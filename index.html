@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">39</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">40</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">27/08/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">28/08/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">2</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -1131,7 +1131,7 @@
     <section class="mes open" id="m-2026-08" data-mes="Agosto 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Agosto 2026</span>
-        <span class="mes-count">18 jornadas</span>
+        <span class="mes-count">19 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -2164,6 +2164,109 @@
 <p>Drive registra el PDF &quot;Informe_Ejecutivo_Integra.pdf&quot; con fecha de carga en la carpeta compartida del 27/08, aunque el informe fue elaborado el 26/08 según el registro de esa jornada; probablemente corresponda a la subida/formalización del artefacto un día después de redactado (no es una actividad operativa nueva).</p></div>
             </div>
           </div>
+        </article>
+        <article class="jornada" id="j-2026-08-28" data-fecha="28/08/2026" data-buscar="facturas · expedientes · informe definitivo · cargos a formular · devuelto · fuera de balance · informes migrados · pedido de antecedentes · informe valorativo · informe de relator · domicilio electrónico · notificaciones · proxy inverso · smtp gonzalo moreira mariela sernaglia leandro gabellotta tomás montero swinnen fernando aguilera ivana pérez flavia vargas expediente 1303/2024 2121/2024 guia_capacitacion_facturas_integra.docx pruebas migración-sala ii- 28-08-26.docx.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">28<span class="j-sep">/</span>08<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Expedientes (Facturas) · Juicio de Cuentas (Informe Definitivo · Informes Migrados) · Notificaciones (Domicilio Electrónico)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Expedientes (Facturas: pestaña dentro del expediente y sección general) · Juicio de Cuentas (Informe Definitivo — bloque de balance; Informes migrados: Pedido de Antecedentes, Informe Valorativo, Informe de Relator, Informe Definitivo) · Reportes · Alertas de riesgo (Auditoría continua) · Notificaciones (Domicilio Electrónico).</p></div>
+
+            </div>
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Relevamos en profundidad el módulo Facturas en el ambiente de prueba (test-integra.tcuentaslp.gov.ar), tanto la pestaña Facturas dentro de un expediente (ej. expte. 15901/2032) como la sección general /facturas/ (721.077 registros), con el fin de armar una guía de capacitación. Documentamos ambos circuitos de carga (manual y &quot;Capturar&quot;, con lectura de QR de AFIP y OCR), los filtros y acciones disponibles, y el generador de reportes para la entidad Facturas. Elaboramos y entregamos la Guía de Capacitación en Word (&quot;Guia_Capacitacion_Facturas_Integra.docx&quot;), con objetivos, guion de clase, cuadro comparativo y ejercicio práctico.</p>
+
+<p>Cerramos con Flavia Vargas (Jefa de Sala 1) los tres puntos que habían quedado en repregunta el 27/08 sobre el bloque de balance del Informe Definitivo, confirmando la fórmula completa: Total a rendir = Recibido en el período + Saldo a rendir del período anterior; Total Descargos = Invertido Conformado + Devuelto + Cargos a Formular; Saldo próximo = Total a rendir − Total Descargos; Fuera de Balance se informa aparte, sin sumar en ninguna cuenta. Trasladamos la definición a Desarrollo para cotejarla contra lo ya implementado (PR #463).</p>
+
+<p>Recibimos de Sala II, a través de Ivana Pérez, el relevamiento comparativo entre los informes migrados y los informes vigentes para el expte. 1303/2024 —uno de los tres expedientes que dimos de alta el 27/08 para probar casos excepcionales, cargado como 2121/2024— y lo reenviamos a Sistemas. Junto con Tomás, analizamos el reporte y establecimos la causa de fondo: para expedientes migrados, INTEGRA no muestra el texto original de cada informe sino que lo regenera con las plantillas y textos por defecto del sistema nuevo.</p>
+
+<p>Elevamos a Sistemas los requerimientos para poner en producción el formulario web de Domicilio Electrónico (envío de códigos de verificación y constancias en PDF): una casilla de correo dedicada (no-responder@tcuentaslp.gob.ar) y los datos SMTP para autenticarla. Propusimos además revisar el enfoque de arquitectura de seguridad —reemplazar la DMZ planteada originalmente por un Proxy Inverso, o alternativamente un túnel SSH inverso si el servidor pasa a alojarse dentro de la red del Tribunal— a la espera de definir dónde se alojará finalmente el formulario.</p></div>
+
+            </div>
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Navegamos el ambiente de prueba para relevar el módulo Facturas: alta de comprobantes manual y por captura (IA / lectura de QR / OCR), confirmación individual y masiva, filtros y exportación en la sección general, y armado de reportes agrupados por Organismo / Tipo de comprobante / Estado / Año / Mes del comprobante.</p>
+
+<p>Desarrollo probó, a nuestro pedido, el caso pendiente desde el 27/08 de Fuera de Balance y Devuelto cargados juntos en un mismo Informe Definitivo: no se detectaron problemas adicionales, las cuentas cierran correctamente.</p></div>
+
+            </div>
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Al cotejar la definición de Devuelto contra lo ya mergeado, detectamos que el código buscaba la palabra &quot;devuelto&quot; en el nombre del concepto, pero los conceptos reales de la lista (&quot;Devoluciones a Cuenta N°&quot;, &quot;Devolución a cta cte ... Tesorería&quot;) no la contienen. En producción esa línea de Descargos daba siempre $0 y el importe se cargaba en Invertido Conformado en lugar de en Devuelto (el total y el saldo cerraban igual, pero el desglose salía mal). Corregido el mismo día (PR #464), con test que reproduce dos devoluciones de cuentas distintas consolidándose en una sola cifra.</p>
+
+<p>Analizando el reporte de Sala II sobre expedientes migrados, detectamos tres bugs generales de INTEGRA, independientes de la definición de fondo sobre qué debe mostrarse en un migrado: (1) el nombre del relator interviniente se muestra como un número en lugar del nombre; (2) el texto &quot;en condiciones de ser aprobada&quot; aparece aunque el informe tenga Cargos a Formular, cuando en ese estado la cuenta no está en condiciones de ser aprobada; (3) las observaciones aparecen amontonadas, separadas solo por un salto de línea sin procesar (&quot;\r\n&quot;) en vez de mostrarse como texto formateado. Quedan en corrección.</p></div>
+
+            </div>
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p>Ivana Pérez (Sala II) relevó y reportó, con detalle documentado en Word, las diferencias entre los informes migrados y los vigentes para el expte. 1303/2024, en los cuatro tipos de informe. En el Pedido de Antecedentes: falta el N° de expediente en el encabezado, cambia la leyenda &quot;al jefe de relatores División Segunda&quot; por &quot;Secretaría y Despacho&quot; (dos veces, incluido el pie), las observaciones aparecen amontonadas separadas solo por &quot;rn&quot;, y no muestra el nombre del relator interviniente sino una numeración.</p>
+
+<p>En el Informe Valorativo: falta la fecha, se omite informar a uno de los responsables, la valoración aparece amontonada (separada solo por &quot;rn&quot;), y se agrega al pie la leyenda &quot;por lo expuesto precedentemente por el relator&quot; —que no figuraba en el original— mezclada con las observaciones, sin el interlineado necesario para la firma del relator.</p>
+
+<p>En el Informe de Relator: agrega la leyenda &quot;importe por resolución&quot; en los cargos del período (no correspondía), agrega &quot;considerando que la misma estaría en condiciones de ser aprobada…&quot; en un expediente con Cargos a Formular (no figuraba en el original y no corresponde, dado que ese estado no permite la aprobación), no referencia dónde va la fecha ni el sector &quot;Relatoría Sala II, División Segunda&quot;, y no muestra el nombre del relator ni la sala (en su lugar muestra un N° de expediente).</p>
+
+<p>En el Informe Definitivo: falta fecha; falta informar un responsable, la jurisdicción y las resoluciones en el encabezado; en vistos y considerandos aparece la leyenda &quot;el texto lo define asesoría&quot;, que no corresponde para un migrado —la leyenda original ya era la correcta—; cambió por completo el contenido de considerandos y resulta; falta el detalle numérico; las observaciones aparecen amontonadas (&quot;rn&quot;); se ocultó la información de fojas del cuerpo principal y del complementario; y el relator informado es incorrecto (figura Valduvino cuando según Sala II intervino Villafañe).</p></div>
+
+            </div>
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>El bug de Devuelto detectado hoy mismo en el bloque de balance del Informe Definitivo quedó corregido el mismo día (PR #464, mergeado). Con esto se cierran los tres puntos que habían quedado pendientes desde el 27/08 sobre ese bloque: Cargos a Formular y Fuera de Balance ya estaban correctamente implementados (confirmado hoy contra el legado) y Devuelto quedó corregido; los tres conceptos fueron además validados en conjunto (Fuera de Balance + Devuelto cargados juntos) sin novedades.</p></div>
+
+            </div>
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Definir con el equipo funcional si, para expedientes migrados, INTEGRA debe mostrar el texto original tal cual estaba (Opción A) o aceptarse el formato nuevo corrigiendo solo diferencias puntuales (Opción B); de ser la Opción A, verificar con Desarrollo si la migración trajo el cuerpo textual original de cada informe (considerandos, resulta, observaciones, valoración) o solo datos/metadatos. Verificar la corrección de los tres bugs generales que quedaron en curso (nombre del relator como número, leyenda &quot;en condiciones de ser aprobada&quot; con Cargos a Formular, y el salto de línea que amontona observaciones). Resolver con Desarrollo el reporte de intimaciones de PNR en masa (pendiente desde el 27/08). Asignar usuarios a los grupos &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot; para las firmas de condonación/extensión de la Mochila de Deuda (pendiente desde el 27/08). Confirmar con Mariela si el plazo de recupero de 15 días es hábil o corrido (pendiente desde el 27/08). Validar el caso límite señalado por Tomás sobre el cálculo de jornada laboral (pendiente desde el 27/08). Definir dónde se alojará el formulario de Domicilio Electrónico para resolver DMZ vs. Proxy Inverso / túnel SSH inverso, y obtener de Sistemas la casilla no-responder@ y los datos SMTP. Confirmar con Desarrollo/Contaduría si corresponde documentar un flujo de conciliación o de estados de cobro/pago en Facturas.</p></div>
+
+            </div>
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>No se registraron novedades en Google Drive (carpeta compartida Gonza-Marie) en la jornada del 28/08. No se registró actividad en los canales de Odoo Personal (329), General (324), Senior (348), Sueldos (326) ni Obras Públicas (327). El resumen matutino que Leandro publicó en Odoo el 28/08 corresponde a la jornada del jueves 27/08 (ya registrada) y no se utilizó aquí como fuente de actividad del 28/08.</p>
+
+<p>La discrepancia detectada sobre expedientes migrados no parece aislada: agrupa múltiples desvíos consistentes con una misma causa (regeneración con la plantilla nueva en vez de preservar el texto original), lo que sugiere revisar el criterio de migración para el conjunto de expedientes históricos y no solo para el caso testigo 1303/2024. Es una hipótesis de trabajo, no confirmada aún con Desarrollo.</p>
+
+<p>El relevamiento de Facturas no encontró un módulo específico de conciliación ni estados de cobro/pago (más allá del campo &quot;Fecha de pago&quot; en el formulario de carga); queda pendiente confirmar con Desarrollo/Contaduría antes de incluirlo en futuras capacitaciones como funcionalidad existente.</p></div>
+
+            </div>
+
+          </div>
+
         </article>
       </div>
     </section>
