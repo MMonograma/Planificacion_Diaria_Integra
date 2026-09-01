@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">40</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">41</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">28/08/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">31/08/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">2</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -1131,7 +1131,7 @@
     <section class="mes open" id="m-2026-08" data-mes="Agosto 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Agosto 2026</span>
-        <span class="mes-count">19 jornadas</span>
+        <span class="mes-count">20 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -2262,6 +2262,107 @@
 <p>La discrepancia detectada sobre expedientes migrados no parece aislada: agrupa múltiples desvíos consistentes con una misma causa (regeneración con la plantilla nueva en vez de preservar el texto original), lo que sugiere revisar el criterio de migración para el conjunto de expedientes históricos y no solo para el caso testigo 1303/2024. Es una hipótesis de trabajo, no confirmada aún con Desarrollo.</p>
 
 <p>El relevamiento de Facturas no encontró un módulo específico de conciliación ni estados de cobro/pago (más allá del campo &quot;Fecha de pago&quot; en el formulario de carga); queda pendiente confirmar con Desarrollo/Contaduría antes de incluirlo en futuras capacitaciones como funcionalidad existente.</p></div>
+
+            </div>
+
+          </div>
+
+        </article>
+        <article class="jornada" id="j-2026-08-31" data-fecha="31/08/2026" data-buscar="subsidios poder legislativo cámara de diputados vencimiento caratulación movimientos reingreso origen informes migrados cargos a formular en condiciones de ser aprobada expediente 900162928/2026 1303/2024 backfill 119 expedientes 283 subsidios gonzalo moreira tomás montero swinnen leandro gabellotta subsidiospldefectos.docx.pdf motor central de vencimientos.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">31<span class="j-sep">/</span>08<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Subsidios (Poder Legislativo) · Expedientes (Vencimientos / Movimientos) · Informes Migrados (Informe de Relator)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Subsidios (Poder Legislativo / Cámara de Diputados) — importación, caratulación y movimientos · Expedientes — motor de cálculo de vencimientos, trazabilidad de movimientos · Juicio de Cuentas — Informes migrados (Informe de Relator).</p></div>
+
+            </div>
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Probamos el circuito completo de un subsidio de Cámara de Diputados en el ambiente de pruebas, sobre el expte. 900162928/2026: desde la importación del archivo del primer cuatrimestre 2026 (283 recibos, 119 beneficiarios, $67.587.000 — el monto total coincide exactamente con el archivo y no hubo duplicados) hasta el pase y el reingreso del cuentadante, siguiendo cada paso en la auditoría del sistema. Documentamos los hallazgos en un informe formal (&quot;SubsidiosPLDefectos.docx.pdf&quot;) y lo elevamos a Desarrollo.</p>
+
+<p>Junto con Tomás, revisamos el informe y cerramos los puntos de carátula y de reingreso, y verificamos que el caso especial del extracto de Cámara no reproduce la fragilidad del sistema legado.</p>
+
+<p>También con Tomás, cerramos uno de los tres bugs generales que habían quedado pendientes desde el 28/08 sobre informes migrados: el Informe de Relator con Cargos a Formular ya no imprime la leyenda &quot;en condiciones de ser aprobada&quot; (corregido el campo con_cargo en 2.129 informes migrados).</p>
+
+<p>Confirmamos con Tomás que el recálculo indebido del vencimiento no es un problema exclusivo de Subsidios PL sino de alcance general —afecta a todos los expedientes a través del motor central de vencimientos—, y dado ese impacto lo dejamos pendiente de una definición de negocio antes de tocar el código.</p></div>
+
+            </div>
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Prueba de carga e importación del archivo de subsidios de Cámara de Diputados (primer cuatrimestre 2026) y recorrido completo del circuito del expediente 900162928/2026 (alta, pase, dar entrada/reingreso), verificando cada movimiento contra la auditoría del sistema.</p>
+
+<p>Desarrollo ejecutó un backfill sobre los 119 expedientes ya importados para que todos muestren el período correcto en la carátula; verificado en el ambiente de pruebas.</p></div>
+
+            </div>
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Vencimiento que se reescribe con cada movimiento (el más grave de los hallazgos de hoy): cada pase, dar entrada o cambio de estado recalcula la fecha de vencimiento desde la fecha del movimiento, para todos los expedientes —no solo Subsidios PL—, por lo que el plazo nunca se consume. En la prueba, dos movimientos el mismo día corrieron el vencimiento 124 días: el expediente entró &quot;Vencido&quot; con 33 días de mora y salió vigente con 91 días por delante, sin que se rindiera nada, solo por moverlo de área. Tomás confirmó que es un comportamiento heredado del sistema anterior (los plazos por etapa coinciden exactamente con la tabla de días de Feriados.php del SGE) y que es el motor central de vencimientos, no un caso aislado de Subsidios. No se corrige hoy: queda pendiente de definición de negocio (ver Pendientes).</p>
+
+<p>Carátula del expediente de subsidio no identificaba el caso: el período salía vacío (&quot;/ 2026&quot;, el importador no cargaba el campo) y no se mostraba ningún dato de Cámara (expediente, resolución, CUIT, monto, N° de recibo); afectaba a los 119 expedientes importados. Corregido y desplegado el mismo día, con backfill sobre los ya importados.</p>
+
+<p>El reingreso del cuentadante perdía el área de origen del movimiento (aparecía un guion en vez de &quot;FUERA DEL TRIBUNAL&quot;), cortando la trazabilidad justo en el tramo del que dependen los plazos; ya estaba reportado para rendiciones comunes y se confirmó también en Subsidios PL. Corregido el mismo día (el alta sigue sin origen por ser el nacimiento del expediente, comportamiento esperado).</p></div>
+
+            </div>
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+
+            </div>
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>Carátula del subsidio sin período ni datos de Cámara, y reingreso sin área de origen: ambos detectados y corregidos el mismo 31/08 (ver Errores encontrados).</p>
+
+<p>Uno de los tres bugs generales pendientes desde el 28/08 sobre informes migrados quedó verificado como corregido: el Informe de Relator con Cargos a Formular ya no imprime &quot;en condiciones de ser aprobada&quot; (2.129 informes migrados corregidos). Los otros dos (nombre del relator como número; observaciones amontonadas por salto de línea sin procesar) siguen sin confirmación de cierre.</p>
+
+<p>El &quot;detalle del extracto&quot; señalado en el informe de Subsidios PL se verificó que no es un bug: el caso especial de Cámara se dispara por el campo de origen del subsidio (dato modelado), no por comparar el texto del extracto como en el sistema legado.</p></div>
+
+            </div>
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Definir la regla de negocio para el motor de vencimientos (el hallazgo más grave de hoy): si el vencimiento debe calcularse siempre desde la fecha de ingreso del expediente y solo modificarse con una suspensión o ampliación explícita (para todos los tipos de expediente), o si existen etapas donde corresponde reiniciar el plazo con el cambio de estado; Desarrollo espera esta definición antes de tocar el motor. Definir si conviene guardar número y fecha de parte, banco/forma de pago/sucursal y localidad del archivo de Cámara (hoy no se importan) y para qué se usarían. Definir si las autoridades del subsidio (que ya se importan, con correo) deben cargarse también en el padrón de responsables para poder notificarlas, de cara a la nota anual de domicilios electrónicos. Verificar el cierre de los otros dos bugs generales de informes migrados pendientes desde el 28/08 (nombre del relator como número; observaciones amontonadas). Definir Opción A/B para expedientes migrados (texto original vs. regenerado). Resolver con Desarrollo el reporte de intimaciones de PNR en masa; asignar usuarios a los grupos &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;; confirmar con Mariela el plazo de recupero (hábil/corrido); validar el caso límite de jornada laboral señalado por Tomás; definir el alojamiento del formulario de Domicilio Electrónico y obtener la casilla no-responder@ y los datos SMTP; confirmar si corresponde un flujo de conciliación en Facturas (pendientes de jornadas previas, sin novedades hoy).</p></div>
+
+            </div>
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>El mensaje que Leandro publicó en el canal Expedientes el 31/08 (15:46) es el resumen de la jornada del viernes 28/08 (ya registrada) y no se usó como fuente de actividad del 31/08. Se registraron dos adjuntos en un canal ajeno al seguimiento de Integra (solicitud de equipos de red) que no se incorporan a este registro por no corresponder. Sin novedades en Drive (carpeta Gonza-Marie) ni en los canales Personal, General, Senior, Sueldos u Obras Públicas.</p>
+
+<p>Hipótesis, a confirmar: el hallazgo de hoy sobre el motor de vencimientos parece una manifestación más amplia de la categoría &quot;recálculo indebido de vencimientos&quot; que el Informe Ejecutivo de Gestión (25/08) ya señalaba como uno de los dos nudos críticos de mayor impacto legal-funcional del proyecto, dado como &quot;en su mayoría corregido y verificado&quot;. A diferencia de los casos ya documentados (motor de suspensión/ampliación/prórroga del 25/07; carga manual de vencimiento en Subsidios PE del 07/08), hoy se confirma que el motor recalcula la fecha ante cualquier movimiento —no solo actos explícitos de prórroga o suspensión— y que es de alcance general. Vale la pena cotejar con Desarrollo si esto reabre parte de lo dado por cerrado en el informe ejecutivo o si es un ángulo nuevo del mismo problema.</p></div>
 
             </div>
 
