@@ -179,17 +179,17 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">41</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">42</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">31/08/2026</span></div>
-    <div class="m"><span class="k">Meses</span><span class="v">2</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">01/09/2026</span></div>
+    <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
 </header>
 
 <nav class="rdi-bar">
   <div class="chips">
-    <a class="chip" href="#m-2026-07" onclick="abrirMes('m-2026-07')">Julio <span class="chip-yy">'26</span></a><a class="chip" href="#m-2026-08" onclick="abrirMes('m-2026-08')">Agosto <span class="chip-yy">'26</span></a>
+    <a class="chip" href="#m-2026-07" onclick="abrirMes('m-2026-07')">Julio <span class="chip-yy">'26</span></a><a class="chip" href="#m-2026-08" onclick="abrirMes('m-2026-08')">Agosto <span class="chip-yy">'26</span></a><a class="chip" href="#m-2026-09" onclick="abrirMes('m-2026-09')">Septiembre <span class="chip-yy">'26</span></a>
   </div>
   <div class="rdi-search">
     <span class="lupa" aria-hidden="true">⌕</span>
@@ -1128,8 +1128,8 @@
         </article>
       </div>
     </section>
-    <section class="mes open" id="m-2026-08" data-mes="Agosto 2026">
-      <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
+    <section class="mes " id="m-2026-08" data-mes="Agosto 2026">
+      <button class="mes-cab" aria-expanded="false" onclick="toggleMes(this)">
         <span class="mes-nombre">Agosto 2026</span>
         <span class="mes-count">20 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
@@ -2369,6 +2369,123 @@
           </div>
 
         </article>
+      </div>
+    </section>
+    <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
+      <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
+        <span class="mes-nombre">Septiembre 2026</span>
+        <span class="mes-count">1 jornada</span>
+        <span class="mes-chev" aria-hidden="true">⌄</span>
+      </button>
+      <div class="mes-cuerpo">
+        <article class="jornada" id="j-2026-09-01" data-fecha="01/09/2026" data-buscar="vencimiento artículo 30 pedido de antecedentes expediente 77095/2026 77096/2026 resoluciones disposiciones sala 2 organismo cuenta duplicado intimación masiva pnr im.1 im.9 opción a documentos firmados congelar con_cargo informe 72764 1303/2024 reorganización desarrollo fernando aguilera matías grassi uat expedientes uat personal epics r-1 r-2 a-1 a-2 a-3 a-4 f-0 tomás montero swinnen gonzalo moreira leandro gabellotta.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">01<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Expedientes (Vencimientos / Art. 30) · Resoluciones y Disposiciones (Sala 2) · Informes Migrados · Notificaciones (PNR) · Reorganización del equipo de Desarrollo</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Expedientes Internos (Vencimientos / Artículo 30 / Pedido de Antecedentes) · Juicio de Cuentas (Informes migrados / Documentos firmados) · Resoluciones y Disposiciones (Sala 2) · Notificaciones (Intimación Masiva por PNR) · Gestión del proyecto / equipo de Desarrollo.</p></div>
+
+            </div>
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Reorganizamos la forma de trabajo del equipo de Desarrollo: se suman Fernando Aguilera y Matías Grassi al desarrollo de INTEGRA. De ahora en más todo se coordina en Odoo, en los proyectos UAT Expedientes y UAT Personal: el área sigue reportando y probando en las tarjetas UAT como hasta ahora, y el desarrollo pasa a vivir en una etapa nueva, &quot;🛠 Desarrollo — Sistemas&quot; (dentro de UAT Expedientes), organizada en epics con subtareas por tema, de modo que el reporte del área y el fix queden conectados en la misma tarjeta. Cada subtarea lleva un asignado fijo para no superponerse, y sigue el circuito rama → tests → Pull Request, sin mergear sin revisión de Tomás. Las definiciones funcionales se siguen charlando directo con el área en la propia tarjeta de Odoo y, aunque el chat se puede seguir usando para cuestiones varias, de ahora en más los reportes técnicos como los de hoy se cargan directamente como tarea en Odoo, no por chat. Tomás dejó asignadas las primeras tareas: a Fernando, R-2 (Resoluciones: cargar solo la cuenta, traer el organismo automáticamente y validar la relación cuenta-organismo) y A-2 (los seis casos del artículo 30 para calcular el vencimiento, sujeta a A-1; spec en docs/ART_30_PLAZOS.md); a Matías, R-1 (Resoluciones: campos y cosméticos) y A-4 (mostrar la fecha del artículo 30 con su caso en la ficha, sujeta a A-2); y para sí mismo, A-1 (el campo de fecha de notificación del Pedido de Antecedentes, prerrequisito de todo el artículo 30), A-3 (que el vencimiento se calcule desde el ingreso del expediente y no se reescriba en cada movimiento) y F-0 (diseño de cómo congelar los documentos firmados, para que un migrado no se vuelva a generar). Se arranca por las tareas de Resoluciones, ya definidas; las del artículo 30 dependen de A-1.</p>
+
+<p>Corrimos el circuito completo de dos expedientes internos de prueba (77095/2026 y 77096/2026, rotulados PRUEBA GMOREIRA) contra el sistema legado y documentamos el resultado en un informe (&quot;Plazos art. 30.pdf&quot;). Confirmamos que el plazo de Segundo Estudio son tres meses calendario y no 90 días corridos —corrección sobre un dato que habíamos dado antes— y que el motor de días hábiles, el rechazo de movimientos con fecha futura, la impresión del número GDE en la carátula electrónica, la derivación automática desde la cuenta y el guardado separado del Tipo de Rendición funcionan correctamente. Relevamos los seis casos (A a F) del artículo 30 para la fecha desde la que corre el año de sentencia —hoy no visible en la ficha del expediente— y detectamos que veníamos manejando mal uno de ellos (confundíamos el caso E con el F).</p>
+
+<p>Definimos, junto con Tomás, avanzar con la Opción A para expedientes migrados: que el documento histórico no se vuelva a generar. Verificamos contra el código de producción (informe_definitivo_pdf.php) que el sistema anterior también arma el Visto, el Considerando y el Resulta desde una plantilla al imprimir, por lo que no existe un cuerpo textual original guardado que se haya perdido en la migración —ni en INTEGRA ni en el sistema legado—. Confirmamos, sobre el informe migrado del expte. 1303/2024 (informe 72764), que los campos con_cargo, resultado y fecha_notificacion llegaron vacíos de la migración, y que ese con_cargo vacío es la causa directa del bug de &quot;en condiciones de ser aprobada&quot; que se corrigió el 31/08. Encuadramos la definición de Opción A dentro del criterio que Sala II ya había fijado el 18/08 sobre documentos firmados: un informe migrado es un documento firmado y notificado, y no debe re-renderizarse después de la firma.</p>
+
+<p>Elevamos a Desarrollo una propuesta de ajustes para la pantalla de carga de Resoluciones/Disposiciones de Sala 2 (la norma con la que el Ministerio le paga a instituciones, cargada por Sala 2 e incorporada automáticamente al Informe de Relator del organismo/período en rendición): simplificar el campo Tipo de organismo a solo dos opciones, renombrar campos confusos, quitar el campo redundante Año del período, precargar Sección y Concepto por defecto, agregar Fecha de Parte, y mostrar el total cargado para cotejar contra el monto de la resolución. Detectamos además que, al asignar organismo y cuenta, el sistema no valida que correspondan entre sí —lo que ya generó un error real de carga— y que al buscar por cuenta puede traer el mismo organismo duplicado bajo dos números de iniciador (uno vigente, otro obsoleto nunca dado de baja); propusimos que alcance con cargar la cuenta y que el sistema traiga el organismo automáticamente, resolviendo cuál registro es el vigente.</p>
+
+<p>Entregamos a Desarrollo el relevamiento completo de la Intimación Masiva por PNR, estudiado contra el sistema legado y consultado con Sala II (&quot;Intimacion Masiva_PnR.pdf&quot;), con el flujo, las reglas IM.1 a IM.9, los casos borde y una mejora adicional para reubicar la Verificación de Pre-Intimación. Quedó cargado como tarea de desarrollo en Odoo.</p></div>
+
+            </div>
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Recorrimos el circuito completo de dos expedientes internos de prueba (77095/2026, 77096/2026) desde el alta hasta sucesivos pases, Pedido de Antecedentes y Segundo Estudio, verificando en cada paso el cálculo de vencimientos contra la auditoría del sistema y contra la tabla de plazos del sistema legado.</p>
+
+<p>Verificamos contra el código de producción (informe_definitivo_pdf.php) cómo se arman el Visto, el Considerando y el Resulta del Informe Definitivo, y los valores migrados de con_cargo, resultado y fecha_notificacion del informe 72764 (expte. 1303/2024).</p></div>
+
+            </div>
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>El expediente nace sin vencimiento: al dar de alta un expediente interno, el campo queda vacío; recién aparece con el primer pase, calculado desde la fecha del pase y no desde el ingreso. El sistema legado sí lo fija en el alta (vencimiento_corrido($link, $fecha_ingreso, 90) en altas_internos.php).</p>
+
+<p>El vencimiento se reescribe con cada movimiento (ya confirmado como general el 31/08): sobre el expediente 77096/2026 se documentó el rastro completo de movimientos —dos de los saltos de fecha van hacia atrás— y al generar el Pedido de Antecedentes el expediente perdió 49 días de plazo. En el caso medido, la regla correcta da un vencimiento del 30/06, pero INTEGRA muestra 30/09/2026 (92 días de diferencia), un valor que no corresponde a ninguna de las fechas que la regla contempla.</p>
+
+<p>El plazo del Pedido de Antecedentes se cuenta desde la fecha del documento y no desde su notificación; es un problema de modelo, no solo de cálculo, porque el P.A. tiene un único campo de fecha y no existe dónde registrar cuándo se notificó.</p>
+
+<p>El caso E del artículo 30 queda incumplido: el sistema usa la fecha de notificación de una intimación de Pedido de Antecedentes para recalcular el vencimiento, cuando la regla dice que esa fecha nunca debe considerarse (a lo que se suma un error propio de definición: veníamos anotando como caso E lo que en realidad es el caso F).</p>
+
+<p>En la pantalla de Resoluciones/Disposiciones, el sistema no valida que la cuenta asignada corresponda al organismo elegido, lo que ya generó un error real de carga (organismo cargado con la cuenta de otro organismo). Sin resolver hoy; queda como tarea R-2 asignada a Fernando.</p></div>
+
+            </div>
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p>Mónica Mataloni (canal Senior) consultó si se puede armar un filtro para ver los registros que ingresan en un determinado mes, en respuesta a un mensaje previo de Flavia que no está disponible en las fuentes relevadas; no queda claro a qué pantalla se refiere. Se registra como consulta pendiente de contexto, no como error confirmado.</p></div>
+
+            </div>
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p class="vacio">Sin registros. Los cinco defectos relevados hoy (vencimientos/artículo 30 y validación de Resoluciones) pasaron a tareas de desarrollo asignadas, sin corrección desplegada todavía.</p></div>
+
+            </div>
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Implementar A-1 (Tomás: campo de fecha de notificación del P.A.), A-2 (Fernando, depende de A-1: los 6 casos del art. 30), A-3 (Tomás: vencimiento calculado desde el ingreso, sin reescritura por movimiento) y A-4 (Matías, depende de A-2: mostrar la fecha del art. 30 en la ficha). Implementar R-1 (Matías) y R-2 (Fernando) de Resoluciones/Disposiciones. Avanzar el diseño F-0 (Tomás) de cómo congelar documentos firmados, con las 5 preguntas que quedaron abiertas para Gonzalo y Leandro (tarea 2782): qué significa &quot;firmar&quot; en el sistema, si el candado de edición se adelanta a la firma, y cómo tratar los documentos migrados. Confirmar con Gonzalo (tarea 2776) si el defecto reportado es sobre el vencimiento de sentencia (1 año desde el art. 30, debería ser estable) y no sobre el operativo por etapa, y si conviene separarlos. Revisar si los campos resultado y fecha_notificacion del informe migrado están vacíos igual que con_cargo. Definir los dos puntos abiertos de Intimación Masiva por PNR (tarea 2790): límite por corrida para lotes grandes vs. procesamiento en segundo plano, y si la intimación en lote queda solo para Sala II o se amplía a otras Salas. Aclarar con Mónica Mataloni a qué pantalla se refiere su consulta sobre un filtro por mes de ingreso. Pendientes de jornadas previas sin novedad hoy: otros dos bugs generales de informes migrados (nombre del relator, observaciones amontonadas); datos del importador de Cámara (parte, banco, localidad; autoridades en el padrón); grupos &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;; plazo de recupero con Mariela; caso límite de jornada laboral; alojamiento del formulario de Domicilio Electrónico; conciliación en Facturas.</p></div>
+
+            </div>
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>El mensaje que Leandro publicó en el canal Expedientes el 01/09 (11:19) es el resumen de la jornada del lunes 31/08 (ya registrada) y no se usó como fuente de actividad del 01/09.</p>
+
+<p>Cambio de método a tener en cuenta para el relevamiento de las próximas jornadas: Desarrollo pidió que, de ahora en más, los reportes técnicos como los de hoy se carguen directamente como tarea en Odoo (proyectos UAT Expedientes / UAT Personal, etapa &quot;🛠 Desarrollo — Sistemas&quot;) en lugar de por chat. Es probable que buena parte de la información de las próximas jornadas esté en esas tarjetas y no en los canales de Discuss; conviene incorporar esa fuente (tareas de los proyectos UAT) al relevamiento diario, además de los canales de Odoo ya relevados.</p>
+
+<p>Sin novedades en Drive ni en los canales Personal, General, Sueldos u Obras Públicas.</p>
+
+<p>El detalle documentado hoy sobre el motor de vencimientos profundiza y confirma, con casos medidos, el hallazgo general que ya se había confirmado el 31/08, y queda ahora traducido en tareas concretas de desarrollo (A-1 a A-4) en lugar de una definición abierta.</p></div>
+
+            </div>
+
+          </div>
+
+        </article>
+
       </div>
     </section>
   <p class="sin-resultados" id="rdi-sinres">Sin coincidencias para la búsqueda.</p>
