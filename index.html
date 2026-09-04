@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">42</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">43</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">01/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">03/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">1 jornada</span>
+        <span class="mes-count">2 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -2479,6 +2479,116 @@
 <p>Sin novedades en Drive ni en los canales Personal, General, Sueldos u Obras Públicas.</p>
 
 <p>El detalle documentado hoy sobre el motor de vencimientos profundiza y confirma, con casos medidos, el hallazgo general que ya se había confirmado el 31/08, y queda ahora traducido en tareas concretas de desarrollo (A-1 a A-4) en lugar de una definición abierta.</p></div>
+
+            </div>
+
+          </div>
+
+        </article>
+
+              <article class="jornada" id="j-2026-09-03" data-fecha="03/09/2026" data-buscar="relatorías islas estructura organizacional área ri-1 ri-2 ri-3 buscador de expedientes b-1 cuenta número/año tipo redundante alt-1 subsidios responsable motivo extracto sub-2 sub-3 parte diario valorativo sa-4 primer estudio saldo próximo período s-1 s-2 s-4 sa-1 sa-2 jornada laboral llegada tarde recupero salidas particulares días corridos ag-8 informe definitivo mariela sernaglia fernando aguilera matías grassi tomás montero swinnen gonzalo moreira metodología de pruebas por tema.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">03<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Relatorías / Islas (estructura) · Expedientes (Búsqueda) · Subsidios PE · Informe de Relator (Sala II / Isla Salud) · Personal (Jornada laboral)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Estructura organizacional (Relatorías / Islas) · Expedientes (búsqueda, alta) · Subsidios del Poder Ejecutivo (Isla Educación) · Juicio de Cuentas (Informe de Relator / Definitivo — balance, Fuera de Balance, Partes Diarios) · Personal (jornada laboral, recupero, salidas particulares).</p></div>
+
+            </div>
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Mariela precisó cómo debe modelarse la estructura de relatorías e islas: no va en el catálogo de Organismos (reservado a cuentadantes, con CUIT), sino como entidad propia dentro del módulo de Áreas, por donde circula el expediente; usar denominaciones como &quot;Educación (TDEC-R1-A-EDU)&quot; en lugar de copiar los nombres del Tablero de Personal; y que jefas, subjefas y coordinadoras —que integran las relatorías— deben ver todas las islas de su relatoría sin que se mezclen los datos de &quot;Tu operatoria&quot; entre islas. Con esa definición, Desarrollo cerró en el día el epic completo de Relatorías/Islas: el modelo de jerarquía Área (Relatoría→Isla) con un comando de siembra que reutiliza las divisiones ya migradas y crea las 8 islas; la importación del Excel de Mariela para corregir el grupo de cuentas de las ~678 cuentas, sin adivinar en los casos ambiguos; y la ampliación automática del filtro por defecto para que jefas, subjefas y coordinadoras vean todas las islas de su relatoría, sin tocar roles ni permisos.</p>
+
+<p>Mariela retomó las pruebas de Personal y cerró tres definiciones que estaban pendientes desde fines de agosto. Sobre el caso límite de jornada laboral que había dejado planteado Tomás: explicó que la llegada tarde genera una deuda que se cancela quedándose después del cierre ese mismo día —en el ejemplo, sin ganancia neta—, que el orden de imputación importa cuando además hay una salida particular (primero se descuenta la llegada tarde, después la salida), y que la llegada tarde debe quedar marcada igual, se haya recuperado o no, porque la reincidencia puede dar lugar a sanción y ese dato no debe perderse. Sobre los grupos &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;: todavía no tienen los usuarios a asignar, y prefiere que los cargue el área de Personal directamente. Sobre el plazo de 15 días para salidas particulares: confirmó que son días corridos, coincidiendo con el documento original y no con la implementación actual, que había quedado cargada como días hábiles.</p>
+
+<p>Mariela también compartió una novedad de metodología pedida por las Salas: en vez de avanzar isla por isla, probar un tema a la vez (Pedido de Antecedentes, Partes Diarios, etc.) con todas las islas en simultáneo. La expectativa es depurar los módulos con mayor precisión, adelantar la incorporación de otras aplicaciones (por ejemplo Control Previo), llegar al Juicio de Cuentas con todas las Salas capacitadas a la par, y facilitar tanto el control de las Jefaturas de Sala como la trazabilidad de las tareas.</p>
+
+<p>Fue una jornada de mucho cierre de Desarrollo: además del epic de Relatorías/Islas, se corrigió el buscador de expedientes para que filtre realmente por cuenta (tolerando el separador de miles) y entienda el formato número/año; se sacó el campo redundante Tipo del alta de expediente, pasando Tipo de Rendición a obligatorio en los Internos; se sumaron los campos opcionales Responsable, Motivo y Extracto al alta de Subsidios; y se implementó, definido con Sala II, el circuito de Pedido de Antecedentes y Valorativo a nivel de parte diario. En un solo Pull Request de Matías se cerraron además cinco reportes de Sala II: el saldo del próximo período deja de ser obligatorio, el concepto del balance pasa a ser obligatorio y su desplegable filtra por sección, el expediente nace en &quot;Primer Estudio&quot; en lugar de &quot;Alta&quot;, la fecha del informe deja de poder editarse, y quedó aclarado dónde va cada dato del Pedido de Antecedentes. También se revisó el pedido de unificar los botones &quot;Editar&quot; y &quot;Editar balance&quot; del Informe de Relator: no se unificaron porque hacen cosas distintas (uno no recalcula el saldo en vivo, el otro sí), y en su lugar se aclararon los rótulos.</p></div>
+
+            </div>
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Mariela revisó en detalle, con el caso límite planteado por Tomás, cómo se cruzan llegada tarde y salida particular en el cálculo de jornada laboral de Personal.</p>
+
+<p>Desarrollo corrió en dry-run el comando de importación del Excel de islas antes de aplicarlo en commit, para no tocar cuentas ambiguas sin revisión, y verificó con datos reales migrados el volumen de líneas afectadas por Fuera de Balance en el Informe de Relator (1.363 líneas en producción).</p></div>
+
+            </div>
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>A partir de la aclaración de Mariela, confirmamos que el plazo de 15 días para salidas particulares está mal implementado: el sistema lo tiene cargado como días hábiles, cuando el documento original —y la definición vigente— dice días corridos. Corrección pendiente de aplicar.</p></div>
+
+            </div>
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+
+            </div>
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>Epic completo de Relatorías/Islas (RI-1, RI-2, RI-3): definido y cerrado el mismo día.</p>
+
+<p>B-1 (el buscador no filtraba por cuenta ni entendía número/año), pendiente desde el 02/09: resuelto hoy.</p>
+
+<p>ALT-1 (campo Tipo redundante en el alta), pendiente desde el 02/09: resuelto hoy.</p>
+
+<p>SUB-2 y SUB-3 (faltaban motivo, extracto y responsable en Subsidios), pendientes desde el 02/09: resueltos hoy como campos opcionales —la pregunta de fondo sobre SUB-2 (qué cargan hoy las jefas de Sala 1 y si el dato sirve más adelante) sigue sin respuesta, aunque el campo ya está disponible.</p>
+
+<p>S-1, S-2, S-4, SA-1 y SA-2 —cinco puntos de los reportes de Sala II (Ivana) e Isla Salud (Eugenia Mitzel), pendientes desde el 02/09—: resueltos hoy en un mismo Pull Request.</p>
+
+<p>SA-4 (el Informe Valorativo no cubría partes diarios): resuelto hoy, con el circuito definido junto con Sala II.</p>
+
+<p>AG-8 (alerta al generar el Informe Definitivo): quedó cerrada definitivamente hoy, tras la reconfirmación de Sala II (estaba desplegada desde el 24/08, pendiente solo de esa confirmación).</p></div>
+
+            </div>
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Resolver SUB-1 (crítico, bloquea SUB-4): Fernando dejó una pregunta a Gonzalo sobre qué número de expediente corresponde a cada beneficiario al separar la carga. Definir con Gonzalo qué grupos de estado merecen un color distinto (SA-17, 86 estados en el catálogo). Obtener de Sala II la definición pendiente desde el 24/08 sobre AG-6/SA-3 (número de expediente en el P.A.) y responder la consulta de circuito AG-7 (dónde se guarda el P.A. para que Mesa de Entradas lo vincule en GDE). Responder las 5 preguntas de definición de F-0, sin novedades desde el 01/09. Revisar y mergear R-1, S-3 y SA-9, con desarrollo ya terminado. Aclarar el estado real de SA-13 (ver Observaciones). Aplicar la corrección del plazo de salidas particulares (de días hábiles a corridos) y del criterio de marcar la llegada tarde aunque se recupere. Asignar usuarios a los grupos &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;, ahora a cargo del área de Personal. Evaluar el impacto de la nueva metodología de pruebas por tema (todas las islas juntas) sobre la planificación en curso. Avanzar B-2 (&quot;rn&quot; en extractos, sin resolver). Pendientes de jornadas previas sin novedad hoy: otro bug general de informes migrados (nombre del relator como número); datos del importador de Cámara; qué hacer con los 3 pares de duplicados ya existentes en el padrón (DUP-1); las subtareas restantes de Eugenia Mitzel (SA-6, SA-7, SA-8, SA-10 a SA-12, SA-14 a SA-16) y de Agustina (AG-2 a AG-4); alojamiento del formulario de Domicilio Electrónico; conciliación en Facturas.</p></div>
+
+            </div>
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>El resumen que Leandro publicó el 03/09 reporta la jornada del miércoles 02/09 (ya registrada) y no se usó como fuente de actividad de hoy.</p>
+
+<p>Contradicción entre fuentes, a confirmar: el estado de Desarrollo que Tomás publicó a las 13:05 lista SA-13 (PR #487) como &quot;desarrollo terminado, pendiente de revisión y merge&quot;, pero el registro del 02/09 ya documentaba ese mismo PR como mergeado y desplegado a las 22:38 de esa jornada. Tomás mencionó estar corrigiendo el formato de estos reportes; podría ser un desfasaje del resumen y no un retroceso real, pero conviene aclararlo antes de dar SA-13 por reabierto o por cerrado.</p>
+
+<p>Jornada de alto volumen de cierres en Desarrollo: al menos nueve Pull Requests mergeados y desplegados en el día (RI-1, RI-2, RI-3, B-1, el combinado S-1/S-2/S-4/SA-1/SA-2, ALT-1, SUB-3, SUB-2 y SA-4), sumado al cierre completo del epic de Relatorías/Islas el mismo día en que terminó de definirse.</p>
+
+<p>Sin novedades en Drive ni en los canales General, Sueldos u Obras Públicas de Integra; en el canal Senior solo hubo coordinación de asignación de tareas a Matías, sin contenido funcional.</p></div>
 
             </div>
 
