@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">43</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">44</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">03/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">04/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">2 jornadas</span>
+        <span class="mes-count">3 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -2596,6 +2596,118 @@
 
         </article>
 
+              <article class="jornada" id="j-2026-09-04" data-fecha="04/09/2026" data-buscar="tablero de desarrollo partes diarios legado sge matías grassi vtiger jira resoluciones r-1 informe de relator saldo próximo período sa-3 sa-6 sa-7 sa-10 traslado de saldo alt-1 subsidios sub-2 sub-3 sub-4 sa-4 valorativo pedido de antecedentes ag-1 ag-6 sa-8 sa-12 sa-16 relatorías islas seeds intimación masiva pnr a-3 jornada laboral llegada tarde tomás montero swinnen fernando aguilera matías grassi mariela sernaglia gonzalo moreira metodología deuda técnica seguridad repositorio.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">04<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Documentación (Partes Diarios legado) · Tablero de Desarrollo · Resoluciones / Informe de Relator · Subsidios PE · Alta de Expediente · Personal (Jornada laboral)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Documentación / antecedentes (sistema legado &quot;SGE&quot; de Partes Diarios, Matías Grassi) · Coordinación de Desarrollo (Tablero de Desarrollo) · Resoluciones y Disposiciones (alta de expediente Interno) · Juicio de Cuentas (Informe de Relator/Definitivo — traslado de saldo, Pedido de Antecedentes) · Subsidios del Poder Ejecutivo · Personal (jornada laboral).</p></div>
+
+            </div>
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Se completó un relevamiento exhaustivo del sistema legado de Partes Diarios mantenido por Matías Grassi (identificado técnicamente como &quot;SGE&quot;, fork de vtiger CRM 4.2 de 2005), consolidado en tres informes (ejecutivo sobre las 21 tareas del proyecto Odoo &quot;Rendición de Cuentas Nuevo&quot;, retrospectivo sobre el historial Jira SGE-5 a SGE-93, y de auditoría con 31 casos clasificados) más dos bases de conocimiento de referencia. Hitos ya aplicados identificados: renombramiento del módulo &quot;Tema parte diario&quot; a &quot;Temas&quot; (unificado para partes diarios y mensuales), validación de cuenta habilitada para rendir parte diario, y el módulo de carga de facturas vinculado a partes diarios. Casos &quot;en curso&quot; (SGE-91, SGE-86, SGE-33) muestran evidencia de desarrollo ya aplicado en sus comentarios de 2024/2025 que nunca movió la tarjeta de la etapa &quot;Especificaciones&quot; — un problema de higiene de tablero más que de trabajo pendiente real. Se detectó además una deuda de seguridad grave en el repositorio del sistema SGE (credenciales de MercadoPago expuestas en texto plano, inyección SQL sin autenticación, bypass de autenticación fijo, contraseñas en MD5 sin sal), documentada como hallazgo separado a escalar.</p>
+
+<p>Tomás lanzó un Tablero de Desarrollo público (<a href="http://192.168.0.252/tablero-desarrollo" target="_blank" rel="noreferrer noopener">tablero-desarrollo</a>) para tener un panorama global sin depender del chat: una columna &quot;Esperando definición del área&quot; (lo trabado a la espera de Gonzalo/Leandro/Mariela/Salas, incluidas las consultas abiertas del canal), otra &quot;En curso — Sistemas&quot; (dividida por persona: Tomás/Fernando/Matías) y &quot;Hecho reciente&quot; (lo mergeado y desplegado al 231); cada tarjeta linkea a su tarea de Odoo, y se actualiza dos veces al día (~9 y ~12 hs).</p>
+
+<p>Puesta al día de Desarrollo sobre UAT Expedientes: quedaron confirmadas como hechas y desplegadas al 231 — A-1 (el campo de notificación del P.A. ya existía), Resoluciones R-1 y R-2 (PRs #486/#474), Informe de Relator/Definitivo S-1 a S-4 del reporte de Ivana (PRs #494/#485), y el código de la estructura Relatoría→Isla RI-1/RI-2/RI-3 (PRs #489/#490/#491) — desplegado, resta solo correr los seeds en el 231 con el Excel de Mariela para cargar los datos reales. Quedaron señaladas como pendientes de definición del área: A-3 (motor de vencimientos, dos vencimientos distintos — operativo y de sentencia), F-0 (congelar documentos firmados, 5 preguntas) e Intimación Masiva por PnR (el núcleo ya entró en PR #483; faltan definir tamaño de lote —procesamiento en caja o en segundo plano— y qué Salas la habilitan).</p>
+
+<p>Matías cargó con atraso en el canal una serie de cierres ya resueltos en días previos, al no saber que también debía comentarlos ahí y no solo en la tarea de Odoo: R-1 (tipo de organismo reducido de 7 a 2 opciones, renombrado &quot;de norma&quot; a &quot;de Resolución/Disposición&quot;, se sacó Año del período del formulario, se agregaron Fecha de Parte y Monto de la resolución con un total en vivo, PR #486) y A-4 (fecha sugerida del artículo 30 —Decreto Ley 513/69— en la ficha del expediente, reutilizando el cálculo ya hecho para A-2, PR #477). El mismo día resolvió además tres casos nuevos vinculados al traslado de saldo del Informe de Relator: SA-6 (excluir los Informes de Relator anulados como fuente del traslado, más un resguardo de servidor contra cargar a mano un concepto de otra sección), SA-7 parcial (el aviso de lo que se va a trasladar ahora se muestra antes de guardar el Informe de Relator, no después; la parte de fondo —si el traslado es por concepto o por el saldo A+B-C completo— sigue bloqueada por una definición sin resolver entre Fernando y Gonzalo) y SA-10 (la Sección de una fila nueva del balance se hereda de la última cargada). Cerró también, en el mismo Pull Request, SA-3 y AG-6 (mismo bug: el número de expediente vuelve a aparecer en el encabezado del PDF del Pedido de Antecedentes también en rendiciones). Todo este lote, cargado inicialmente como PR #499 &quot;a revisar&quot;, fue revisado y mergeado por Tomás el mismo día como PR #500.</p>
+
+<p>Fernando comunicó en el canal el cierre de cuatro tareas de Subsidios/Expedientes: ALT-1 (campo Tipo sacado del alta de expediente por redundante, corregido el título de la sección que seguía diciendo &quot;TIPO Y ORIGEN&quot;, PR #495), SUB-2 (campos Motivo y Extracto agregados al alta de subsidio, opcionales, PR #497), SUB-3 (campo Responsable agregado, opcional —distinto del beneficiario, nunca único en subsidios masivos—, PR #496) y SA-4 (circuito completo: ahora se puede generar un Pedido de Antecedentes sobre un parte diario, y hay un Valorativo mensual por organismo que agrupa los partes observados del período, PR #498). Dejó además abiertas para Gonzalo cuatro preguntas de definición: AG-1/SA-16 (si el usuario de pruebas &quot;coordinador&quot; carece de área en UsuarioTribunal —motivo del bypass detectado— y si conviene endurecer el control para bloquear también a cualquier usuario sin área, lo que afectaría 6 vistas), SA-12 (qué datos componen los &quot;sellos del relator interviniente&quot; y de dónde salen en Integra, y si el reclamo de Sala I sobre el área firmante &quot;Auditoría&quot; ya se resolvió), SA-8 (si la sección &quot;Devoluciones que no implican descargos&quot; suma, resta o es solo informativa en el balance) y sobre la épica de Pedido de Antecedentes de Sala II (reporte Agustina 21/08): si es solo la tarjeta agrupadora de AG-1 a AG-8 o falta algo puntual, y si ya existe tarjeta propia para el hallazgo de expedientes duplicados que mencionaba como pendiente.</p>
+
+<p>Tomás le explicó a Mariela, en el canal de Personal, la implementación completa del cruce entre llegada tarde y salida particular en el cálculo de jornada laboral: corrigió que antes solo tenía modelada la salida particular (por eso alguien que llegaba tarde y se quedaba compensando aparecía &quot;recuperando de más&quot;); ahora ambos lados se cruzan y quedan en cero. La llegada tarde genera deuda con una tolerancia de 10 minutos tratada como umbral y no como descuento (quien entra a las 7:10 no debe nada, quien entra a las 7:11 debe los 11 minutos completos desde las 7:00), se recupera el mismo día quedándose después del cierre, no entra en la mochila de los 15 días (reservada a salidas particulares), el orden de descuento es primero la llegada tarde del día y después la salida particular —cubierto con una prueba automática que arma ese caso exacto—, y la marca de llegada tarde nunca se borra por el recupero, solo si se corrige la fichada. Aplicó también la corrección del plazo de 15 días a días corridos. Todo quedó implementado y subido al servidor de pruebas; los grupos &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot; siguen a la espera de que el área de Personal cargue los usuarios.</p>
+
+<p>En el canal Senior, Tomás y Fernando discutieron y reafirmaron la metodología de trabajo interna: todo pasa por tareas de Odoo, y las tres personas de Desarrollo comentan avances y preguntas directamente en el canal Interno Sistemas (no solo en la tarea) para que Gonzalo, Mariela y Leandro puedan seguirlo sin entrar a cada tarjeta; a los agentes de Salas se los deja trabajar y probar como les resulte más cómodo. Confirmaron además que ese mismo día hubo una reunión de Desarrollo con las coordinadoras donde se planteó la metodología de probar un módulo completo antes de pasar al siguiente, en línea con lo que Mariela había adelantado el 03/09.</p>
+
+<p>Se creó una subcarpeta &quot;Parte Diario&quot; dentro de la carpeta compartida de Drive (Mariela Sernaglia), sin archivos cargados aún.</p></div>
+
+            </div>
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Fernando reprodujo el bypass del control de área con el usuario &quot;coordinador&quot; del servidor de pruebas para diagnosticar AG-1/SA-16. Matías corrió la batería de tests automáticos (1463 casos, todos pasando) sobre sus correcciones de SA-3/SA-6/SA-7/SA-10, y Tomás agregó una prueba automática específica que arma el caso de llegada tarde seguida de salida particular en el mismo día, para que la regla de orden de descuento no se pueda romper sin que falle.</p></div>
+
+            </div>
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Detectamos, al revisar el traslado de saldo del Informe de Relator (SA-7), un bug real de código: ni la función de incorporación del saldo anterior ni la de cálculo del saldo a trasladar excluían los Informes de Relator anulados como posible fuente del traslado, por lo que un informe cargado mal y anulado podía arrastrar igual su balance descartado al período siguiente. Corregido el mismo día (SA-6).</p></div>
+
+            </div>
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+
+            </div>
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>R-1 (alta de Resolución/Disposición), pendiente de revisión y merge desde el 03/09: confirmado hoy como hecho y desplegado al 231 (PR #486).</p>
+
+<p>S-3 (Informe de Relator/Definitivo, reporte de Ivana), pendiente de revisión y merge desde el 03/09: confirmado hoy como hecho y desplegado al 231 (PR #485), junto con S-1/S-2/S-4 ya cerrados el 03/09.</p>
+
+<p>AG-6/SA-3 (número de expediente ausente en el encabezado del PDF del Pedido de Antecedentes en rendiciones), sin definición de Sala desde el 24/08: resuelto hoy por Matías, mismo bug en ambos casos.</p>
+
+<p>SA-6 (traslado de saldo arrastraba Informes de Relator anulados): detectado y resuelto en el mismo día.</p>
+
+<p>SA-10 (Sección no se heredaba entre filas nuevas del balance): resuelto hoy.</p></div>
+
+            </div>
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Confirmar con Gonzalo el estado real de SUB-1: Fernando dio por hecho que &quot;ya está lista de su lado&quot; a partir de lo visto en el canal, pero no hay una confirmación explícita de Gonzalo — de eso depende destrabar SUB-4 (listado precargado de beneficiarios, sujeta además a aprobación de las jefas de Sala 1). Responder a Gonzalo: A-3 (motor de vencimientos operativo/sentencia), AG-1/SA-16 (endurecer o no el control de área), SA-12 (composición de los &quot;sellos del relator&quot; y si el reclamo de Sala I sobre &quot;Auditoría&quot; ya se cerró), SA-8 (cómo computa &quot;Devoluciones que no implican descargos&quot; en el balance) y el alcance real de la épica DEV de Pedido de Antecedentes (Sala II, reporte Agustina). Cerrar la definición de fondo entre Fernando y Gonzalo sobre el traslado de saldo (por concepto vs. saldo A+B-C completo) que bloquea la parte 1 de SA-7. Correr los seeds del Excel de Mariela en el 231 para completar la carga de datos de Relatorías/Islas (el código ya está desplegado). Definir con las Salas el tamaño de lote y la habilitación por Sala de la Intimación Masiva por PnR. Responder las 5 preguntas de F-0, sin novedades. Mariela probará el nuevo cálculo de jornada laboral (llegada tarde + salida particular) ya subido al servidor de pruebas. Aclarar el estado real de SA-13, sin novedades desde la contradicción señalada el 03/09. Sobre el legado de Partes Diarios (Grassi/SGE): verificar en vivo con Matías y Fernando si SGE-91/86/33 ya están operativos en producción pese a seguir en &quot;Especificaciones&quot;; completar la documentación de los Casos de Uso CU0000014, CU0000018 y CU0000019 (fecha límite ya vencida); actualizar la nomenclatura de CU0000015; decidir si recuperar el contenido de los dos adjuntos no leídos (&quot;Reporte módulos del sistema viejo.odt&quot; en SGE-78 y la Nota Conjunta 1-2024 a Secretaría en SGE-52); y escalar aparte, como tema de seguridad activo, la deuda crítica detectada en el repositorio SGE. Pendientes de jornadas previas sin novedad hoy: SA-9 (desarrollo terminado, pendiente de revisión/merge), SA-17, AG-7, B-2, otro bug general de informes migrados, datos del importador de Cámara, DUP-1, subtareas restantes de Eugenia Mitzel (SA-8, SA-12, SA-14 a SA-16) y de Agustina (AG-2 a AG-4), asignación de usuarios a &quot;Personal (RRHH)&quot;/&quot;Secretaría&quot;, alojamiento del formulario de Domicilio Electrónico, conciliación en Facturas.</p></div>
+
+            </div>
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>No se identificó en los canales relevados un resumen matutino de Leandro correspondiente al 04/09 con contenido atribuible (su único mensaje del día, &quot;solucionado&quot; a las 10:19, no tiene contexto suficiente para tratarlo como actividad).</p>
+
+<p>Varios de los cierres comunicados hoy en el canal (R-1 y A-4 de Matías, marcados explícitamente como &quot;cargado con atraso, resuelto hace unos días&quot;) ya estaban terminados en jornadas previas y solo se reportaron recién hoy, porque Matías no sabía que debía comentarlos también en el canal y no solo en la tarea de Odoo. Es el mismo patrón de desfasaje entre desarrollo real y reporte que motivó la contradicción de SA-13 señalada el 03/09, y coincide con el propio hallazgo del relevamiento de Partes Diarios legado sobre &quot;higiene de tablero&quot; en el sistema anterior — vale la pena vigilar que no se repita.</p>
+
+<p>El relevamiento del sistema legado de Partes Diarios (Grassi/SGE) detectó una deuda de seguridad crítica en ese repositorio (credenciales expuestas, inyección SQL, autenticación bypasseada) — no es un hallazgo de Integra, pero se registra por su gravedad y porque el propio informe recomienda escalarlo de forma independiente.</p>
+
+<p>Sin novedades en Drive más allá de la creación de una carpeta vacía, ni en los canales Expedientes, General, Sueldos u Obras Públicas de Integra.</p>
+<p>En la reunión de mejora continua se estableció un cambio en la modalidad de trabajo, principalmente en el orden para afrontar y resolver las tareas: las Salas van a reunirse con nosotros para establecer las prioridades, de modo que podamos estudiar y avanzar en Integra sobre esa base.</p></div>
+
+            </div>
+
+          </div>
+
+        </article>
       </div>
     </section>
   <p class="sin-resultados" id="rdi-sinres">Sin coincidencias para la búsqueda.</p>
