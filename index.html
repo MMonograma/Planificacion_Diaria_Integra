@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">44</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">45</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">04/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">07/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">3 jornadas</span>
+        <span class="mes-count">4 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -2702,6 +2702,127 @@
 
 <p>Sin novedades en Drive más allá de la creación de una carpeta vacía, ni en los canales Expedientes, General, Sueldos u Obras Públicas de Integra.</p>
 <p>En la reunión de mejora continua se estableció un cambio en la modalidad de trabajo, principalmente en el orden para afrontar y resolver las tareas: las Salas van a reunirse con nosotros para establecer las prioridades, de modo que podamos estudiar y avanzar en Integra sobre esa base.</p></div>
+
+            </div>
+
+          </div>
+
+        </article>
+              <article class="jornada" id="j-2026-09-07" data-fecha="07/09/2026" data-buscar="partes diarios regularización completitud funcional auditoría empírica test-integra leandro gabellotta 21 puntos cuenta habilitada vencimiento prórroga filtro área sala fecha por rango persistencia intimación no presentados cédula pdnr temas autocompletado tipos de anexo conformar parte vista de detalle valorativo intimación masiva pnr a-3 vencimiento de sentencia artículo 30 mariela abrahan sala i ma-1 ma-2 ma-3 ma-4 agustina ag-2 ag-3 ag-4 ag-5 sa-11 sa-14 sa-15 b-2 rn extractos personal licencias uat-per tablero jornada laboral saldo ordinaria acumulado responsables de área correo personal sueldos agosto tablero de desarrollo cambios solicitados matías grassi fernando aguilera tomás montero swinnen mariela sernaglia.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">07<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Partes Diarios (Regularización, 21 puntos) · Intimación Masiva PnR · Sala I / Sala II · Personal (Licencias, UAT) · Sueldos (Agosto)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Partes Diarios (Sala I y Sala II) · Juicio de Cuentas (Informe de Relator — vencimiento de sentencia Art. 30, Pedido de Antecedentes) · Rendiciones (Intimación Masiva por Período no Rendido) · Subsidios del Poder Ejecutivo · Personal (licencias, jornada laboral, ficha del agente, responsables de área) · Sueldos (período Agosto 2026) · Coordinación de Desarrollo (Tablero de Desarrollo).</p></div>
+
+            </div>
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Completamos una auditoría funcional empírica de Partes Diarios contra test-integra (usuario administrador), en base a la cual armamos el reporte &quot;Partes Diarios — Regularización y completitud funcional&quot; con 21 puntos relevados y creamos la tarjeta correspondiente en el proyecto UAT Expedientes, columna Desarrollo - Sistema, con sus 16 subtareas derivadas (algunos puntos del reporte se agruparon en una misma subtarea). Aclaramos al equipo que estas observaciones surgen de las reuniones y charlas mantenidas con las jefas y coordinadoras de las Salas, y que las dejamos sin asignar para que Desarrollo las organice.</p>
+
+<p>Sobre esas 16 subtareas, Desarrollo cerró el mismo día cinco: filtro por Área/Sala en el listado, con vista por defecto blanda según el área del usuario (PR #517); fecha propia por cada parte al cargar por rango, en vez de una única fecha para todo el rango (PR #519); Tema con autocompletado en el Pedido de Antecedentes que nace de un Parte Diario (PR #516); filtros por tipo de organismo y por fecha en el catálogo de Temas, más la incorporación de Partes Diarios como entidad del Generador de Reportes (PR #516); y la verificación de que el alta de Subsidio del Poder Ejecutivo no tiene circuito de origen en Parte Diario y ya ubica bien el expediente, sin necesidad de cambios. Las once subtareas restantes quedaron esperando definición del área: Fernando dejó preguntas puntuales sobre qué mostrar cuando un organismo no tiene cuentas habilitadas, el criterio para calcular el Vencimiento, el orden de columnas que pide Sala II, y — tras investigar a fondo el código sin poder reproducirlo — qué campo de fecha exactamente no se guarda al editar un parte y sobre qué caso concreto se detectó. Matías dejó preguntas sobre la automatización de partes tentativos mensuales, las acciones dedicadas de Pedido de Prórroga y Conformar Parte, la vista de detalle del parte y el acceso al Valorativo mensual, y el alcance del catálogo de Tipos de Anexo. Fernando también pidió precisar qué significa &quot;intimar&quot; un Parte Diario y el plazo en días hábiles para la cédula de la intimación por Parte Diario no Rendido.</p>
+
+<p>Tomás cerró y desplegó la Intimación Masiva por Período no Rendido: una pantalla que lista las cuentas candidatas por año/mes/Sala/organismo y genera en lote una intimación por cuenta seleccionada con sus cédulas, con manejo robusto para corridas grandes (transacción por cuenta, tope, reanudable) — PR #521. Cerró también A-3: separó los dos vencimientos que se confundían en el Informe de Relator, dejando el de sentencia (Art. 30, un año desde esa fecha) anclado y sin recorrerse al trabajar el expediente, sin tocar el operativo por etapa — PR #520.</p>
+
+<p>Matías resolvió cuatro reportes de Sala I (Mariela Abrahan): la etiqueta del desplegable de Cuenta ahora distingue organismo cuando dos cuentas comparten número, para que el filtro no devuelva cero (MA-1); el historial de auditoría ahora traduce las etiquetas de cualquier modelo por introspección, descarta relaciones reversas y filas sin cambio real, y resuelve las claves foráneas al texto del objeto (MA-2); se agregó un enlace directo de alta de responsable desde el propio aviso de &quot;responsable no vigente&quot; (MA-3); y se amplió a 100 caracteres el campo de referencia del expediente en el PDF del Pedido de Antecedentes, además de limpiar un &amp;nbsp; que salía literal (MA-4) — PRs #508, #505 y #506.</p>
+
+<p>Sobre el reporte de Agustina del 21/08, Matías cerró cuatro puntos más: AG-2 (la firma con la División padre cuando el expediente está en una isla, con la salvedad de que no puede confirmar si esto cubre el caso puntual de Agustina sin ver el dato real de ese expediente), AG-3 (aviso no bloqueante de responsable faltante también en el alta del Pedido de Antecedentes), AG-4 (alineación a la izquierda del número de punto en el PDF, mismo motivo que ya se había corregido en observaciones) y AG-5 (la fecha de &quot;marcado como notificado&quot; ahora se carga a mano y no puede ser futura, y no se puede notificar un documento todavía en Borrador) — PRs #513 y #514. De Eugenia Mitzel cerró SA-11 (columna propia para el concepto en el PDF del Informe de Relator, porque el padding no lo aplicaba el motor de PDF) y SA-14 (el autocompletado de la observación por Tema ahora también actualiza si se cambia de Tema, no solo la primera vez) — PR #513; dejó SA-15 deliberadamente sin tocar porque depende de dos definiciones que las jefas postergaron a una segunda etapa el 26/08; y armó el comando <code>fix_rn_extractos</code> (dry-run por defecto, idempotente) para B-2, acotado al patrón exacto que describió Eugenia, listo para correr con <code>--commit</code> cuando se decida, pero todavía no ejecutado contra los datos reales.</p>
+
+<p>En Personal, Tomás procesó por completo el documento de UAT que le envió Mariela Sernaglia. Quedaron resueltos: el tablero de licencias (una licencia migrada sin fecha de fin se tomaba como abierta indefinidamente, lo que hacía figurar en licencia a agentes sin ninguna gestionada, y en un caso dejaba a un Subjefe habilitado a autorizar salidas todos los días porque el sistema creía al Jefe permanentemente ausente); el saldo pendiente acumulado, que se leía en vivo y por eso una licencia nueva alteraba el número ya impreso de las anteriores; el saldo de licencia ordinaria, congelado al registrar y sin recalcularse ante una prórroga; el bloqueo de calendario de una licencia suspendida o prorrogada entera (ya no ocupa la fecha completa, solo los días efectivamente usados); los selects de artículo/inciso con su tope y su forma de contar (143 y 147 en días laborables, con los topes de matrimonio, nacimiento, fallecimiento 1er y 2do grado, donación de sangre y mesa examinadora, separando el catálogo de Fallecimiento en dos incisos); la ficha del agente, ahora editable en cuatro secciones (Rama, Subroga, Ingreso, Sexo, Estado civil, Hijos, Cónyuge, nacimiento), dejando Cargo/categoría/revista solo por Registrar movimiento para no pisar el histórico; el correo personal, agregado a la ficha y visible en el Padrón junto al declarado por el propio agente; y la autogestión de responsables de área, para que cada Jefe cargue su Subjefe y Secretaria sin poder cambiar quién es el Jefe. Quedaron dos puntos a definir con Mariela: si UAT-PER-13 debe sacar el cartel de prórroga que excede el cupo anual o bloquear directamente como hace el artículo 148, y quién puede dar de alta un agente nuevo (y si necesita aprobación de Secretaría) para poder construir UAT-PER-05.</p>
+
+<p>En Sueldos, Tomás avisó que el período Agosto 2026 ya está disponible en Integra pruebas para consultar.</p>
+
+<p>Fernando señaló que el Tablero de Desarrollo le muestra 4 tareas pendientes que en realidad están trabadas esperando respuesta de los analistas funcionales, y propuso reflejar ese estado como &quot;cambios solicitados&quot; en vez de &quot;pendiente&quot;; consultado, Leandro dijo que se entendería el concepto y quedó a criterio del equipo de Desarrollo. Tomás además compartió con el equipo una autocrítica sobre su propio script de relevamiento del Tablero: había reportado una tarea como &quot;esperando definición&quot; sin detectar que Gonzalo ya la había respondido, porque la barrida solo leía los campos de la tarjeta (asignado/etapa/estado) y no abría los hilos de comentarios, además de apoyarse en memoria desactualizada en vez de verificar la conversación real — lo dejó anotado para que el resto del equipo tenga cuidado con el mismo problema en sus propios asistentes.</p></div>
+
+            </div>
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Realizamos una auditoría empírica completa de Partes Diarios sobre test-integra (usuario administrador), verificando en la interfaz real cada uno de los 21 puntos del reporte de regularización. Fernando investigó a fondo el código y la vista de edición del Parte Diario, con un test real contra la URL de edición, intentando reproducir el bug de persistencia de fecha reportado, sin lograrlo. Matías corrió la batería de tests automáticos en cada uno de sus Pull Requests del día (1487 casos, todos pasando), y verificó generando el PDF real antes y después de su corrección de alineación de columna en el balance (SA-11).</p></div>
+
+            </div>
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Mediante la auditoría empírica sobre test-integra, confirmamos numerosos defectos y faltantes en Partes Diarios: el combo de Cuenta del alta no filtra por Organismo ni respeta la habilitación para rendir Parte Diario (punto 1); no hay vínculo entre Vencimiento/Prórroga y el parte específico, ni alerta de doble prórroga (punto 2); no existe una acción dedicada de Pedido de Prórroga (punto 3); el listado carecía de filtro por Área/Sala (punto 4); un rango de partes correlativos solo admitía una única fecha para todos (punto 7); el Pedido de Antecedentes que nace de un Parte Diario no tenía campo Tema (punto 16); y el catálogo de Temas carecía de filtros por tipo de organismo o fecha, mientras Partes Diarios no figuraba como entidad reportable (puntos 18 y 20) — entre otros 14 puntos más documentados en el reporte. De estos, los puntos 4, 7, 16, 18, 20 y 21 (este último verificado sin necesidad de corrección) se resolvieron en el mismo día — ver ANTERIORES VERIFICADOS COMO SOLUCIONADOS.</p>
+
+<p>También detectamos, al procesar el informe de Personal de Mariela sobre el tablero de licencias, que una licencia migrada sin fecha de fin se interpretaba como abierta indefinidamente; en al menos un caso esto dejaba a un Subjefe habilitado a autorizar salidas todos los días porque el sistema consideraba al Jefe permanentemente ausente. Corregido el mismo día (UAT-PER-03).</p></div>
+
+            </div>
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p>Mariela Abrahan (Sala I) reportó cuatro casos, los cuatro resueltos el mismo día: MA-1, el desplegable de Cuenta repetía etiquetas y el filtro por cuenta devolvía cero cuando dos cuentas compartían número; MA-2, el historial de auditoría mostraba claves foráneas crudas y ruido técnico en vez de valores legibles; MA-3, no había forma de dar de alta un responsable de cuenta desde el propio aviso de &quot;responsable no vigente&quot;; y MA-4, el PDF del Pedido de Antecedentes imprimía un &amp;nbsp; literal y cortaba la referencia al expediente por límite de caracteres.</p></div>
+
+            </div>
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>Partes Diarios — puntos 4, 7, 16, 18 y 20 del reporte de regularización: detectados y resueltos en el mismo día (07/09).</p>
+
+<p>Partes Diarios — punto 21 (ubicación del expediente de Subsidio PE originado en Parte Diario): verificado en el mismo día, no requería corrección.</p>
+
+<p>A-3 (vencimiento de sentencia confundido con el operativo por etapa), pendiente de confirmación de Gonzalo desde el 04/09: resuelto hoy (PR #520).</p>
+
+<p>Intimación Masiva por Período no Rendido, con el núcleo pendiente de definiciones desde el 04/09: resuelta hoy de punta a punta (PR #521).</p>
+
+<p>MA-1, MA-2, MA-3 y MA-4 (Sala I, Mariela Abrahan): detectados y resueltos en el mismo día.</p>
+
+<p>AG-2, AG-3 y AG-4 (subtareas restantes del reporte de Agustina, pendientes desde jornadas previas): resueltas hoy, con la salvedad de que AG-2 no puede confirmarse como la causa exacta del caso puntual de Agustina sin revisar el dato real de ese expediente.</p>
+
+<p>SA-11 y SA-14 (subtareas restantes de Eugenia Mitzel): resueltas hoy.</p></div>
+
+            </div>
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Responder a Desarrollo las 11 subtareas de Partes Diarios que quedaron esperando definición del área: qué mostrar cuando un organismo no tiene cuentas habilitadas (punto 1); criterio de cálculo del Vencimiento (punto 2); si conviene esperar a que cierre el diseño de Vencimiento antes de construir la acción de Pedido de Prórroga, y si Conformar Parte necesita botón propio con motivo/rol habilitado (punto 3/17); precisar el campo de fecha y el caso concreto del bug de persistencia que Fernando no pudo reproducir (punto 8); definir qué significa &quot;intimar&quot; un Parte Diario, a quién se notifica y qué documento genera (punto 12); si el proceso de partes tentativos corre solo o lo dispara un botón, qué calendario de feriados usa, cómo se distingue Sala I de Sala II y qué pasa con los tentativos sin parte real al cierre de mes (punto 11); si conviene resolver la distinción entre parte esperado y parte cargado recién después de la automatización de tentativos, y cómo distinguirla visualmente (punto 10, depende del punto 11); si el catálogo de Tipos de Anexo arranca solo con los 4 valores pedidos o hay que migrar antes los valores libres ya cargados, y si Tipo de Parte/Ubicación/Subparte siguen haciendo falta (punto 19); el orden de columnas que pide Sala II y el resto de la presentación del listado (puntos 5/6/9); si se necesita ficha de detalle propia del parte o alcanza con el listado, si el Valorativo mensual debe verse desde cada parte o alcanza con verlo una vez por organismo/mes, y si se libera el circuito P.A.→Valorativo antes o después de confirmar que funciona de punta a punta (puntos 14/15); y el plazo en días hábiles para la cédula de la intimación por Parte Diario no Rendido (punto 13). Definir con Mariela Sernaglia el criterio de UAT-PER-13 (sacar el cartel o bloquear al superar los 15 días) y quién puede dar de alta un agente nuevo en Personal, con o sin aprobación de Secretaría (UAT-PER-05). Correr <code>fix_rn_extractos --commit</code> contra los datos reales cuando se decida (B-2). Retomar SA-15 cuando las jefas cierren las dos definiciones postergadas al 26/08. Sin respuesta de Gonzalo, reiterado nuevamente hoy: SA-8, SA-12 y el alcance real de la épica de Pedido de Antecedentes de Agustina; SUB-1, SA-17, SUB-4 y AG-1/SA-16 (esta última ya con la reproducción concreta documentada — usuario &quot;coordinador&quot; sin área cargada — a la espera de que se confirme si alcanza con cargar el área a los usuarios de prueba o si hay que endurecer el control en las 6 vistas afectadas). Aclarar el estado real de SA-13, sin novedades desde la contradicción señalada el 03/09. Correr los seeds del Excel de Mariela en el 231 para completar la carga de datos de Relatorías/Islas. Asignar usuarios a los grupos &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;. Sobre el legado de Partes Diarios (Grassi/SGE): verificar en vivo SGE-91/86/33, completar CU0000014/018/019, actualizar CU0000015, decidir sobre los adjuntos no leídos y escalar la deuda de seguridad crítica del repositorio SGE. Pendientes de jornadas previas sin novedad hoy: SA-9, otro bug general de informes migrados, datos del importador de Cámara, DUP-1, alojamiento del formulario de Domicilio Electrónico, conciliación en Facturas.</p></div>
+
+            </div>
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>El reporte de regularización de Partes Diarios y sus 21 puntos surgieron, según lo aclaró Leandro en el canal, de las reuniones y charlas mantenidas con las jefas y coordinadoras de las Salas — no es una auditoría aislada del equipo técnico, sino la formalización de pedidos ya conversados con ellas.</p>
+
+<p>AG-1/SA-16 (control de área que no frena la creación del Pedido de Antecedentes) sigue sin respuesta de Gonzalo pese a haberse reiterado dos veces hoy, con la reproducción exacta ya documentada desde el 02/09 — es el pendiente más insistido del canal en lo que va de la semana.</p>
+
+<p>Tomás compartió con el equipo una autocrítica sobre su propio asistente de relevamiento del Tablero (no abría los hilos de comentarios y confiaba en memoria desactualizada), como aviso para que no se repita el mismo tipo de error de &quot;higiene de tablero&quot; que ya señaló el relevamiento del sistema legado de Partes Diarios.</p>
+
+<p>Fernando avisó que subió al Drive los sueldos de agosto para Tomás; no es el mismo Drive que releva este registro (carpeta compartida Gonza-Marie), por lo que no hay archivo verificable desde esta fuente.</p>
+
+<p>Tomás reportó lentitud del sistema en un momento del día, sin diagnóstico ni seguimiento posterior en el canal.</p>
+
+<p>Sin novedades en Drive (carpeta compartida Gonza-Marie) ni en los canales Expedientes, General y Obras Públicas de Integra.</p></div>
 
             </div>
 
