@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">45</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">46</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">07/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">08/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">4 jornadas</span>
+        <span class="mes-count">5 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -2825,6 +2825,125 @@
 <p>Sin novedades en Drive (carpeta compartida Gonza-Marie) ni en los canales Expedientes, General y Obras Públicas de Integra.</p></div>
 
             </div>
+
+          </div>
+
+        </article>
+              <article class="jornada" id="j-2026-09-08" data-fecha="08/09/2026" data-buscar="partes diarios regularización completitud funcional subtareas 1 2 4 7 9 10 11 12 13 respuestas leandro gabellotta resolución 18/2019 anexo vii si.t.e.a división segunda catálogo de anexo 29 valores intimación de partes no presentados por lote cédula de notificación pdnr pnr tablero de desarrollo pr mergeado test_licencia_vigencia comentarios django licencias personal artículo 116 aprobación multinivel subrogancia de firmas uat-per-13 uat-per-05 uat-per-10 saldo de licencia ordinaria mariela sernaglia fernando aguilera matías grassi tomás montero swinnen gonzalo moreira.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">08<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Partes Diarios (Regularización — respuestas a 9 subtareas, 2 cierres) · Personal (Licencias Art. 116 — aprobación multinivel) · Coordinación de Desarrollo (Tablero, formato de reporte de PRs)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Partes Diarios (Sala I y Sala II — Regularización y completitud funcional) · Rendiciones / Notificaciones (Intimación por Parte Diario no Rendido — individual y masiva, cédula de notificación) · Personal (Licencias Art. 116 — aprobación multinivel, ficha del agente) · Informes migrados / PDFs (comentarios Django en plantillas) · Coordinación de Desarrollo (Tablero de Desarrollo, formato de reporte de Pull Requests).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Leandro respondió, directamente en las subtareas de Odoo de la tarjeta &quot;Partes Diarios — Regularización y completitud funcional (Reporte 07/09/2026)&quot; (proyecto UAT Expedientes), las 9 definiciones que Desarrollo tenía pendientes del área (puntos 1, 2, 4, 7, 9, 10, 11, 12 y 13). Sobre el punto 1 aclaró que un organismo sin cuenta habilitada no debe deshabilitar el alta —el combo de Cuenta debe filtrar solo las cuentas del organismo elegido— y verificó en vivo contra el sistema legado Si.T.E.A. (División Segunda) que ese filtrado ya funciona correctamente ahí, confirmando que el pedido es una regresión a corregir y no una función nueva; sumó además el catálogo completo de organismos habilitados a rendir Parte Diario según el texto consolidado de la Resolución N° 18/2019 (Anexo VII), con la salvedad de que Sala I gestiona un subconjunto de esos organismos sobre un sistema que no tiene cargado en esta sesión. Sobre el punto 2 fijó las reglas de negocio: vencimiento de presentación en 2 días hábiles, prórroga a pedido del cuentadante, vencimiento de estudio en 10 días desde el ingreso del parte. Sobre el punto 4 no hubo novedades: sigue a la espera de que Susana o Ivana indiquen el campo puntual y un caso concreto. Sobre el punto 7 definió que la &quot;generación de tentativos&quot; es una vista de fechas hábiles por organismo (ingresados / pendientes / vencidos, estos últimos seleccionables para intimar en lote), que el calendario de feriados es el mismo que usa hoy el sistema y lo actualiza Despacho, que Sala I y Sala II se distinguen por el Área de la cuenta, y que los tentativos sin parte real al cierre de mes no se borran sino que quedan como &quot;no presentado&quot;; aclaró de paso que el menú &quot;Grupos&quot; que ya existe en el legado es un mecanismo distinto (agrupa cuentas/habilitaciones, no tentativos con partes reales) y pidió no confundirlos. Sobre el punto 9 pidió desestimar la tarea hasta nuevas pruebas. Sobre el punto 10 confirmó que falta una ficha de detalle del parte, editable, con resumen, facturas asociadas y circuito —sin necesidad de mostrar ahí el Valorativo mensual— y aportó como insumo el estado que ya maneja el listado &quot;Últimos Partes Cargados&quot; del legado (Conformado/No Conformado, Observado/Sin Observaciones, Con Pase/Sin Pase, Afuera del TdeC). Sobre el punto 11 extrajo del legado el catálogo real de 29 valores de Anexo —mucho más amplio que los 4 pedidos puntualmente— y confirmó que el formulario actual de Alta/Modificación de Partes no tiene campos separados de Tipo de Parte, Ubicación ni Subparte. Sobre el punto 12 fijó el orden de columnas correcto (Fecha de parte, fecha de ingreso, vencimiento de presentación), verificado igual en el legado. Sobre el punto 13 aclaró que la distinción entre parte esperado y cargado surge de la lista de tentativos prevista en el punto 7: uno atrasado pasa a &quot;no presentado&quot;.</p>
+
+<p>Sobre esas subtareas, Fernando cerró dos el mismo día: la intimación de Partes Diarios no presentados, individual desde el propio parte y por lote con selección múltiple desde el listado (PR #522), y la generación de cédula de notificación —no solo la carátula como antes— en el alta de Intimación por Parte Diario no Rendido, reutilizando la misma lógica de la intimación masiva y saneando de paso expedientes viejos que habían quedado sin cédula (PR #524). Tomás mergeó y desplegó al 231 ambos PR, además de un fix de un test de Personal roto desde el propio 08/09 (<code>test_licencia_vigencia</code>, que mockeaba <code>hoy()</code> pero no <code>ahora()</code> y tenía el CI de todo el equipo en rojo — PR #523) y de un PR de Fernando que convierte comentarios Django multilínea <code>{# ... #}</code> —que Django no soporta y salían impresos literales— a <code>{% comment %}</code> en 13 pantallas y PDFs, incluidos sentencia, carátula e informe definitivo (PR #526). El Tablero de Desarrollo se actualizó dos veces en el día: &quot;En curso (Sistemas)&quot; bajó de 19 a 18 tarjetas reflejando el cierre de la intimación, mientras &quot;Esperando definición del área&quot; se mantuvo en 8 y &quot;Hecho reciente&quot; en 14.</p>
+
+<p>En Personal, Tomás avanzó en profundidad el circuito de licencias con Mariela: implementó y subió al servidor de pruebas la aprobación multinivel de las licencias del Art. 116 (Jefe de área → Secretaría → Presidencia, sin nombres propios cargados —los niveles se definen por cargo, y Secretaría/Presidencia se resuelven contra la Subrogancia de Firmas que ya usa Expedientes), habilitó a esos tres roles el acceso a la bandeja de solicitudes —antes no podían ni entrar a firmar— y dejó, solo mientras dura la UAT, que Personal pueda empujar las tres firmas sin usar los usuarios reales de Patricia y María Alejandra (queda registrado como firmado por &quot;Gestión de Personal&quot;, para no confundirlo con la firma real; se apaga antes de producción). Confirmó además que UAT-PER-05 (alta de agente sin pasar por Secretaría) ya estaba resuelto, con aviso si el DNI cargado ya existe o corresponde a un agente inactivo. Quedó pendiente, por responsabilidad propia según reconoció el mismo Tomás, la cuarta parte de UAT-PER-10 (la aprobación multinivel), que había dado por cerrada sin construir. Mariela confirmó que la subrogancia de Patricia y de los Vocales sigue la misma Subrogancia de Firmas de Expedientes (Contador/a Fiscal, o el Vocal de Sala I y si no Sala II para María Alejandra), avaló no cargar nombres propios, y avisó que envió a Despacho una guía de pruebas para precisar las autorizaciones del resto de los artículos.</p>
+
+<p>Sobre coordinación del equipo: Tomás introdujo en el canal Senior un formato estandarizado para reportar cada Pull Request mergeado (PR · autor · qué hace · estado), en paralelo a los avisos que Fernando y Matías siguen publicando en Interno Sistemas al resolver cada punto. Por separado, Gonzalo le señaló a Matías que los mensajes de su propio asistente de IA estaban llegando al canal sin arrobar y con bloques de código, en un formato que dificulta la lectura, y pidió a Fernando y Matías analizar mejor las consultas antes de enviarlas; Matías respondió que ya había ajustado esa configuración para que se publicaran de forma más entendible.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Leandro verificó en vivo, contra el sistema legado Si.T.E.A. (División Segunda), que el filtrado del combo de Cuenta por Organismo en el alta de Partes Diarios funciona correctamente allí, sustento directo de la definición del punto 1. Con la corrección de <code>test_licencia_vigencia</code> (PR #523), el resto de los Pull Requests del día se integró contra la batería automática en verde. Mariela dejó pendiente de completar las pruebas del resto de los artículos de licencia, a la espera de la guía que le devuelva Despacho.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Al investigar el reclamo de Mariela sobre UAT-PER-13, detectamos que el cartel de PRÓRROGA se generaba correctamente pero se perdía al aprobar la licencia desde la bandeja de solicitudes —solo se conservaba si Personal la cargaba directo desde la ficha del agente—, y que por ese mismo circuito se perdía también el saldo de licencia ordinaria restante del Art. 116, un defecto que no había sido reportado. Ambos corregidos el mismo día.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>Punto 5 del reporte de regularización (intimación de partes no presentados, individual y por lote), pendiente desde el 07/09: resuelto hoy (PR #522).</p>
+
+<p>Punto 15 (cédula de notificación en la intimación por PnR), pendiente desde el 07/09: resuelto hoy (PR #524).</p>
+
+<p>UAT-PER-13 / pérdida del saldo de licencia ordinaria restante (Art. 116): detectado y resuelto en el mismo día.</p>
+
+<p>Test <code>test_licencia_vigencia</code>, roto desde el propio 08/09 y con el CI en rojo para todo el equipo: corregido el mismo día (PR #523).</p>
+
+<p>Comentarios Django multilínea impresos literales en 13 pantallas y PDFs: corrección mergeada hoy (PR #526; fecha de detección no precisada en las fuentes relevadas).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Trasladar a desarrollo (aún no aplicado en código) las definiciones que Leandro dejó hoy sobre los puntos 1, 2, 7, 10, 11, 12 y 13. Punto 4: seguir esperando que Susana o Ivana precisen el campo y un caso concreto. Punto 9: desestimada por ahora, sin acción. Confirmar con Sala I el detalle de organismos/cuentas del Anexo VII que gestiona esa Sala (Hacienda y Finanzas, Producción, IPAV, Obras Públicas, Canal 3, Salud Pública, Desarrollo Social, Gobierno y Justicia, Cultura y Educación, Gobernación). Definir con Tomás y Mariela si la aprobación multinivel aplica solo al Art. 116 o también a otros artículos, y cómo debe identificar el sistema quién subroga a Patricia y a María Alejandra (Mariela ya adelantó que sigue la Subrogancia de Firmas de Expedientes; falta la definición formal para implementarlo). Mariela: completar las pruebas del resto de los artículos de licencia. Apagar antes de producción la vía temporal que permite a Personal empujar las tres firmas durante la UAT. Sin novedades desde jornadas previas: SUB-1 (bloquea SUB-4), SA-17 (colores de estado), AG-1/SA-16 (control de área), SA-8, SA-12, alcance de la épica de Pedido de Antecedentes de Agustina, estado real de SA-13, correr los seeds de Relatorías/Islas en el 231, asignar usuarios a &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;, legado de Partes Diarios Grassi/SGE (SGE-91/86/33, CU0000014/018/019, CU0000015, adjuntos no leídos, deuda de seguridad crítica del repositorio), otro bug general de informes migrados (nombre del relator), datos del importador de Cámara, DUP-1, alojamiento del formulario de Domicilio Electrónico, conciliación en Facturas.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>El punto 1 (validación de cuenta habilitada) quedó marcado como resuelto en Odoo por Fernando, pero el cambio de estado está fechado 09/09 (hoy) y no 08/09; se deja fuera de esta jornada y corresponde a la próxima.</p>
+
+<p>Sobre el pedido de sumar el mensaje de reorganización de Tomás: en los canales relevados de Odoo (Interno Sistemas, Personal, Senior) no encontramos un mensaje suyo con ese contenido literal. Lo más cercano es el formato estandarizado de reporte de PRs que introdujo hoy en el canal Senior, ya incluido en Actividades — si se trata de otro mensaje (por ejemplo de un chat fuera de Odoo), queda pendiente de incorporar.</p>
+
+<p>El intercambio sobre formato de mensajes en Interno Sistemas (Gonzalo señalando salidas sin arrobar y con bloques de código del asistente de Matías, y Matías confirmando el ajuste) es una cuestión de higiene de canal, no un hallazgo funcional; se registra por seguir el mismo patrón de auto-corrección de proceso que ya señaló Tomás el 07/09 sobre su propio script.</p>
+
+<p>Sin novedades en Drive (carpeta compartida Gonza-Marie) ni en los canales Expedientes, General, Sueldos y Obras Públicas de Integra.</p></div>
+
+            </div>
+
+
 
           </div>
 
