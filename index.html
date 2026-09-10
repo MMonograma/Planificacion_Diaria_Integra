@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">47</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">48</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">08/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">09/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">6 jornadas</span>
+        <span class="mes-count">7 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -3061,6 +3061,137 @@
 <p>El intercambio sobre formato de mensajes en Interno Sistemas (Gonzalo señalando salidas sin arrobar y con bloques de código del asistente de Matías, y Matías confirmando el ajuste) es una cuestión de higiene de canal, no un hallazgo funcional; se registra por seguir el mismo patrón de auto-corrección de proceso que ya señaló Tomás el 07/09 sobre su propio script.</p>
 
 <p>Sin novedades en Drive (carpeta compartida Gonza-Marie) ni en los canales Expedientes, General, Sueldos y Obras Públicas de Integra.</p></div>
+
+            </div>
+
+
+
+          </div>
+
+        </article>
+              <article class="jornada" id="j-2026-09-09" data-fecha="09/09/2026" data-buscar="partes diarios regularización puntos 1 2 10 11 12 vencimiento prórroga ficha de detalle catálogo de anexo filtros listado guardar y cargar otro pedido de antecedentes numeración firmar borrador sa-15 ag-7 documentos firmados f-0 informe de relator informe valorativo sentencia consolidado de respuestas y definiciones subsidios poder ejecutivo sub-3 sub-4 sub-5 sub-6 sub-7 padrón de beneficiarios ag-1 sa-16 control de área unicidad gde desambiguación de cuentas sala i sala ii modelado relatoría isla sala_de_area domicilio electrónico php servidor de pruebas glpi incidente tablero de desarrollo tareas revertidas gonzalo moreira tomás montero swinnen matías grassi fernando aguilera mariela sernaglia.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">09<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Partes Diarios (5 puntos cerrados) · Documentos Firmados F-0 (completo) · Pedido de Antecedentes (numeración al Firmar) · Subsidios PE (Sala 1) · Consolidado de Definiciones UAT · Domicilio Electrónico</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+            
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Partes Diarios (Sala I y Sala II — Regularización) · Juicio de Cuentas (Documentos Firmados / F-0, Pedido de Antecedentes — numeración, destino en GDE, autocompletado de Tema, control de Área; Informe de Relator / Balance — carga, autocompletado, maquetación de PDF, traslado de saldos) · Subsidios del Poder Ejecutivo (Sala I) · Expedientes (unicidad por GDE, desambiguación de cuentas, permisos) · Estructura organizacional (Sala I / Sala II — modelado pendiente) · Notificaciones (Domicilio Electrónico — infraestructura del servidor de pruebas) · Coordinación de Desarrollo (Tablero, proceso de cierre de tareas).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Gonzalo compartió con el equipo un Consolidado de Respuestas y Definiciones Funcionales que resuelve un lote grande de consultas abiertas de UAT Expedientes y de la épica de Partes Diarios, validadas contra la práctica operativa de ambas Salas y ya registradas como nota en cada tarjeta de Odoo: el calendario de días hábiles sigue siendo único (sin calendarios por Sala); Documentos Firmados exige inmutabilidad estricta, con el PDF definitivo sellado en el instante de presionar &quot;Firmar&quot; y los migrados en solo lectura; la numeración oficial del Pedido de Antecedentes nace recién al Firmar, eliminando el estado intermedio &quot;Publicar&quot;; el P.A. firmado se adjunta al pase formal hacia Mesa de Entradas para que de ahí lo tome GDE; en su estructura, &quot;Detalle General&quot; es un encabezado opcional y &quot;Observaciones&quot; es el cuerpo sustantivo; cambiar el Tema del P.A. recarga la plantilla con confirmación previa si ya había texto tipeado; sobre el control de Área en el P.A. se confirmó que el bypass se debía a que el usuario de pruebas no tenía fila en UsuarioTribunal, y se optó por no endurecer el código para no afectar cuentas de soporte —con esto quedaron cerradas AG-1 y SA-16—; los expedientes con número de GDE llevan de ahora en más una restricción de unicidad estricta hacia adelante (admite vacío para soporte papel), saneando los duplicados existentes; en la carga de Balance el formulario debe recordar la última Sección elegida y filtrar Conceptos en cascada, bloqueando guardar líneas sin concepto; se exige <code>autocomplete=&quot;off&quot;</code> en las celdas de importe; el PDF de Balance debe imprimir el concepto en columna propia; los saldos de sección 4 deben venir precargados al abrir un nuevo período; el desplegable de Cuenta debe incluir el Organismo para desambiguar homónimos (362 cuentas repetidas hoy devuelven 0 expedientes); y la auditoría y el PDF del P.A. deben mostrar nombres legibles en español, sin variables crudas ni entidades <code>&amp;nbsp;</code> sueltas.</p>
+
+<p>Sobre esa base, Desarrollo cerró en el día varios frentes de Partes Diarios: Fernando cerró el punto 1 (el alta ya solo ofrece cuentas habilitadas para rendir Parte Diario, acotadas al Organismo elegido — PR #528) y el punto 2 (el parte queda con dos vencimientos distintos —presentación a 2 días hábiles de la fecha de parte, estudio a 10 días hábiles del ingreso—, con prórroga sobre la presentación que bloquea una segunda mientras haya una vigente, y ampliación sobre el estudio — PR #545), además del punto 12 (filtros por Cuenta y Anexo, columnas reordenadas según el criterio de Sala II, el rango cargado visible junto al número de parte, y el botón &quot;Guardar y cargar otro&quot; que recuerda Organismo/Cuenta — PR #534). Matías cerró el punto 10 (nueva ficha de detalle del parte, con estado mapeado de la leyenda del legado, el circuito del P.A. y las facturas asociadas) y el punto 11 (el Anexo pasa de texto libre a catálogo cerrado con los 29 valores del legado, migrando automáticamente los partes ya cargados) —ambos en el PR #541, que reemplazó y cerró dos ramas obsoletas (#530, #537)—. También resolvió AG-7 sin necesidad de código nuevo —verificó que el circuito P.A. → pase → adjunto → GDE ya funciona de punta a punta y lo dejó cubierto con un test end-to-end (PR #539)— y, tras acordar el diseño con Tomás, implementó SA-15: el Pedido de Antecedentes nace en Borrador sin consumir número, y una acción &quot;Firmar&quot; asigna el número oficial, avanza el estado y congela el PDF en un solo paso (PR #538). Tomás completó en el día el resto de F-0 (Documentos Firmados): además de Informe Definitivo y Sentencia (PR #532), quedaron congelando su PDF al firmar también el Pedido de Antecedentes, el Informe Valorativo y el Informe de Relator, con el sello &quot;Firmado&quot; visible en la ficha (PR #533) —dando por completa la definición que Gonzalo cerró hoy—.</p>
+
+<p>En la épica de Subsidios del Poder Ejecutivo (Sala I), Gonzalo trasladó las respuestas de las jefas de Sala 1 a la consulta del 02/09: SUB-5 (sacar número y fecha de parte del alta) y SUB-4 (precargar el listado de beneficiarios) fueron aprobadas en concepto, pero Gonzalo relevó el padrón real y encontró que SUB-4 no es construible tal como estaba planteada —de 1.647 entidades solo 2 dicen &quot;biblioteca&quot; (siempre abreviado), y los 122 registros bajo &quot;Beneficiario&quot; son un cajón único que mezcla bibliotecas, clubes, bomberos y cooperadoras sin padrón propio—, por lo que la reescribió en tres pasos y dejó el primero (clasificar esos 122 a mano) a cargo del área. SUB-3 se reabrió: estaba cerrada como &quot;el responsable no es obligatorio&quot; y Sala 1 pidió lo contrario —que siempre se cargue, tomado del padrón de la institución con control de vigencia—, cruzando con MA-3. De paso, Gonzalo encontró en una tarjeta del proyecto viejo (Mariela Abrahan, tarjeta 63) cuatro consideraciones nunca trasladadas a una tarea: una ya estaba resuelta sin que lo supiéramos (el campo Extracto que entregó Fernando el jueves), y las otras tres pasaron a ser SUB-6, SUB-7 y la propia SUB-3. Sobre esas, Matías cerró SUB-5 y SUB-7 el mismo día —ambas ya cubiertas por el mecanismo de desembolsos existente (una segunda etapa de un subsidio agrega un desembolso al mismo subsidio, sin duplicar decreto ni expediente); no requirió código, solo un test de punta a punta para SUB-7 (PR #543)— y dejó SUB-6 en consulta, pidiendo al equipo precisar el volumen de casos y si el vencimiento en dos tramos necesita un dato propio del hecho disparador.</p>
+
+<p>Matías planteó una duda de modelado que terminó destapando un problema de fondo: al encarar la numeración de Parte Diario por Sala, notó que el Área solo tiene un campo de texto libre (&quot;Grupo de Cuentas&quot;) en lugar de un desplegable como el que sí tienen Organismo y Cuenta. Tomás confirmó el diagnóstico parcial (son catálogos distintos, no redundantes) pero identificó el problema real: la Sala no está modelada como dato en ningún lugar del sistema, solo existe como texto suelto en una sentencia o un acta —lo que bloquea, entre otras cosas, la numeración por Sala de Partes Diarios—. Para no frenar el trabajo en curso, Tomás propuso un puente práctico —la cadena Cuenta → Isla → Relatoría (ya construida en RI-1/RI-2/RI-3) más el helper <code>sala_de_area()</code> que ya usa Expedientes— y dejó el modelado formal de Sala anotado como la próxima tarea grande. Con luz verde de Tomás, Matías armó y compartió la propuesta técnica completa para los puntos 7 y 13 (generación mensual de tentativos y distinción esperado/cargado): marca <code>automatico=True</code> para lo generado por el sistema, deriva el Área/Sala por la cadena mencionada (con el aviso de que solo 8 de los ~18 valores de <code>grupo_cuentas</code> tienen hoy una isla cargada), reutiliza el campo <code>grupo_partes</code> para la agrupación, actualiza en lugar de duplicar cuando entra un parte real que coincide con un tentativo, y corre el comando mensualmente en dry-run por defecto —a la espera de confirmación antes de codear—.</p>
+
+<p>Aparte de Partes Diarios, Fernando encontró y corrigió un segundo caso del mismo patrón de bug de fechas mockeadas en tests (esta vez en Personal, <code>test_licencia_multinivel</code>) que —por ser un check obligatorio— le bloqueaba el merge de PRs que no tocaban ese módulo (PR #529); Tomás confirmó que el bug era su responsabilidad y de paso detectó un caso borde de huso horario (la corrida entre las 21:00 y las 00:00 ART podría volver a hacerlo fallar de forma intermitente), y se comprometió a resolverlo de raíz con un fixture de reloj compartido. Fernando cerró además el ocultamiento del botón &quot;Registrar movimiento&quot; para quien no tiene permiso de gestión (PR #531).</p>
+
+<p>Sobre Notificaciones, Sistemas preparó y compartió con Fernando un documento técnico formal pidiendo autorizar la instalación de PHP 8.2 en el servidor de pruebas de Domicilio Electrónico (192.168.0.131): hoy corre AppServ de 2007 con PHP 5.2.3, cuyas bibliotecas de cifrado son anteriores a TLS 1.1/1.2 y no pueden conectar contra el portal público, por lo que la tarea que sincroniza los domicilios electrónicos declarados por los ciudadanos contra el padrón interno nunca llegó a arrancar. El documento detalla una instalación aditiva (no toca el Apache ni el sitio vigente), los permisos mínimos de base necesarios, y aclara que el bloqueo de GLPI reportado en junio (&quot;token incorrecto&quot;) no era la credencial sino una restricción de rango de IP del cliente API —verificado hoy que la API responde bien desde una PC de la red—, quedando pendiente confirmar que ese rango incluya al servidor.</p>
+
+<p>Por último, Tomás propuso empezar a producir material de e-learning con maquetas reales animadas por IA y compartió un ejemplo; Mariela lo recibió bien y aprovechó para informar el estado de UAT Personal —de 436 pruebas corridas por el equipo, 16 corresponden a Despacho y no puede asegurar que no haya que reabrirlas— y anunció que, siguiendo la metodología acordada de probar un tema a la vez con todas las islas juntas, lo próximo es Parte Diario y Pedido de Antecedentes.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Cada Pull Request del día se integró contra la batería automática en verde (1.691 tests en el caso del PR #540 de rebase del Anexo). Matías cubrió AG-7 y SUB-7 con tests end-to-end nuevos que dejan verificado el circuito completo (P.A. → pase → adjunto → GDE, y segunda etapa de subsidio → mismo subsidio, respectivamente) en lugar de solo confirmarlo a mano.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Confirmamos, a partir de la consulta de Matías sobre la numeración de Partes Diarios, que la Sala (I/II) no está modelada como dato en ningún lugar del sistema —existe solo como texto suelto en sentencias o actas—, lo que bloquea la numeración por Sala y otras funciones relacionadas (cuentas de Sala II, nómina de intimaciones por Sala). No se resuelve hoy; queda anotado como la próxima tarea grande de modelado.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p>Las jefas de Sala 1 reabrieron SUB-3: la definición que se había cerrado el 04/09 (el responsable del subsidio no es obligatorio) queda invertida —piden que siempre se cargue, tomado del padrón de la institución con control de vigencia—.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>Puntos 1, 2, 10, 11 y 12 del reporte de regularización de Partes Diarios, pendientes desde jornadas previas: resueltos hoy (PR #528, #545, #541 ×2, #534).</p>
+
+<p>AG-7 (dónde se guarda el P.A. para que Mesa de Entradas lo vincule en GDE), consulta abierta desde el 02/09: verificado hoy que no requería desarrollo (PR #539).</p>
+
+<p>SA-15 (numeración del P.A. al Firmar), pendiente desde jornadas previas: resuelto hoy (PR #538).</p>
+
+<p>F-0 (Documentos Firmados), en diseño desde el 01/09: completado hoy para los 5 documentos del pipeline (PR #532, #533).</p>
+
+<p>AG-1 y SA-16 (control de Área que no frenaba el alta del P.A.), sin respuesta de Gonzalo desde el 24/08 y el pendiente más insistido de la semana pasada: cerradas hoy en el Consolidado de definiciones.</p>
+
+<p>SUB-5 y SUB-7 de la épica de Subsidios: resueltas hoy, sin necesidad de código (PR #543).</p>
+
+<p>Test <code>test_licencia_multinivel</code>, roto desde hoy y con el CI en rojo para el equipo: corregido el mismo día (PR #529). Error 403 al registrar movimiento: corregido el mismo día (PR #531).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Confirmar la propuesta técnica de Matías para los puntos 7 y 13 antes de codear (incluye qué pasa con los grupos de cuentas sin isla mapeada: Comunas, Molas, Poder Legislativo, etc.). Modelar formalmente la Sala (I/II) como dato del sistema —próxima tarea grande, hoy resuelto solo con un puente práctico—. SUB-3: construir la carga del responsable desde el padrón de la institución con control de vigencia; cruzar con MA-3. SUB-4: que el área clasifique a mano los 122 registros &quot;Beneficiario&quot; del padrón antes de seguir con los otros dos pasos de la especificación. SUB-6: el área debe precisar el volumen de casos y el detalle del plazo en dos tramos. Confirmar si además de cargar el Extracto en Subsidios hace falta poder filtrar por él (SUB-2). Obtener la autorización de Sistemas para instalar PHP 8.2 en el servidor de pruebas de Domicilio Electrónico y confirmar que el rango de IP de GLPI incluya al servidor. Revisar contra el repositorio (no solo contra Odoo) el estado real de las tarjetas afectadas por el incidente de reversión de hoy, en particular las de Partes Diarios que muestran &quot;en curso&quot; pese a tener PR mergeado. Punto 4 (persistencia de fecha) y punto 9 (desestimado el 08/09): sin novedades. Sin novedades desde jornadas previas: SA-17, SA-8, SA-12, alcance de la épica de P.A. de Agustina, correr los seeds de Relatorías/Islas en el 231, asignar usuarios a &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;, legado de Partes Diarios Grassi/SGE, otro bug general de informes migrados (nombre del relator), datos del importador de Cámara, DUP-1, conciliación en Facturas.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>Tomás avisó que su propio asistente de Claude marcó por error un número grande de tarjetas del tablero como &quot;Hecho&quot; y tuvo que hacerlas revertir; como consecuencia, el estado que hoy muestra Odoo en varias subtareas de Partes Diarios (incluidas algunas con Pull Request ya mergeado en el día, como los puntos 10 y 11) no refleja la realidad del código. Para este reporte se tomaron como fuente los Pull Requests y los mensajes del canal, no el campo de estado crudo de la tarjeta —convendría una revisión puntual del tablero antes de confiar en él de nuevo—. El salto del contador &quot;En curso (Sistemas)&quot; del Tablero de Desarrollo, de 21 a las 10:18 a 34 a las 12:32, es consistente con este incidente y no con un aumento real de trabajo.</p>
+
+<p>A raíz de lo anterior, Tomás y Fernando acordaron un criterio: Fernando sigue marcando &quot;Hecho&quot; directamente al cerrar una tarea y reporta al canal con el link (confirmado con los agentes de Sala que así está bien), mientras que el asistente de Tomás, en lugar de cerrar tareas, debe asignarlas a Gonzalo, Leandro o Mariela para que sean ellos quienes las prueben y cierren.</p>
+
+<p>Contradicción a confirmar: el Consolidado de Gonzalo describe la distinción Sala I/Sala II como algo que &quot;se deduce automáticamente por la pertenencia de la Cuenta/Isla, sin campo extra en pantalla&quot;, pero en el mismo intercambio del canal Tomás confirmó que la Sala no está modelada como dato en ningún lugar del sistema, solo como texto libre en sentencias o actas. No es necesariamente un error del Consolidado (la deducción es viable hoy vía Cuenta→Isla→Relatoría), pero conviene que quede claro que no hay todavía un campo de Sala real, antes de que alguien dé por sentado que sí lo hay.</p>
+
+<p>No pudimos verificar de forma independiente el archivo &quot;Consolidado-Respuestas-Definiciones-UAT.docx&quot; que menciona Gonzalo: no aparece entre los adjuntos relevados de Odoo bajo ese nombre. El resumen de esta jornada sobre esas definiciones se basa en el texto del propio mensaje de Gonzalo en el canal.</p>
+
+<p>Sin novedades en Drive (carpeta Gonza-Marie) ni en los canales Personal, Expedientes, Sueldos y Obras Públicas de Integra; toda la actividad relevada de hoy ocurrió en Interno Sistemas y Senior.</p></div>
 
             </div>
 
