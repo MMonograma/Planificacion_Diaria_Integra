@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">48</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">49</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">09/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">10/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">7 jornadas</span>
+        <span class="mes-count">8 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -3192,6 +3192,137 @@
 <p>No pudimos verificar de forma independiente el archivo &quot;Consolidado-Respuestas-Definiciones-UAT.docx&quot; que menciona Gonzalo: no aparece entre los adjuntos relevados de Odoo bajo ese nombre. El resumen de esta jornada sobre esas definiciones se basa en el texto del propio mensaje de Gonzalo en el canal.</p>
 
 <p>Sin novedades en Drive (carpeta Gonza-Marie) ni en los canales Personal, Expedientes, Sueldos y Obras Públicas de Integra; toda la actividad relevada de hoy ocurrió en Interno Sistemas y Senior.</p></div>
+
+            </div>
+
+
+
+          </div>
+
+        </article>
+              <article class="jornada" id="j-2026-09-10" data-fecha="10/09/2026" data-buscar="partes diarios bloqueante cuenta vacía alta imposible backfill rinde_parte_diario 2864 generación de tentativos esperado no presentado sa-12 sello sala división informe de relator sa-17 color estado troncal sa-8 devoluciones que no implican descargos balance sa-2 encabezado introducción sa-14 sa-10 s-2 sa-11 ma-2 historial de auditoría sa-7 traslado de saldos personal sexo uat-per-06 unificación de áreas uat-per-04 uat-per-05 jefe designado licencias ordinarias saldo pendiente 2027 mochila de deuda horaria domicilio electrónico php 8.2 marco sánchez valdivieso tablero de desarrollo leandro gabellotta gonzalo moreira mariela sernaglia tomás montero swinnen fernando aguilera matías grassi eugenia mitzel.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">10<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Partes Diarios (Bloqueante Cuenta — resuelto; tentativos #7/#13) · Personal (Sexo, Áreas duplicadas) · Informe de Relator (Sala/División, colores, balance) · Notificaciones (Domicilio Electrónico)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Partes Diarios (Sala I y Sala II — bloqueante en el alta por el combo Cuenta, generación de tentativos mensuales, distinción esperado/cargado, intimación de no presentados) · Personal (catálogo de Sexo, unificación de Áreas duplicadas, licencias ordinarias — saldo y arrastre 2027, autorizaciones por &quot;Jefe designado&quot;) · Juicio de Cuentas (Informe de Relator — sello de Sala/División, color por estado troncal, sección &quot;Devoluciones que no implican descargos&quot;, traslado de saldos; Pedido de Antecedentes — rótulo de encabezado, confirmación al cambiar Tema) · Auditoría / historial de cambios (ocultamiento de campos internos) · Notificaciones (Domicilio Electrónico — autorización de infraestructura) · Coordinación de Desarrollo (Tablero, reasignación de tarjetas tras el incidente del 09/09).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Leandro realizó, en dos sesiones sucesivas, una prueba en vivo del alta de Parte Diario en el ambiente de prueba (test-integra.tcuentaslp.gov.ar), motivada por el reporte de que el combo &quot;Cuenta&quot; no traía resultados; construyó además una guía con 24 capturas (legado + Integra) tomando como referencia el proceso normativo de &quot;Base de Conocimiento — Parte Diario&quot; (Bloque B), y la envió como PDF al chat. El hallazgo central quedó reportado como bloqueante en la subtarea #2864 de la épica de Partes Diarios, avisando directamente a Matías y Fernando.</p>
+
+<p>Sobre esa base, Fernando cerró el mismo día el bloqueante (PR #555: backfill de <code>rinde_parte_diario</code> para toda cuenta con historial real de partes) y, ya en paralelo, tres pendientes de la relatoría que venían sin respuesta: SA-12 —sello de Sala/División en la firma del Informe de Relator (PR #554)—, SA-17 —color propio para los 5 estados troncales del expediente, dejando el resto del catálogo en gris neutro (PR #547)— y SA-8 —sección informativa &quot;Devoluciones que no implican descargos&quot; en el balance del Informe de Relator, con el paso de catálogo (Sección + Concepto) todavía a cargo del área (PR #548)—. Esas dos últimas se destrabaron porque Gonzalo trasladó al canal, por la mañana, las definiciones que había recibido de la relatoría (Eugenia Mitzel, Isla Salud): la sección es estrictamente informativa (no altera Total Cargo/Descargo) y el color solo debía aplicarse a los 5 estados troncales del circuito de Sala, sin tocar el resto del catálogo (85 estados) para no saturar la grilla visualmente.</p>
+
+<p>Matías cerró en el mismo bloque un conjunto de pendientes menores: SA-2 (el campo del P.A. se renombró de &quot;Detalle General&quot; a &quot;Encabezado / Introducción (opcional)&quot;, con el comportamiento del PDF ya correcto), SA-14 (al cambiar el Tema de una observación del P.A. ahora se pregunta antes de pisar texto propio), MA-2 (el historial de auditoría deja de mostrar <code>id</code>/<code>creado</code>/<code>modificado</code> sin traducir), y verificó los 4 puntos de la definición unificada de balance (SA-10, S-2, SA-11: la Sección se mantiene al agregar un rubro, Concepto se filtra en cascada, no se puede guardar una línea sin concepto, y el PDF ya imprime el concepto en columna propia), todo en el PR #551. Aparte, confirmó que SA-7 (traslado de saldos entre períodos) ya estaba resuelto desde antes sin necesidad de código nuevo: el aviso de qué se traslada se muestra antes de guardar, y si algunas cuentas no trasladan es porque al concepto le falta el mapeo &quot;concepto próximo período&quot; en el catálogo —un problema de datos, no de código—. Con luz verde de Leandro (&quot;Mandale nomas!&quot;), Matías completó también los puntos #7 y #13 de Partes Diarios —pendientes desde el 09/09—: un comando <code>generar_partes_tentativos</code> que genera un tentativo por cada cuenta habilitada y día hábil del mes (fusionando con el parte real si llega uno con la misma fecha, y dejando &quot;no presentado&quot; a los que no se cubren), y la distinción en listado y ficha entre &quot;Esperado&quot; y &quot;No presentado&quot;, con un botón &quot;Cargar&quot; directo (PR #552).</p>
+
+<p>En Personal, Tomás mergeó dos comandos propios: UAT-PER-06, que deja el combo de Sexo con únicamente las 4 opciones canónicas (Masculino, Femenino, Otro, Prefiero no decirlo — PR #557), y UAT-PER-04/05, un comando (<code>unificar_areas_personal</code>, dry-run por defecto) que unifica las Áreas de Personal duplicadas por mayúscula/minúscula o espacios, arrastre del legado, y de paso corrige que el combo de &quot;Jefe&quot; en &quot;Quién autoriza las salidas&quot; no ofreciera a nadie (PR #558; falta correrlo con <code>--commit</code> en el servidor 231). Mariela, por su parte, avanzó sus pruebas de Personal: pasó a &quot;aprobadas&quot; las tarjetas ya verificadas, adjuntó a la subtarea UAT-PER-10 un documento sobre Licencias Ordinarias (Saldo, Saldo Pendiente y arrastre 2026→2027), planteó una duda sobre &quot;que el área del agente tenga Jefe designado&quot; (no logra hacer nada en Integra al respecto) y anunció que sigue con las pruebas de &quot;Mochila de deuda horaria&quot;.</p>
+
+<p>Sobre coordinación de equipo: Fernando le reasignó a Matías una tarjeta con varias subtareas ya resueltas para que las fuera marcando &quot;Hecho&quot; siguiendo el criterio acordado ayer, y ambos avanzaron en paralelo triando el resto de tarjetas pendientes del tablero —el contador &quot;En curso (Sistemas)&quot; bajó de 32 (12:32) a 9 (15:32) en el transcurso del día—. Fernando preguntó además por qué se había reabierto la subtarea #2848 (intimación de partes no presentados), sin que quedara una respuesta registrada en el canal; la tarjeta terminó el día nuevamente en &quot;Hecho&quot;, sin PR nuevo asociado. Por separado, en un canal directo con Fernando, Sistemas (Marco Sánchez) recibió el documento técnico de instalación de PHP 8.2 para el servidor de pruebas de Domicilio Electrónico que se había preparado el 09/09, dando curso al pedido de autorización pendiente.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Reprodujimos el bloqueo del alta de Parte Diario en <code>/partes-diarios/nuevo/</code>: el <code>&lt;select&gt;</code> oculto de Cuenta se renderiza con un solo option vacío tanto antes como después de elegir Organismo (probado con &quot;PODER JUDICIAL&quot;), a diferencia de Organismo (1.054 opciones) y Anexo (33); probamos el workaround de escribir la cuenta a mano (&quot;398/6&quot;) hasta el final dos veces, y en ambas el formulario volvió con el campo vacío y &quot;Este campo es requerido&quot; —el texto tipeado no llega a asociarse al valor real que se envía al backend—. Verificamos en el maestro de Cuentas (<code>/cuentas/?q=398</code>) que la cuenta 398/6 existe y está activa, descartando un problema de datos faltantes. Confirmamos en el sistema legado que su combo de Cuenta sí filtra correctamente por Organismo, y recorrimos el árbol completo de menús de Integra confirmando que no existe ninguna pantalla de &quot;tentativos&quot; ni &quot;calendario hábil&quot; (sí existe el Catálogo de Feriados, con 301 registros, pero sin consumidor de ese dato hasta hoy). Con la guía de 24 capturas armada en la misma sesión, reprobamos y confirmamos otro comportamiento en siete puntos que estaban abiertos desde el 07–09/09.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Detectamos que el alta de un Parte Diario nuevo no se podía completar hoy para ninguna cuenta: el combo Cuenta llegaba vacío (0 opciones) para cualquier Organismo, y el texto tipeado a mano tampoco persistía al guardar —un bloqueo operativo total, no un problema de filtrado parcial—. Documentamos que este mismo campo tuvo tres estados distintos en menos de una semana (04/09: resuelto/filtrado por organismo; 07/09: trae todas las cuentas sin filtrar; hoy: no trae ninguna), lo que es consistente con que un intento de corregir el filtro entre el 07/09 y hoy haya roto la consulta en lugar de acotarla —lo dejamos marcado como hipótesis, no como hecho confirmado—. También confirmamos que persiste, sin ocultarse, un comentario de plantilla Django visible como texto plano tanto en el listado como en el alta de Partes Diarios, que expone notas internas de desarrollo (incluida una referencia a un número de tarea) a cualquier usuario de Sala I/II.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>Bloqueante #2864 (combo Cuenta vacío / alta de Parte Diario imposible), detectado y reportado hoy mismo: resuelto el mismo día (PR #555).</p>
+
+<p>SA-12 (sello de Sala/División en el Informe de Relator), SA-17 (color por estado troncal) y SA-8 (sección &quot;Devoluciones que no implican descargos&quot;), pendientes de definición desde jornadas previas: resueltas hoy (PR #554, #547, #548).</p>
+
+<p>SA-2 (rótulo &quot;Detalle General&quot; → &quot;Encabezado / Introducción&quot;) y SA-14 (confirmación al cambiar el Tema del P.A.): resueltas hoy (PR #551) —SA-14 ya había sido reportada resuelta el 07/09; ver Observaciones—.</p>
+
+<p>SA-10, S-2 y SA-11 (persistencia de Sección, cascada de Conceptos, bloqueo sin concepto, columna propia en el PDF de balance): verificados hoy los 4 puntos (PR #551) —SA-11 ya había sido reportada resuelta el 07/09; ver Observaciones—.</p>
+
+<p>MA-2 (historial de auditoría con campos internos sin traducir): resuelto hoy (PR #551).</p>
+
+<p>SA-7 (traslado de saldos entre períodos): verificado hoy que ya estaba resuelto desde antes, sin código nuevo.</p>
+
+<p>Puntos #7 y #13 de Partes Diarios (tentativos mensuales y distinción esperado/cargado), pendientes desde el 09/09: implementados y desplegados hoy (PR #552).</p>
+
+<p>UAT-PER-06 (catálogo cerrado de Sexo): resuelto hoy (PR #557).</p>
+
+<p>UAT-PER-04/05 (unificación de Áreas de Personal duplicadas): resuelto hoy (PR #558; falta correr <code>--commit</code> en el 231).</p>
+
+<p>Punto 5 / #2848 (intimación de partes no presentados), ya reportado resuelto el 08/09: se reabrió brevemente hoy sin causa identificada y volvió a &quot;Hecho&quot; en el día, sin PR nuevo.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Correr <code>unificar_areas_personal --commit</code> en el servidor 231. Confirmar con Sistemas (Marco Sánchez) la autorización para instalar PHP 8.2 en el servidor de pruebas de Domicilio Electrónico —documento reenviado hoy, sin respuesta aún registrada—. Aclarar con Mariela la duda sobre &quot;Jefe designado&quot; en Personal (no queda claro si es un bug de permisos o una confusión de uso). Investigar por qué se reabrió brevemente la subtarea #2848. Revisar y ocultar correctamente los comentarios de plantilla Django que quedan visibles como texto en el listado y el alta de Partes Diarios. Confirmar que el backfill del bloqueante #2864 no deje afuera cuentas nuevas sin partes previos cargados. Conseguir el documento original de IT-MEV-RDPE-04 para confirmar si describe el mismo circuito de Partes Diarios del lado del Poder Ejecutivo. Continuar las pruebas de Mariela sobre &quot;Mochila de deuda horaria&quot;. Sin novedades desde jornadas previas: punto 4 / #2847 (persistencia de fecha, falta caso concreto de Susana o Ivana), punto 9 / #2852 (desestimado), SUB-3, SUB-4 y SUB-6 de Subsidios del Poder Ejecutivo, modelado formal de Sala I/II como dato del sistema, SA-13, correr los seeds de Relatorías/Islas en el 231, asignar usuarios a &quot;Personal (RRHH)&quot; y &quot;Secretaría&quot;, legado de Partes Diarios Grassi/SGE, otro bug general de informes migrados (nombre del relator), datos del importador de Cámara, DUP-1, conciliación en Facturas, #2859 (ubicación del expediente de Subsidio del PEj originado en Parte Diario — no verificado).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>El &quot;Resuelto: 2. Vencimiento y prórroga...&quot; (PR #545) que publicó Fernando hoy corresponde al mismo punto que ya habíamos reportado resuelto en la jornada del 09/09; se registra como reanuncio/formalización —probablemente parte del hábito de publicar el aviso estandarizado en el canal—, no como un cierre nuevo, para no duplicar el cómputo de puntos resueltos.</p>
+
+<p>SA-11 y SA-14 ya habían sido reportadas como resueltas el 07/09. Su reaparición hoy como &quot;Resuelto&quot; es, con carácter de hipótesis y no de hecho confirmado, un efecto residual del incidente del 09/09 (el asistente de Claude de Tomás revirtiendo tarjetas a &quot;en curso&quot;), en línea con lo señalado en esa jornada —no hay evidencia de que el comportamiento funcional haya vuelto a romperse—.</p>
+
+<p>El contador &quot;En curso (Sistemas)&quot; del Tablero de Desarrollo bajó de 32 (12:32) a 9 (15:32) en el transcurso del día, consistente con el reordenamiento de tarjetas que Fernando y Matías venían haciendo tras el incidente de ayer, y no con una caída real repentina de trabajo en curso.</p>
+
+<p>Sin novedades en Drive (carpeta compartida Gonza-Marie) ni en los canales Expedientes, General, Sueldos y Obras Públicas de Integra.</p></div>
 
             </div>
 
