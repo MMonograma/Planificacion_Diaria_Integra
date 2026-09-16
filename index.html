@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">50</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">52</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">11/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">15/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">9 jornadas</span>
+        <span class="mes-count">11 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -3450,6 +3450,240 @@
 <p>El contador &quot;En curso (Sistemas)&quot; del Tablero de Desarrollo subió de 6 (12:32) a 11 (15:32) en el transcurso del día, a diferencia de la tendencia a la baja de ayer —consistente con la carga de las cinco subtareas nuevas del re-test de Leandro, no con un retroceso en lo ya resuelto—.</p>
 
 <p>Sin novedades en Drive (carpeta compartida Gonza-Marie) ni en los canales Expedientes, General, Sueldos y Obras Públicas de Integra.</p></div>
+
+            </div>
+
+
+
+          </div>
+
+        </article>
+              <article class="jornada" id="j-2026-09-14" data-fecha="14/09/2026" data-buscar="partes diarios prueba de cero 9710 9711 9712 9720 salto de numeración caso a b c d e f 2871 2872 2873 2874 2875 2876 conformado salida con pase realizar pase editar bloqueado comentario de plantilla django filtrado bug004 organismos sin cuenta decisión de producto catálogo de cuentas estructura tdec grupos de cuentas islas vigente runbook post-migración backfill generar_partes_tentativos cron mensual subsidios poder ejecutivo sub-1 sub-4 épicas contenedoras 2838 2816 leandro gabellotta mariela sernaglia tomás montero swinnen fernando aguilera matías grassi.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">14<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Partes Diarios (6 casos A-F, 5 resueltos) · Comentario de plantilla corregido · TDEC (Grupos/Islas — cierre de 115 cuentas, runbook) · Tentativos con cron mensual</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Partes Diarios (6 casos nuevos reportados por Leandro — A a F; comentario de plantilla filtrándose corregido; tentativos con cron mensual instalado) · Estructura organizacional / TDEC (Grupos de cuentas e Islas — definición final de cuentas pendientes, columnas Grupo/Vigente expuestas, runbook de post-migración) · Subsidios del Poder Ejecutivo (SUB-1, SUB-4, sin avance) · Coordinación de Desarrollo (cierre de épicas contenedoras #2838 y #2816, Tablero).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Leandro hizo una prueba de cero de Partes Diarios (Organismo PODER JUDICIAL, Cuenta 398/6), cargando partes por rango (9710 a 9712) y un parte con salto intencional (9720, salteando 9713-9719) para probar el aviso de numeración, todo marcado &quot;Prueba_Lean&quot;. Confirmó que, desde el 11/09, ya están resueltos BUG002 (campos adyacentes), BUG003/tentativos (ya se generan), el acceso al Informe Valorativo desde la ficha, y que &quot;VTO. ESTUDIO&quot; se completó en un caso real. Reportó además 6 casos nuevos como subtareas (#2871 a #2876, colgadas de la épica #2843): A (fecha de salida y conformado se igualarían entre sí al guardar), B (ocultar temporalmente el filtro Área — pedido, no bug), C (el parte debería bloquearse para editar tras tener salida o conformado), D (los campos de fecha del rango deberían ir debajo de Fecha parte/Año), E (&quot;Con pase&quot; debería ser un botón de Pase, no un checkbox) y F (alertar si falta el parte diario anterior en la numeración).</p>
+
+<p>Sobre esas subtareas, Fernando cerró en el día F (aviso de salto de numeración — PR #567), D (reordenamiento de los campos de fecha del rango — PR #566) y B (se ocultó el filtro Área del listado hasta que las Salas definan si hace falta, sin borrar el dato ni la lógica — PR #568); también corrigió el comentario de plantilla Django que venía filtrándose como texto visible desde el 10/09 (encontró y corrigió los 3 casos del proyecto y agregó un test que escanea todo el repo — PR #569). Sobre BUG004 (organismos sin cuenta habilitada, bloqueando el alta para IPAV, Ministerio de Hacienda y otros), Fernando planteó tres caminos posibles al equipo y Leandro decidió: mantener el filtro estricto y que se vaya marcando a mano, cuenta por cuenta, cuál rinde Parte Diario desde el catálogo de Cuentas —se cerró la tarjeta sin cambio de código—. Matías cerró C (el parte se bloquea para editar una vez que tiene fecha de salida o conformado) y E (&quot;Con pase&quot; pasó a ser la acción &quot;Realizar pase&quot; en la ficha), ambas en el PR #570/#572; sobre A no encontró código que autocomplete fecha de salida/conformado entre sí y quedó como consulta pendiente de los pasos exactos de reproducción de Leandro. Matías cerró además, sin código nuevo, dos tarjetas &quot;contenedoras&quot; que solo agrupaban subtareas ya hechas: #2838 (Informe de Relator y P.A., Sala I — reporte Mariela Abrahan) y #2816 (Pedido de Antecedentes, Sala II — reporte Agustina Benito).</p>
+
+<p>En paralelo, Mariela hizo la devolución de la tarea de estructura de grupos de cuentas (#2833). Tomás cerró la definición de las 115 cuentas que habían quedado pendientes el 11/09 (PR #564: el comando ahora prefiere la cuenta vigente cuando un número se repite, y tolera el prefijo de localidad) y expuso, a pedido de Mariela, columnas y filtros de &quot;Grupo/Isla&quot; y &quot;Vigente&quot; en el listado de Cuentas y en la ficha del organismo (PR #571; falta correr la carga final en el 231). Tomás confirmó además que el cron mensual de <code>generar_partes_tentativos</code> ya quedó instalado en test-integra (día 1 de cada mes, 00:00) y que septiembre (1.269) y octubre (1.218) ya se generaron en modo real —BUG003 queda para probar y cerrar formalmente—. Por separado, mergeó un runbook de post-migración con los insumos de islas versionados y el comando de backfill reejecutable (PR #565), dejando documentado y reproducible el paso de carga de datos que el 11/09 había faltado en #2833. Fernando, sin recibir novedades, volvió a pedirle a Gonzalo las definiciones de SUB-1 (numeración de expediente por beneficiario) y SUB-4 (clasificación de las 122 entidades del padrón), ambas siguen bloqueadas del lado del área.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Probamos de cero, en vivo, el alta de Parte Diario con datos identificables (partes 9710-9712 por rango, 9720 con salto intencional) y verificamos puntualmente los 6 casos reportados (A-F) contra el comportamiento real del sistema. Confirmamos que BUG002, la generación de tentativos, el acceso al Informe Valorativo y el campo &quot;VTO. ESTUDIO&quot; ya funcionan respecto de lo relevado el 11/09.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Detectamos que el Parte Diario conformado (9711/2026) se pudo reabrir y editar sin ninguna restricción (C). Confirmamos que los campos de fecha del rango seguían pegados a &quot;Hasta&quot; en vez de ir debajo de &quot;Año&quot;/&quot;Fecha parte&quot; (D). Confirmamos que &quot;Con pase&quot; seguía siendo un checkbox, sin ningún botón de Pase en la ficha (E). Confirmamos, cargando el parte 9720 salteando el 9713-9719, que no había ningún aviso de numeración faltante (F). Reportamos además que la fecha de salida y la fecha de conformado no se igualan entre sí al completar solo una (A), aunque este caso no pudo ser reproducido por Matías en su revisión —queda como consulta abierta, no como hecho confirmado de nuestra parte—.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>C, D, E y F, detectados y reportados hoy mismo: resueltos el mismo día (PR #570/#572, #566, #572, #567).</p>
+
+<p>B (ocultar filtro Área), pedido hoy: resuelto el mismo día (PR #568).</p>
+
+<p>El comentario de plantilla Django visible en pantalla, señalado desde el 10/09: resuelto hoy (PR #569).</p>
+
+<p>BUG004 (organismos sin cuenta habilitada), señalado desde el 11/09: cerrado hoy por decisión de producto, sin cambio de código —ver Observaciones sobre su alcance real—.</p>
+
+<p>Definición de las 115 cuentas TDEC pendientes desde el 11/09: cerrada hoy (PR #564; falta correr la carga final en el 231).</p>
+
+<p>BUG003 (tentativos sin correr en modo real), pendiente desde el 11/09: cron instalado y datos de septiembre/octubre generados hoy en modo real; pendiente de confirmación formal en Odoo.</p>
+
+<p>#2838 y #2816 (tarjetas contenedoras de Sala I y Sala II): cerradas hoy sin trabajo nuevo, todas sus subtareas ya estaban hechas.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Correr la carga final del comando de islas en el 231 (PR #564 ya mergeado). Confirmar y cerrar formalmente BUG003 en Odoo tras la corrida real de septiembre/octubre. Conseguir de Leandro los pasos exactos para reproducir A (fecha de salida/conformado). Seguir marcando a mano, cuenta por cuenta, cuáles rinden Parte Diario para destrabar BUG004 en los organismos afectados —sin fecha cierta, el bloqueo persiste mientras tanto—. Definir la numeración de expediente por beneficiario para SUB-1. Clasificar por tipo las 122 entidades del padrón para SUB-4. Sin novedades desde jornadas previas: SUB-6, modelado formal de Sala I/II como dato del sistema (parcialmente cubierto por la estructura de Relatorías/Islas), SA-13, legado de Partes Diarios Grassi/SGE, otro bug general de informes migrados (nombre del relator), datos del importador de Cámara, conciliación en Facturas, casos de prueba dedicados para #2858 y #2859, orden de columnas del listado pedido por Sala II, definición sobre campos propios de Tipo de Parte/Ubicación/Subparte en el catálogo de Anexo.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>El PR #565 (runbook de post-migración + backfill reejecutable) responde directamente a lo señalado el 11/09 sobre por qué la tarjeta #2833 parecía cerrada mientras el paso de carga de datos seguía pendiente: deja ese paso documentado y reproducible para que no vuelva a pasar en una futura re-migración.</p>
+
+<p>BUG004 se cerró hoy por una decisión de producto (mantener el filtro estricto, marcar cuentas a mano), no por un cambio de código —dejamos constancia de que el bloqueo sigue vigente en la práctica para todo organismo cuyas cuentas todavía no hayan sido marcadas manualmente—.</p>
+
+<p>Sin novedades en Drive (carpeta compartida Gonza-Marie) ni en los canales Personal, Expedientes, General, Sueldos y Obras Públicas de Integra.</p></div>
+
+            </div>
+
+
+
+          </div>
+
+        </article>
+        <article class="jornada" id="j-2026-09-15" data-fecha="15/09/2026" data-buscar="partes diarios ipav instituto provincial autarquico de vivienda dirección provincial de vialidad 8001 8010 8011 8012 7001 7002 7003 7004 anexo bis pedido de antecedentes 5/2026 observado bug004 organismos sin cuenta ampliado combo cuenta cruzada 25 de mayo canal 3 ente provincial del río colorado organismos duplicados ministerio de hacienda y finanzas ministerio de la producción catálogo de anexo bis mayúsculas falta faltan botón conformado salida pase masivo 2878 2879 2880 checkbox sin movimientos 2881 validación fecha futura 2882 autocompletar fechas de rango hábiles 2883 2852 estructura tdec grupos de cuentas filtro vigente grupo-isla paginación obras públicas mariela abrahan sge leandro gabellotta mariela sernaglia tomás montero swinnen fernando aguilera matías grassi.">
+
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+            <span class="j-fecha">15<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+
+            <span class="j-modline">Partes Diarios (BUG004 ampliado, Cuenta cruzada, 6 botones/validaciones nuevas) · Cuentas (filtro por paginación) · Obras Públicas (primer aporte, Sala I)</span>
+
+            <span class="j-chev" aria-hidden="true">⌄</span>
+
+          </button>
+
+          <div class="j-cuerpo">
+
+
+
+            <div class="sec sec-modulos">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+
+              <div class="sec-cont"><p>Partes Diarios (carga masiva de prueba sobre 3 organismos, BUG004 confirmado y ampliado, bug nuevo de Cuenta cruzada entre organismos, botones Conformado/Salida/Pase, checkbox &quot;Sin movimientos&quot;, validación de fecha futura, autocompletado de fechas de rango hábiles) · Catálogo de Organismos y Cuentas (organismos duplicados, filtros Vigente/Grupo-Isla con bug de paginación) · Pedido de Antecedentes (P.A. 5/2026) · Estructura TDEC (grupos de cuentas — corrección del filtro por paginación) · Obras Públicas (primer aporte de Sala I sobre este módulo) · Coordinación de Desarrollo (cierre de #2852).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-activ">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Leandro hizo una carga de prueba de Partes Diarios de cero sobre tres organismos: IPAV (parte individual 8001/2026 con Anexo &quot;Bis&quot;, más un rango de 3 partes —8010 a 8012— con fecha propia por parte) y Dirección Provincial de Vialidad (rango de 4 partes —7001 a 7004— con fecha propia), además de un Pedido de Antecedentes (P.A. 5/2026) sobre el parte 7001, que quedó marcado &quot;Observado&quot; automáticamente. Todos los registros quedaron identificados con la observación &quot;Prueba de Sistemas&quot;. No pudo cargar partes para tres organismos (Habilitación Hacienda y Finanzas, Ministerio de la Producción —con sus dos registros duplicados— e IPAV con nombre corto) porque el combo Cuenta seguía vacío para ellos: confirma que el bloqueo de BUG004, cerrado el 14/09 por decisión de producto, sigue vigente en la práctica mientras no se marquen las cuentas a mano. Además cargó 6 subtareas nuevas bajo la épica #2843, todas asignadas a Fernando: #2878 (botón &quot;Conformado&quot;), #2879 (botón &quot;Salida&quot;), #2880 (botón &quot;Pase&quot; masivo), #2881 (checkbox &quot;Sin movimientos&quot;), #2882 (validar fecha futura) y #2883 (autocompletar fechas de rango); de paso borró la subtarea anterior sobre fecha de salida/conformado (A, del 14/09) porque cambiaron las definiciones.</p>
+
+<p>Fernando y Matías se repartieron las 6 subtareas y las cerraron todas el mismo día: Matías resolvió #2878, #2879 y #2880 (Conformado y Salida pasan a botones individuales y masivos; el botón Pase se extiende al listado para pases masivos — PR #574/#577); Fernando resolvió #2881 (checkbox &quot;Sin movimientos&quot; que autocompleta la Observación), #2882 (ya no se admite fecha de parte posterior a hoy) y #2883 (en la carga por rango sin fecha propia, cada parte toma el día hábil siguiente al anterior, saltando fines de semana y feriados) —PR #573, #575 y #576—. Con eso, Matías cerró también la tarjeta madre #2852 (&quot;Pedido de Prórroga&quot; y &quot;Conformar Parte&quot; como acciones dedicadas), ya cubierta entre la prórroga (#2845) y este bloque de botones, sin código adicional.</p>
+
+<p>Sobre la estructura de grupos de cuentas (#2833), Mariela envió una nueva devolución: los filtros de &quot;Grupo&quot; y &quot;Vigente&quot; que se habían expuesto el 14/09 no estaban filtrando bien. Tomás no lograba reproducirlo de su lado y le pidió a Mariela hacer un refresco forzado y probar en incógnito; ella confirmó que el problema persistía igual, incluso con el usuario de Leandro, y que la falla aparecía a partir de la segunda página del listado. Tomás encontró la causa —la paginación no conservaba los filtros aplicados— y la corrigió el mismo día (PR #578). En paralelo, Mariela actualizó en el Drive compartido el archivo &quot;Desarrollo - ESTRUCTURA TDEC - Grupos de cuentas (ampliado).xlsx&quot;.</p>
+
+<p>Por separado, en el canal de Obras Públicas, Mariela Abrahan (Sala I) compartió con el equipo un documento (&quot;consultas sistema obras.docx&quot;) con reportes de errores, sugerencias y consultas sobre el módulo de Obras, comparándolo con el SGE que usan actualmente, en el marco de que el estudio de Partes Diarios roza otros módulos; Fernando invitó a Gonzalo, Mariela y Leandro al canal, y Leandro le agradeció. No tenemos el detalle del contenido del documento —queda para revisar antes de sacar conclusiones sobre alcance o prioridad—.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pruebas">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+
+              <div class="sec-cont"><p>Cargamos partes diarios de cero sobre IPAV y Dirección Provincial de Vialidad, incluyendo carga individual, por rango de 3 y de 4 con fecha propia por parte, uso del catálogo de Anexo, y un Pedido de Antecedentes completo (Tema por fila, editor de texto enriquecido, el parte pasó a &quot;Observado&quot;). Verificamos que F (aviso de salto de numeración), D (campos de fecha del rango) y E (botón de Pase) siguen funcionando según lo resuelto el 14/09, y que el banner de &quot;organismo recordado&quot; ya es un elemento propio de la interfaz, no el comentario de código suelto que se corrigió ayer.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errdet">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+
+              <div class="sec-cont"><p>Confirmamos y ampliamos BUG004: además de los organismos ya conocidos, hoy no pudimos cargar partes para Habilitación Hacienda y Finanzas, Ministerio de la Producción (ambos registros duplicados) ni IPAV con nombre corto —el combo Cuenta sigue vacío para todos ellos pese a la decisión tomada el 14/09—. Detectamos un bug nuevo, en sentido inverso: con Dirección Provincial de Vialidad correctamente seleccionada, el combo Cuenta ofrece también cuentas de otros organismos (25 de Mayo C.A.E., Canal 3, Ente Provincial del Río Colorado) y el sistema permite seleccionarlas, quedando un Parte Diario con Organismo y Cuenta de organismos distintos —mismo problema de fondo que #2844, en sentido opuesto a BUG004—. Detectamos organismos duplicados en el catálogo (dos entradas idénticas de &quot;Ministerio de Hacienda y Finanzas&quot; y de &quot;Ministerio de la Producción&quot;, más nombres cortos y largos del mismo organismo con distinto comportamiento respecto de sus cuentas) y duplicados por mayúscula en el catálogo de Tipos de Anexo (&quot;bis&quot; y &quot;Bis&quot; como entradas distintas). Encontramos además un detalle de redacción en el aviso de salto de numeración agregado ayer (&quot;falta&quot; en vez de &quot;faltan&quot;). No pudimos confirmar si el autocompletado de Observación al elegir Tema en el Pedido de Antecedentes funciona, porque el Tema se seleccionó de forma automatizada en la prueba —queda como duda, no como hecho confirmado—. Sobre la estructura de cuentas, detectamos que los filtros &quot;Grupo&quot; y &quot;Vigente&quot; del listado de Cuentas (expuestos el 14/09) no se mantenían al pasar a la segunda página del listado.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-errrep">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+
+              <div class="sec-cont"><p>Mariela Abrahan (Sala I) compartió un documento con reportes de errores, sugerencias y consultas sobre el módulo de Obras Públicas, comparado contra el SGE actual —sin detalle disponible del contenido; queda pendiente de revisión por el equipo.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-resuelto">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+
+              <div class="sec-cont"><p>#2878, #2879, #2880, #2881, #2882 y #2883, pedidos hoy mismo: resueltos el mismo día (PR #574, #577, #573, #575, #576).</p>
+
+<p>#2852 (acciones dedicadas de prórroga y conformar parte), pendiente desde jornadas previas: cerrada hoy sin código adicional, ya cubierta por lo anterior.</p>
+
+<p>Filtros &quot;Grupo&quot;/&quot;Vigente&quot; del listado de Cuentas rotos por paginación, detectado hoy mismo: corregido el mismo día (PR #578).</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-pend">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+
+              <div class="sec-cont"><p>Cargar en Odoo, como subtareas nuevas, los hallazgos de hoy que todavía no las tienen: la Cuenta que trae organismos cruzados (inverso de BUG004), los organismos duplicados en el catálogo, el duplicado &quot;bis&quot;/&quot;Bis&quot; en Tipos de Anexo, y la corrección de redacción &quot;falta&quot; → &quot;faltan&quot;. Confirmar si el autocompletado de Observación al elegir Tema en el P.A. funciona con una interacción manual (no automatizada). Seguir marcando a mano las cuentas habilitadas para destrabar BUG004 en los organismos que aún lo necesitan. Revisar el documento de Mariela Abrahan sobre el módulo de Obras Públicas y definir si corresponde sumarlo al alcance de pruebas. Sin novedades desde jornadas previas: SUB-1, SUB-4, SUB-6, modelado formal de Sala I/II como dato del sistema, SA-13, legado de Partes Diarios Grassi/SGE, otro bug general de informes migrados (nombre del relator), datos del importador de Cámara, conciliación en Facturas, casos de prueba dedicados para #2858 y #2859, orden de columnas del listado pedido por Sala II, definición sobre campos propios de Tipo de Parte/Ubicación/Subparte en el catálogo de Anexo.</p></div>
+
+            </div>
+
+
+
+            <div class="sec sec-obs">
+
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+
+              <div class="sec-cont"><p>BUG004 se había cerrado el 14/09 por decisión de producto (filtro estricto, marcado manual); hoy confirmamos que el bloqueo sigue vigente en la práctica para varios organismos cuyas cuentas todavía no fueron marcadas —es la consecuencia esperada de esa decisión, no una regresión ni una contradicción entre fuentes—.</p>
+
+<p>Varios Pull Requests del día (#575, #576, #577, #578) quedaron registrados en el mismo minuto exacto (16:04:37); según explicó Tomás en el canal, un problema temporal con la clave de API que dispara los anuncios automáticos hizo que se publicaran agrupados, no que se hayan mergeado todos al mismo tiempo real.</p>
+
+<p>El módulo de Obras Públicas recibió hoy su primer aporte documentado (Mariela Abrahan, Sala I) desde que el equipo definió empezar por Partes Diarios —es una señal de expansión de alcance a tener en cuenta, sin que implique todavía una decisión tomada—.</p>
+
+<p>Sin novedades en Drive más allá del archivo de estructura TDEC actualizado por Mariela, ni en los canales Expedientes, General y Sueldos de Integra.</p></div>
 
             </div>
 
