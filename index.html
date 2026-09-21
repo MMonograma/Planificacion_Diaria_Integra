@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">54</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">55</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">17/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">18/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">13 jornadas</span>
+        <span class="mes-count">14 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -3928,6 +3928,129 @@
         <p>Contradicción: la épica #2843 se anunció cerrada el 16/09 pero sigue &quot;en curso&quot; en Odoo, con 8 subtareas nuevas agregadas hoy.</p>
 
         <p>Volumen inusual: 15 pull requests desplegados en un solo día — se sugiere confirmar en el entorno 231 que no hay regresiones.</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+              <article class="jornada" id="j-2026-09-18" data-fecha="18/09/2026" data-buscar="partes diarios epica 2843 subtareas 25 35 ivana perez sala ii reporte odt fernando aguilera matias grassi numeracion organismo obras publicas 2884 estado automatico filtros reportes eliminacion certificado facturas expediente permiso 403 cargar factura gonzalo moreira subsidios otorgamiento integrityerror monto ficha beneficiario cuit resolucion periodo pedido de antecedentes rendimiento performance combos sin paginar tomas montero swinnen pull request merge entorno 231 arca afip validacion cuit cesida ejecucion presupuestaria progress openedge zoom">
+
+  <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+
+    <span class="j-fecha">18/09/2026 · viernes</span>
+
+    <span class="j-modline">Partes Diarios · Obras Públicas · Facturas · Subsidios</span>
+
+    <span class="j-chev">▾</span>
+
+  </button>
+
+  <div class="j-cuerpo">
+
+    <div class="sec sec-modulos">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>Módulos involucrados</h4></div>
+
+      <div class="sec-cont"><p>Partes Diarios (11 subtareas nuevas resueltas) · Obras Públicas (3 pendientes resueltos) · Expedientes/Facturas (permiso 403 corregido) · Subsidios (varios errores reportados y resueltos) · Integraciones (POC CUIT/ARCA, gestión con CESIDA).</p></div>
+
+    </div>
+
+    <div class="sec sec-activ">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>Actividades realizadas</h4></div>
+
+      <div class="sec-cont">
+
+        <p>Recibimos un nuevo reporte de pruebas de Partes Diarios de Ivana Pérez (Sala II), con un documento adjunto (.odt); lo tomamos para pasar a desarrollo. Fernando Aguilera nos consultó sobre la tarea &quot;21. Numeración de Partes Diarios centralizada por Organismo&quot; (<code>#2907</code>) — sigue sin definición de nuestra parte.</p>
+
+        <p>El equipo de desarrollo resolvió en el día 11 subtareas nuevas de la épica Partes Diarios <code>#2843</code> (numeradas 25 a 35), dejando 1 en curso y 1 pendiente de definición. También se resolvieron 3 subtareas pendientes de Obras Públicas (<code>#2884</code>): Estado automático, Filtros/reportes faltantes y Eliminación de Obras/Certificados.</p>
+
+        <p>Gonzalo reportó a lo largo del día varios problemas en Facturas y Subsidios; la mayoría se resolvió el mismo día. Tomás Montero Swinnen confirmó el mergeo a main y despliegue al entorno 231 de 16 pull requests (<code>#594</code> a <code>#609</code>).</p>
+
+        <p>Fernando Aguilera realizó una prueba de concepto de validación de CUIT contra ARCA (ex AFIP), exitosa con su usuario personal; requiere autorización institucional para repetirla con el CUIT del Tribunal. Gestionó también ante CESIDA el acceso programático a Ejecución Presupuestaria (hoy solo por carga manual).</p>
+
+      </div>
+
+    </div>
+
+    <div class="sec sec-pruebas">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>Pruebas funcionales realizadas</h4></div>
+
+      <div class="sec-cont">
+
+        <p>Nuevo reporte de pruebas de Partes Diarios de Sala II (Ivana Pérez), con evidencia adjunta — no analizado en profundidad todavía. Pruebas de carga de Facturas y Subsidios (equipo core), que expusieron varios errores puntuales.</p>
+
+      </div>
+
+    </div>
+
+    <div class="sec sec-errdet">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>Errores encontrados durante las pruebas</h4></div>
+
+      <div class="sec-cont">
+
+        <p>Error 500 (IntegrityError) al cargar un otorgamiento de Subsidio sin monto. Número provisorio (900162827) impreso en la carátula antes de tiempo. El otorgamiento redirigía al expediente en vez de a la ficha del subsidio; el expediente no mostraba el monto. Pantalla de edición del Subsidio: 8,3 MB / 11-12 s (135.010 expedientes sin paginar en un combo). Listado de intimaciones migradas sin número/expediente/responsable. &quot;Fecha de ingreso&quot; vacía tras &quot;Dar entrada&quot;. Ningún rol de prueba podía usar &quot;Cargar factura&quot; (403). Pedido de Antecedentes no contempla Subsidios: pide &quot;cargá el responsable en la cuenta&quot; y el PDF no muestra beneficiario/CUIT/resolución. Pantalla de carga de Facturas: 13,9 MB / 83 s (32.172 proveedores, 135.010 expedientes, 63.222 partes sin paginar); partes rotulados &quot;Parte None/None&quot;.</p>
+
+      </div>
+
+    </div>
+
+    <div class="sec sec-errrep">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>Errores reportados por los agentes</h4></div>
+
+      <div class="sec-cont"><p>Ivana Pérez (Sala II): nuevo reporte de errores de Partes Diarios, con documento adjunto (.odt) — pendiente de análisis detallado.</p></div>
+
+    </div>
+
+    <div class="sec sec-resuelto">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>Errores anteriores verificados como solucionados</h4></div>
+
+      <div class="sec-cont">
+
+        <p><strong>Partes Diarios (#2843):</strong> Columna N° de Parte sin rango (#2914) · Conformado con fecha y a término/fuera de término (#2915) · P.A.: 403 y botón Generar corregidos (#2916) · Intimación solo sobre vencidos (#2917) · Cédulas de intimación visibles (#2918) · Alerta de vencimiento en badge (#2919) · Salida masiva valida antes de confirmar (#2920) · Fechas de 1902 corregidas (#2921) · Etiqueta Año corregida (#2922) · Bloqueo de guardado + pantalla de repaso (#2924).</p>
+
+        <p><strong>Obras Públicas (#2884):</strong> Estado automático del certificado (#2891) · Filtros de Localidad/Contratista/Destinatario + 3 reportes (#2894) · Eliminación de certificados de avance (#2898).</p>
+
+        <p><strong>Facturas/Subsidios:</strong> 403 en Cargar factura corregido · beneficiario sin monto avisa en vez de romper · otorgamiento vuelve a la ficha del subsidio, expediente muestra el monto.</p>
+
+        <p><strong>Despliegue:</strong> 16 pull requests (#594-#609) mergeados a main y desplegados al entorno 231.</p>
+
+      </div>
+
+    </div>
+
+    <div class="sec sec-pend">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>Pendientes</h4></div>
+
+      <div class="sec-cont">
+
+        <p>Gráfico previsto versionable (#2886) y Catálogo de Contratistas (#2892) — a definir. Numeración centralizada por Organismo (#2907, a definir) · Consulta de Movimientos (#2910, en curso) · Zoom 100% (#2923, sin poder reproducir). Definir responsable del P.A. en Subsidios y el momento de asignación del número de expediente. Revisar rendimiento de combos sin paginar en Facturas/Subsidios. Corregir listado de intimaciones migradas y Fecha de ingreso vacía. Analizar el nuevo Word/ODT de Ivana Pérez. Autorización institucional para el POC de CUIT/ARCA. Respuesta de CESIDA sobre Ejecución Presupuestaria. Cierre formal de #2843 y #2884.</p>
+
+      </div>
+
+    </div>
+
+    <div class="sec sec-obs">
+
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>Observaciones</h4></div>
+
+      <div class="sec-cont">
+
+        <p>Jornada de alto volumen: 16 pull requests hoy, 31 en 48 horas — se sugiere revisión de regresión en el entorno 231.</p>
+
+        <p><strong>Hipótesis sin confirmar:</strong> las subtareas 25-35 de la épica #2843 probablemente corresponden al reporte de Sala II del 17/09, por continuidad de numeración; no hay confirmación explícita en Odoo.</p>
+
+        <p>Nueva línea de trabajo (fuera de alcance de Partes Diarios/Obras Públicas): validación de CUIT contra ARCA y exploración de acceso programático a Ejecución Presupuestaria vía CESIDA.</p>
+
+        <p>Las tareas madre #2843 y #2884 siguen &quot;en curso&quot; en Odoo.</p>
 
       </div>
 
