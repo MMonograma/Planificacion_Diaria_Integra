@@ -4213,6 +4213,75 @@
     </div>
   </div>
 </article>
+        <article class="jornada" id="j-2026-09-24" data-fecha="24/09/2026" data-buscar="obras publicas partes diarios subsidios poder ejecutivo legislativo personal licencias art 116 sueldos expedientes pedido de antecedentes inicio dashboard r-6 500 prorroga solicitada n-9 debug true 2891 estado certificado 2893 busqueda expediente 2885 curva ara relator admin sesion mariela abrahan ivana perez agustina benito gonzalo tomas leandro">
+  <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+    <span class="j-fecha">24<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+    <span class="j-modline">Obras Públicas · Partes Diarios · Subsidios PE/PL · Personal · Sueldos · Expedientes</span>
+    <span class="j-chev" aria-hidden="true">⌄</span>
+  </button>
+  <div class="j-cuerpo">
+    <div class="sec sec-modulos">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>Módulos de Integra involucrados</h4></div>
+      <div class="sec-cont">
+        <p>Obras Públicas, Partes Diarios, Subsidios (Poder Ejecutivo y Poder Legislativo), Personal/Licencias (Art. 116), Sueldos, Expedientes (Pedido de Antecedentes) e Inicio/Dashboard.</p>
+      </div>
+    </div>
+    <div class="sec sec-activ">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>Actividades realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Realizamos una sesión de pruebas de regresión y verificación funcional exhaustiva sobre Integra (rol <code>relator</code>), cubriendo las épicas <code>#2884</code> (Obras Públicas) y <code>#2843</code> (Partes Diarios), documentada en un informe formal con taxonomía de estados RESUELTO/REABIERTO/PENDIENTE/NO CONCLUYENTE.</p>
+        <p>Avanzamos en la épica de Subsidios PE/PL (<code>#2992</code>, <code>#2993</code>–<code>#2998</code>, <code>#2999</code>–<code>#3000</code>), con varios PR mergeados (<code>#618</code>, <code>#620</code>, <code>#633</code>, <code>#641</code>–<code>#644</code>, <code>#647</code>).</p>
+        <p>Resolvimos un lote de reaperturas de Partes Diarios (<code>#2850</code>, <code>#2851</code>, <code>#2908</code>, <code>#2909</code>, <code>#2917</code>, <code>#2870</code>, <code>#3011</code>–<code>#3013</code>) vía PR <code>#645</code>/<code>#648</code>.</p>
+        <p>Ajustamos el permiso del rol Relator en Obras Públicas para habilitar el alta de obra, resuelto por Tomás el mismo día (PR <code>#639</code>/<code>#640</code>).</p>
+        <p>Tomás elevó a Mariela Sernaglia una consulta de definición funcional sobre criterios de autorización presencia/licencia (Art. 116), aún sin resolver.</p>
+      </div>
+    </div>
+    <div class="sec sec-pruebas">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>Pruebas funcionales realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Pruebas item por item sobre Partes Diarios y Obras Públicas contra el estado declarado en Odoo, circuito de Pedido de Antecedentes (8 casos), y relevamiento de 7 regresiones (R-1 a R-7) y 13 defectos nuevos sin tarjeta en Odoo (N-1 a N-13).</p>
+      </div>
+    </div>
+    <div class="sec sec-errdet">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>Errores encontrados durante las pruebas</h4></div>
+      <div class="sec-cont">
+        <p><strong>R-6 (crítico):</strong> un Parte Diario con prórroga en estado &quot;Solicitada&quot; provoca error 500 en Inicio para todos los usuarios con permiso <code>gestionar_prorroga</code>, por <code>NoReverseMatch</code> en <code>expediente_detail</code>.</p>
+        <p><strong>N-9 (seguridad):</strong> el servidor de pruebas corre con <code>DEBUG=True</code>, exponiendo tracebacks, código fuente y variables de entorno ante cualquier error.</p>
+        <p><code>#2891</code>: tercera confirmación consecutiva de que el cálculo automático del estado del certificado sigue sin funcionar, pese a estar clasificado &quot;Resuelto&quot; desde el 18/09.</p>
+      </div>
+    </div>
+    <div class="sec sec-errrep">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>Errores reportados por los agentes</h4></div>
+      <div class="sec-cont">
+        <p>Mariela Abrahan (Sala I) reportó novedades granulares durante la jornada. Ivana Pérez adjuntó 3 nuevos informes de prueba. Agustina Benito (Sala I/II) adjuntó 1 nuevo informe, primera aparición registrada como agente reportante.</p>
+      </div>
+    </div>
+    <div class="sec sec-resuelto">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>Errores anteriores verificados como solucionados</h4></div>
+      <div class="sec-cont">
+        <p>Lote de reaperturas de Partes Diarios resuelto vía PR <code>#645</code>/<code>#648</code>.</p>
+        <p><code>#2893</code>: la búsqueda por expediente &quot;6162&quot; ahora devuelve 1 resultado correcto (a confirmar si es el mismo caso que había fallado el 22/09 con &quot;1460&quot;).</p>
+        <p><code>#2885</code>: la curva &quot;Real&quot; con certificado ARA nulo ahora renderiza correctamente, mostrando un hueco donde antes no dibujaba.</p>
+        <p>Permiso de alta de obra para Relator: cambio solicitado por el equipo y resuelto el mismo día (PR <code>#639</code>/<code>#640</code>); a confirmar en la matriz de roles.</p>
+      </div>
+    </div>
+    <div class="sec sec-pend">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>Pendientes para continuar</h4></div>
+      <div class="sec-cont">
+        <p>Corregir R-6 (prioridad máxima). Revisar N-9 (exposición <code>DEBUG=True</code>). Confirmar en la matriz de roles el permiso de alta de obra para Relator. Resolver la consulta de Tomás a Mariela Sernaglia sobre Art. 116. Clasificar y priorizar R-1 a R-5, R-7 y N-1 a N-8, N-10 a N-13. Confirmar si <code>#2893</code> y <code>#2885</code> quedaron efectivamente corregidos. Revisar en profundidad <code>#2891</code>. Evaluar cierre de las épicas <code>#2843</code> y <code>#2884</code> en Odoo.</p>
+      </div>
+    </div>
+    <div class="sec sec-obs">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>Observaciones</h4></div>
+      <div class="sec-cont">
+        <p><code>#2891</code> acumula tres confirmaciones consecutivas de discrepancia entre lo declarado &quot;Resuelto&quot; y el comportamiento real observado.</p>
+        <p>Se refuerza, con un segundo caso concreto (Exp. 1460/2026), la hipótesis de posible desactualización entre Integra y el sistema legado, previamente reclasificada &quot;no aplica&quot; el 17/09.</p>
+        <p>Se incorpora una nueva agente externa reportante, Agustina Benito (Sala I/II).</p>
+        <p>N-9 es de naturaleza distinta al resto (seguridad de infraestructura) y amerita tratamiento aparte.</p>
+      </div>
+    </div>
+  </div>
+</article>
       </div>
     </section>
   <p class="sin-resultados" id="rdi-sinres">Sin coincidencias para la búsqueda.</p>
