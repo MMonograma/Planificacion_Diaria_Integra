@@ -4168,6 +4168,51 @@
     </div>
   </div>
 </article>
+        <article class="jornada" id="j-2026-09-23" data-fecha="23/09/2026" data-buscar="partes diarios filtro area organismo division sala isla grupo cuentas sala de area matias grassi ivana perez bloqueo alta combo vacio catalogo curar 445 organismos sin isla comunas molas poder legislativo tarjeta 3001 epica 2843 fernando aguilera gonzalo moreira">
+  <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+    <span class="j-fecha">23<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+    <span class="j-modline">Partes Diarios (filtro Área→Organismo: bloqueo documentado, #3001)</span>
+    <span class="j-chev" aria-hidden="true">⌄</span>
+  </button>
+  <div class="j-cuerpo">
+    <div class="sec sec-modulos">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+      <div class="sec-cont"><p>Partes Diarios (nueva subtarea documentando un bloqueo en el filtro Área→Organismo).</p></div>
+    </div>
+    <div class="sec sec-activ">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+      <div class="sec-cont"><p>Investigamos y documentamos la causa raíz de un reporte de Ivana Pérez (Sala), y cargamos la tarjeta &quot;36. Filtro Área→Organismo: elegir una Sala/División deja el Organismo vacío&quot; (<code>#3001</code>), colgada de la épica <code>#2843</code> y asignada a Fernando Aguilera.</p></div>
+    </div>
+    <div class="sec sec-pruebas">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+      <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+    </div>
+    <div class="sec sec-errdet">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+      <div class="sec-cont">
+        <p>Confirmamos que el combo Organismo filtra hoy por Isla (<code>grupo_cuentas</code>), no por Sala/División — la cadena real es Cuenta → Isla → Sala. Ningún organismo cuelga directo de una División, por lo que elegir &quot;División Primera&quot; o &quot;División Segunda&quot; siempre trae 0 organismos. Detectamos además que 445 de 1.060 organismos no tienen Isla asignada (Comunas, Molas, Poder Legislativo, etc.) y quedan invisibles con cualquier filtro, y que el selector &quot;Área&quot; mezcla Salas, Islas y nombres de personas.</p>
+      </div>
+    </div>
+    <div class="sec sec-errrep">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+      <div class="sec-cont"><p>Ivana Pérez (Sala): sobre una prueba del 21/09, al cargar un Parte Diario con Área = &quot;División Segunda&quot;, el combo Organismo solo ofrecía la opción vacía, impidiendo completar el alta.</p></div>
+    </div>
+    <div class="sec sec-resuelto">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+      <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+    </div>
+    <div class="sec sec-pend">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+      <div class="sec-cont">
+        <p>Que el filtro Área resuelva por Sala usando la cadena Isla→Sala existente. Curar el catálogo del selector Área. Cubrir los 445 organismos sin Isla. Que un Área sin organismos no bloquee el alta (criterio de #2870/#2864). Arrastrado: retest de las 18 subtareas nuevas de Partes Diarios (prioridad #2916, #2921, #2917), estado de reportes pendiente para Sala II, definición del circuito de tarjetas de Personal/Art.116.</p>
+      </div>
+    </div>
+    <div class="sec sec-obs">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+      <div class="sec-cont"><p>Relacionado con <code>#2905</code> (resuelto el 18/09) y con la explicación de Matías Grassi del 09/09 sobre la cadena <code>grupo_cuentas → Isla → Sala</code>. Es otro caso de un punto marcado &quot;resuelto&quot; que una prueba real deja corto en su alcance, en línea con lo detectado el 22/09. Jornada de bajo volumen.</p></div>
+    </div>
+  </div>
+</article>
       </div>
     </section>
   <p class="sin-resultados" id="rdi-sinres">Sin coincidencias para la búsqueda.</p>
