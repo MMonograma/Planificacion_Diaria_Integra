@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">57</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">61</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">22/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">28/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">16 jornadas</span>
+        <span class="mes-count">20 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -4278,6 +4278,132 @@
         <p>Se refuerza, con un segundo caso concreto (Exp. 1460/2026), la hipótesis de posible desactualización entre Integra y el sistema legado, previamente reclasificada &quot;no aplica&quot; el 17/09.</p>
         <p>Se incorpora una nueva agente externa reportante, Agustina Benito (Sala I/II).</p>
         <p>N-9 es de naturaleza distinta al resto (seguridad de infraestructura) y amerita tratamiento aparte.</p>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="jornada" id="j-2026-09-25" data-fecha="25/09/2026" data-buscar="partes diarios personal licencias autorizacion salidas responsables areas subsidios sub-1 expedientes pedido de antecedentes valorativo sentencias multa pase masivo obras publicas mariela sernaglia mariela abrahan gonzalo tomas fernando aguilera numeracion 2907 662 657">
+  <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+    <span class="j-fecha">25<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+    <span class="j-modline">Partes Diarios · Personal · Subsidios · Expedientes · Obras Públicas</span>
+    <span class="j-chev" aria-hidden="true">⌄</span>
+  </button>
+  <div class="j-cuerpo">
+    <div class="sec sec-modulos">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>Módulos de Integra involucrados</h4></div>
+      <div class="sec-cont">
+        <p>Partes Diarios, Personal (Licencias / Autorización de salidas / Responsables de Área), Subsidios (SUB-1), Expedientes (Pedido de Antecedentes, Valorativo, Sentencias, Multa, Pase masivo, Informe Definitivo) y Obras Públicas.</p>
+      </div>
+    </div>
+    <div class="sec sec-activ">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>Actividades realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Cerramos la definición de autorización de salidas ante ausencia del Jefe (gana la fichada de entrada, Opción A), implementada y desplegada el mismo día (PR #657).</p>
+        <p>Desplegamos 7 correcciones sobre Partes Diarios: validación de fecha de ingreso (<code>#3008</code>), filtros por estado e isla (<code>#3009</code>), indicador de &quot;Lugar&quot; (<code>#3010</code>), checkbox &quot;Sin movimientos&quot; desde tentativo (<code>#2881</code>), filtro Área/Sala (<code>#2849</code>), formato de fechas (<code>#2855</code>) y reversión del criterio de numeración (<code>#2907</code>).</p>
+        <p>Resolvimos SUB-1 (<code>#2828</code>): cada beneficiario adicional de un subsidio genera su propio expediente y monto.</p>
+        <p>Tomás realizó una barrida interna de 7 correcciones adicionales (PR #661, #663-#668) sobre Expedientes, Sentencias, Pedido de Antecedentes, Valorativo y Multa.</p>
+      </div>
+    </div>
+    <div class="sec sec-pruebas">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>Pruebas funcionales realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Mariela Sernaglia probó la autorización de salida (funciona) y la carga de Jefes/Subjefes en <code>/personal/responsables-areas/</code> (no pudo completarla). Tomás no logró reproducir esto último con su usuario.</p>
+      </div>
+    </div>
+    <div class="sec sec-errdet">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>Errores encontrados durante las pruebas</h4></div>
+      <div class="sec-cont">
+        <p>En <code>/personal/responsables-areas/</code> los desplegables de Jefe/Subjefe/Secretaria no muestran agentes (&quot;— sin designar —&quot;) pese a tener el área cargada en el padrón; a confirmar si es un problema de datos o de permisos.</p>
+      </div>
+    </div>
+    <div class="sec sec-errrep">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>Errores reportados por los agentes</h4></div>
+      <div class="sec-cont">
+        <p>Mariela Abrahan (Sala I): Obras Públicas sigue sin permitir cargar un certificado desde el inicio; ítems marcados resueltos que no lo están; pedido de colores más fuertes en las curvas del gráfico de obra.</p>
+      </div>
+    </div>
+    <div class="sec sec-resuelto">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>Errores anteriores verificados como solucionados</h4></div>
+      <div class="sec-cont">
+        <p><code>#3008</code>, <code>#3009</code>, <code>#3010</code>, <code>#2881</code>, <code>#2849</code>, <code>#2855</code> y <code>#2907</code> (Partes Diarios); SUB-1 <code>#2828</code>; autorización de salidas (PR #657) verificada funcionando por Mariela Sernaglia el mismo día.</p>
+      </div>
+    </div>
+    <div class="sec sec-pend">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>Pendientes para continuar</h4></div>
+      <div class="sec-cont">
+        <p>Confirmar con Leandro el enfoque de <code>#3014</code>. Resolver el problema en <code>/personal/responsables-areas/</code>. Trasladar a Desarrollo las fallas persistentes de Obras Públicas. Retestear funcionalmente los PR de la barrida interna (#661, #663-#668).</p>
+      </div>
+    </div>
+    <div class="sec sec-obs">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>Observaciones</h4></div>
+      <div class="sec-cont">
+        <p>El PR #662 revierte un criterio de numeración distinto probado antes; conviene verificar cuál queda vigente. La devolución de Mariela Abrahan sobre Obras Públicas no detalla los puntos afectados; se recomienda pedir el detalle punto por punto.</p>
+      </div>
+    </div>
+  </div>
+</article>
+        <article class="jornada" id="j-2026-09-28" data-fecha="28/09/2026" data-buscar="subsidios poder legislativo partes diarios personal agentes licencias art 148 149 trayectoria editar ficha cuil situacion laboral falsos resueltos admin relator responsables areas mariela sernaglia gonzalo leandro tomas 3014 674 44 45 46 47 48 49 50 51 3015 3016 3017 3018 3019 3020 3021 3022">
+  <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+    <span class="j-fecha">28<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+    <span class="j-modline">Subsidios PL · Partes Diarios · Personal</span>
+    <span class="j-chev" aria-hidden="true">⌄</span>
+  </button>
+  <div class="j-cuerpo">
+    <div class="sec sec-modulos">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>Módulos de Integra involucrados</h4></div>
+      <div class="sec-cont">
+        <p>Subsidios (Poder Legislativo), Partes Diarios y Personal (Agentes, Licencias Art. 148/149, Trayectoria).</p>
+      </div>
+    </div>
+    <div class="sec sec-activ">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>Actividades realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Revisamos el circuito completo de Subsidios PL contra el sistema legado: recibo → intimación → cédula → caratulación de oficio funciona de punta a punta.</p>
+        <p>Resolvimos <code>#3014</code> (Parte Diario con período de varios días, campo &quot;fecha desde&quot;) vía PR #674.</p>
+        <p>Cargamos 8 nuevas subtareas de Partes Diarios (44 a 51, <code>#3015</code>-<code>#3022</code>): catálogo de Área, &quot;cargar otro&quot; no conserva Área, fechas duplicadas en carga por rango, búsqueda sin priorizar número de parte, edición de PA de Parte Diario, carga por rango que duplica Esperados, organismos/cuentas según Res. 18/2019, y Área que no limita organismos/cuentas en el alta.</p>
+        <p>Retesteamos 4 ítems previamente marcados resueltos y confirmamos que persisten.</p>
+        <p>Registramos 3 hallazgos formales en Personal: falta de columna CUIL, desincronización de Trayectoria vía &quot;Editar ficha&quot; (agente 171), y Saldo no calculado para Art. 148/149.</p>
+      </div>
+    </div>
+    <div class="sec sec-pruebas">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>Pruebas funcionales realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Circuito de Subsidios PL; retest de 4 ítems marcados resueltos; comparación de circuitos &quot;Registrar movimiento&quot; vs. &quot;Editar ficha&quot; con caso real (agente 171); prueba de guardado de fechas vía POST directo (correcto — el reporte previo apunta al selector del navegador).</p>
+      </div>
+    </div>
+    <div class="sec sec-errdet">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>Errores encontrados durante las pruebas</h4></div>
+      <div class="sec-cont">
+        <p>Subsidios PL: combo de diputados vacío, falta acción &quot;poner como rendido&quot;, falta búsqueda de Entidad por CUIT/nombre, faltan totales en Bandeja y Consulta Mensual, navegación del selector PE/PL poco intuitiva.</p>
+        <p>Personal: falta columna CUIL con aviso; &quot;Editar ficha&quot; desincroniza Trayectoria (prioridad alta, agente 171); Saldo de licencias no calculado para Art. 148/149.</p>
+        <p>Partes Diarios/Expedientes: 4 fallas persistentes pese a figurar &quot;solucionadas&quot;; 8 nuevas fallas/mejoras (subtareas 44-51); <code>/personal/responsables-areas/</code> sigue sin resolución.</p>
+      </div>
+    </div>
+    <div class="sec sec-errrep">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>Errores reportados por los agentes</h4></div>
+      <div class="sec-cont">
+        <p class="vacio">Sin registros.</p>
+      </div>
+    </div>
+    <div class="sec sec-resuelto">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>Errores anteriores verificados como solucionados</h4></div>
+      <div class="sec-cont">
+        <p><code>#3014</code> (Parte Diario con período de varios días) — PR #674, desplegado al 231 (pendiente correr migración 0010).</p>
+      </div>
+    </div>
+    <div class="sec sec-pend">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>Pendientes para continuar</h4></div>
+      <div class="sec-cont">
+        <p>Correr migración 0010 en el 231. Retrasladar a Desarrollo los 4 ítems &quot;falsos Resueltos&quot;. Resolver consulta del 17/09. Definir tratamiento de subtareas 44-51. Unificar el circuito de cambio de Área/Cargo/Categoría en Personal. Implementar Saldo Art. 148/149. Completar pendientes de Subsidios PL. Revertir valores de prueba del agente 171. Resolver <code>/personal/responsables-areas/</code>.</p>
+      </div>
+    </div>
+    <div class="sec sec-obs">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>Observaciones</h4></div>
+      <div class="sec-cont">
+        <p>Se documentó la reunión Salas–Análisis Funcional del 25/09: &quot;falsos Resueltos&quot;, retroceso sobre funcionalidades ya cerradas, permisos Admin vs. Relator, y rechazo a medir avance solo por tarjetas cerradas.</p>
+        <p>3 de los 4 ítems retesteados hoy figuran &quot;solucionados&quot; pero siguen fallando — confirma el señalamiento de &quot;falsos Resueltos&quot;.</p>
+        <p>El hallazgo de Trayectoria (agente 171) es prioridad alta por afectar información oficial de legajo.</p>
+        <p>Se observa reporte funcional circulando por mensajes directos en vez de los canales oficiales; se recomienda centralizarlo.</p>
       </div>
     </div>
   </div>
