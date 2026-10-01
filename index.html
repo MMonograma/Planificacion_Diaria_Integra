@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">61</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">63</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">28/09/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">30/09/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">3</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -2374,7 +2374,7 @@
     <section class="mes open" id="m-2026-09" data-mes="Septiembre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Septiembre 2026</span>
-        <span class="mes-count">20 jornadas</span>
+        <span class="mes-count">22 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -4404,6 +4404,131 @@
         <p>3 de los 4 ítems retesteados hoy figuran &quot;solucionados&quot; pero siguen fallando — confirma el señalamiento de &quot;falsos Resueltos&quot;.</p>
         <p>El hallazgo de Trayectoria (agente 171) es prioridad alta por afectar información oficial de legajo.</p>
         <p>Se observa reporte funcional circulando por mensajes directos en vez de los canales oficiales; se recomienda centralizarlo.</p>
+      </div>
+    </div>
+  </div>
+</article>
+              <article class="jornada" id="j-2026-09-29" data-fecha="29/09/2026" data-buscar="partes diarios subsidios poder ejecutivo sub-8 otorgamiento personal licencias art 133 maternidad art 149 inasistencias cuentas grupo_cuentas estructura tdec backfill mariela sernaglia gonzalo tomas fernando aguilera matias grassi 3015 3016 3017 3018 3019 3020 3022 675 677 678 679 680 681">
+  <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+    <span class="j-fecha">29<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+    <span class="j-modline">Partes Diarios · Subsidios PE · Personal · Cuentas</span>
+    <span class="j-chev" aria-hidden="true">⌄</span>
+  </button>
+  <div class="j-cuerpo">
+    <div class="sec sec-modulos">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>Módulos de Integra involucrados</h4></div>
+      <div class="sec-cont">
+        <p>Partes Diarios, Subsidios (Poder Ejecutivo — Otorgamiento, SUB-8), Personal (Licencias Art. 133 y Art. 149) y Cuentas (grupo_cuentas / Isla).</p>
+      </div>
+    </div>
+    <div class="sec sec-activ">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>Actividades realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Enviamos el &quot;Pedido a Desarrollo – Personal INTEGRA&quot; a Tomás con el detalle de reproducción de cada caso observado por Despacho.</p>
+        <p>Documentamos dos bugs de Licencias: Art. 133 sin validación de género al Solicitar (prioridad alta) y Art. 149 sin distinción Justificada/Injustificada en la lista de solicitudes.</p>
+        <p>Confirmamos que Subsidios PE permite cargar un subsidio con Expediente Electrónico duplicado.</p>
+        <p>Coordinamos con Desarrollo el backfill de grupo_cuentas desde el archivo ESTRUCTURA TDEC (89 cuentas corregidas, 10 no encontradas y 2 ambiguas pendientes).</p>
+        <p>Se desplegaron PR #675, #677, #679/#681 sobre Partes Diarios y Subsidios PE.</p>
+      </div>
+    </div>
+    <div class="sec sec-pruebas">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>Pruebas funcionales realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Pruebas de Licencias Art. 133 y Art. 149 con casos reales de agentes; verificación del alta de Subsidio PE con expediente electrónico duplicado.</p>
+      </div>
+    </div>
+    <div class="sec sec-errdet">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>Errores encontrados durante las pruebas</h4></div>
+      <div class="sec-cont">
+        <p>Art. 133: no valida género al Solicitar (solo al Aprobar), dispara aviso por correo indebido. Art. 149: no distingue Justificada/Injustificada antes de aprobar. Subsidios PE: permite expediente electrónico duplicado.</p>
+      </div>
+    </div>
+    <div class="sec sec-errrep">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>Errores reportados por los agentes</h4></div>
+      <div class="sec-cont">
+        <p class="vacio">Sin registros.</p>
+      </div>
+    </div>
+    <div class="sec sec-resuelto">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>Errores anteriores verificados como solucionados</h4></div>
+      <div class="sec-cont">
+        <p><code>#3015</code>/<code>#3016</code> (PR #675), <code>#3017</code>/<code>#3018</code>/<code>#3020</code> (PR #677), SUB-8 (PR #679/#681), paso 1/2 de <code>#3022</code> (PR #678/#680).</p>
+      </div>
+    </div>
+    <div class="sec sec-pend">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>Pendientes para continuar</h4></div>
+      <div class="sec-cont">
+        <p>Responder la definición funcional de <code>#3019</code>. Corregir a mano las cuentas no encontradas y la 20.987/2. Trasladar a Desarrollo los bugs de Licencias y de Subsidios PE.</p>
+      </div>
+    </div>
+    <div class="sec sec-obs">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>Observaciones</h4></div>
+      <div class="sec-cont">
+        <p>Matías Grassi está comparando Integra contra &quot;la versión que venía armando&quot; (sistema de Matías/SGE), en línea con el reclamo de retroceso de la reunión del 25/09.</p>
+      </div>
+    </div>
+  </div>
+</article>
+        <article class="jornada" id="j-2026-09-30" data-fecha="30/09/2026" data-buscar="partes diarios anexo vii resolucion 18/2019 relatoria i relatoria ii islas habilitaciones contaduria general cuentas vigente organismos duplicados pedido de antecedentes relator falsos resueltos 2843 2816 3022 3021 2851 3019 2915 ipav canal 3 centeno leandro gabellotta">
+  <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+    <span class="j-fecha">30<span class="j-sep">/</span>09<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+    <span class="j-modline">Partes Diarios · Cuentas · Expedientes (P.A.)</span>
+    <span class="j-chev" aria-hidden="true">⌄</span>
+  </button>
+  <div class="j-cuerpo">
+    <div class="sec sec-modulos">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>Módulos de Integra involucrados</h4></div>
+      <div class="sec-cont">
+        <p>Partes Diarios, Cuentas (grupo_cuentas / Isla) y Expedientes (Pedido de Antecedentes de Parte Diario).</p>
+      </div>
+    </div>
+    <div class="sec sec-activ">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>Actividades realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Verificamos con perfil <code>relator</code> las 61 subtareas de <code>#2843</code> y las 8 de <code>#2816</code>, generando datos de prueba propios.</p>
+        <p>Controlamos fila por fila el Anexo VII de la Res. 18/2019 (20 filas, 16 organismos obligados) contra el alta de Parte Diario de Integra.</p>
+        <p>Identificamos la causa raíz: cuentas de Habilitaciones con isla correcta pero &quot;Vigente = No&quot;, y organismos duplicados.</p>
+        <p>Desarrollo cerró el paso 2/2 de <code>#3022</code> y corrigió la cuenta 20.987/2 (PR #682, #686).</p>
+      </div>
+    </div>
+    <div class="sec sec-pruebas">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>Pruebas funcionales realizadas</h4></div>
+      <div class="sec-cont">
+        <p>Recorrido completo del alta de Parte Diario por cada Área/Isla y organismo del Anexo VII; retest de 61+8 subtareas con perfil relator; verificación del PDF del P.A.</p>
+      </div>
+    </div>
+    <div class="sec sec-errdet">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>Errores encontrados durante las pruebas</h4></div>
+      <div class="sec-cont">
+        <p><code>#3022</code> marcado &quot;Resuelto&quot; hoy, pero el combo de Organismo/Cuenta sigue sin filtrar por Área en nuestra verificación posterior (no se probó el guardado).</p>
+        <p>Solo 10 de 20 filas del Anexo VII se pueden cargar; Relatoría I casi sin poder operar (solo IPAV disponible).</p>
+        <p>Posible contradicción entre <code>#3021</code> y la Resolución sobre la cuenta IPAV 468.126/9. <code>#2851</code> (autocompletado de Tema) no funciona. <code>#3019</code> solo bloquea la Fecha. <code>#2915</code> no distingue a término/fuera de término. El P.A. no muestra área/cargo del firmante.</p>
+      </div>
+    </div>
+    <div class="sec sec-errrep">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>Errores reportados por los agentes</h4></div>
+      <div class="sec-cont">
+        <p class="vacio">Sin registros.</p>
+      </div>
+    </div>
+    <div class="sec sec-resuelto">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>Errores anteriores verificados como solucionados</h4></div>
+      <div class="sec-cont">
+        <p>Más de 20 subtareas de Partes Diarios y del P.A. verificadas funcionando con perfil relator (<code>#3013</code>, <code>#2908</code>, <code>#2909</code>, <code>#2916</code>, <code>#2873</code>, <code>#2878</code>-<code>#2880</code>, <code>#2852</code>, <code>#2903</code>-<code>#2906</code>, <code>#2914</code>, <code>#2922</code>, <code>#2924</code>, <code>#2881</code>, <code>#2918</code>, <code>#3009</code>, <code>#3010</code>, <code>#3015</code>, <code>#3018</code>, <code>#3014</code>, <code>#2877</code>, <code>#2854</code>); <code>#3022</code> paso 2/2 con la salvedad señalada.</p>
+      </div>
+    </div>
+    <div class="sec sec-pend">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>Pendientes para continuar</h4></div>
+      <div class="sec-cont">
+        <p>Confirmar alcance real de <code>#3022</code>. Habilitar los 10 organismos faltantes del Anexo VII. Resolver contradicción IPAV 468.126/9. Corregir <code>#2851</code>. Definir &quot;conformado/firmado&quot; para <code>#3019</code>. Agregar distinción a término/fuera de término (<code>#2915</code>). Definir firmante del P.A.</p>
+      </div>
+    </div>
+    <div class="sec sec-obs">
+      <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>Observaciones</h4></div>
+      <div class="sec-cont">
+        <p><code>#3022</code> declarado &quot;Resuelto&quot; la misma mañana pero contradicho por nuestra verificación horas después — caso concreto del patrón de &quot;falsos Resueltos&quot; señalado el 25/09.</p>
+        <p>El tablero de Odoo no refleja el avance real: 61+8 subtareas siguen en &quot;Desarrollo&quot; pese a que la mayoría ya funciona.</p>
+        <p>Relatoría I prácticamente sin poder operar — hallazgo de mayor impacto operativo de la jornada.</p>
       </div>
     </div>
   </div>
