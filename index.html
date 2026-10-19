@@ -179,9 +179,9 @@
   <h1>Registro Diario · <span class="integra">Proyecto Integra</span></h1>
   <p class="rdi-sub">Fuente oficial de seguimiento. Documento vivo: cada nueva jornada se agrega respetando la misma estructura.</p>
   <div class="rdi-meta">
-    <div class="m"><span class="k">Jornadas</span><span class="v">71</span></div>
+    <div class="m"><span class="k">Jornadas</span><span class="v">74</span></div>
     <div class="m"><span class="k">Desde</span><span class="v">01/07/2026</span></div>
-    <div class="m"><span class="k">Hasta</span><span class="v">13/10/2026</span></div>
+    <div class="m"><span class="k">Hasta</span><span class="v">16/10/2026</span></div>
     <div class="m"><span class="k">Meses</span><span class="v">4</span></div>
   </div>
   <p class="rdi-fuentes"><strong style="color:#9fd0f0">Fuentes integradas:</strong> Google Drive (Carpeta Compartida Gonza-Marie) · Odoo (proyectos UAT Expedientes, Integra - Personal, UAT Personal; canales INTEGRA [Interno Sistemas], [Expedientes], [Personal], [Senior], [Sueldos]).</p>
@@ -3505,7 +3505,7 @@
     <section class="mes open" id="m-2026-10" data-mes="Octubre 2026">
       <button class="mes-cab" aria-expanded="true" onclick="toggleMes(this)">
         <span class="mes-nombre">Octubre 2026</span>
-        <span class="mes-count">8 jornadas</span>
+        <span class="mes-count">11 jornadas</span>
         <span class="mes-chev" aria-hidden="true">⌄</span>
       </button>
       <div class="mes-cuerpo">
@@ -4080,6 +4080,129 @@
                 <p>Diferencia de cifras: el retest del 05/10 contó 1.218 Esperados sin vencimiento solo en septiembre; el backfill actualizó 3510 en total. Hipótesis: la diferencia corresponde a los demás meses generados.</p>
                 <p>Al momento del relevamiento no figuraba en Odoo un resumen diario de Análisis Funcional para esta jornada.</p>
               </div>
+            </div>
+          </div>
+        </article>
+        <article class="jornada" id="j-2026-10-14" data-fecha="14/10/2026" data-buscar="personal licencias cupo 2027 badge remanente saldo 2026 pase 1/1 saldo pendiente quien autoriza las salidas responsables areas ficha del agente area solo lectura trayectoria mis solicitudes art 149 art 148 art 116 art 133 art 143 superposicion solicitud pendiente legajo digital formacion tablero marcas duplicadas prueba 28 prueba 30 despacho produccion noviembre infraestructura organismos cuentas estructura tdec depuracion anexo vii renombrar_organismos_tdec ocultar_cuentas_fuera_estructura_tdec fusionar_organismos_duplicados fusionar_cuentas_duplicadas historialasignacioncuenta 3021 709 759 760 761 762 763 764 765 murgia fbesano allegri bide benito montes meluso mariela leandro matias grassi tomas montero">
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+            <span class="j-fecha">14<span class="j-sep">/</span>10<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+            <span class="j-modline">Personal · Licencias · Organismos y Cuentas · Estructura TDEC</span>
+            <span class="j-chev" aria-hidden="true">⌄</span>
+          </button>
+          <div class="j-cuerpo">
+            <div class="sec sec-modulos">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+              <div class="sec-cont"><p>Personal (Licencias, cupo del año siguiente, “Quién autoriza las salidas”, ficha del agente, “Mis solicitudes”, Legajo digital y Asistencia) y Catálogos de Organismos y Cuentas (depuración contra la Estructura TDEC, <code>#3021</code>, con impacto en el alta de Parte Diario y el Anexo VII).</p></div>
+            </div>
+            <div class="sec sec-activ">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+              <div class="sec-cont"><p>Enviamos a Desarrollo el documento de seguimiento de Personal: re-verificación de lo desplegado, lo que sigue fallando y las definiciones de Despacho.</p><p>Trasladamos las definiciones de Despacho: el <strong>Art. 143</strong> bloquea sin hijos declarados y requiere los datos filiatorios de cada hijo; el cambio de área se registra solo desde Trayectoria; en el Tablero, Plantel = agentes activos y Ausentes = quienes no ficharon, no gestionaron licencia ni dieron aviso; los Art. 127, 115 y 140 se mantienen; el <strong>Legajo digital</strong> sigue la opción 2 (lo sube el agente y queda pendiente de aprobación de Despacho), con dos tipos de carga: Documentación personal y Curso realizado; la carga manual de fichada no requiere autorización adicional.</p><p>Pusimos a consideración de Despacho una propuesta para marcas duplicadas e intermedias (Prueba 28): el reloj prevalece, la carga manual solo completa marcas faltantes, ante dos marcas del mismo tipo se toma la primera Entrada y la última Salida, y la sobrante queda visible como “duplicada, a revisar”.</p><p>Planteamos a Desarrollo, a pedido del área, la salida a producción de Personal para noviembre, con prioridad en Licencias (licencias ordinarias/vacaciones). Quedan por probar las licencias ordinarias y la mochila de minutos, estimadas para esta semana. Desde Desarrollo se respondió que están de acuerdo, con una dependencia de Infraestructura para preparar el servidor de producción.</p><p>Enviamos en <code>#3021</code> el informe de control de cuentas y organismos Integra vs. Estructura TDEC (PDF, cruce por Isla → Organismo → Cuenta): las 678 cuentas de la estructura ya están en Integra (sin altas), 55 cuentas requieren corregir el organismo (50 renombres y 5 de Jefatura de Policía), 59 cuentas deben ocultarse y hay organismos duplicados a unificar. Después corresponde correr el diagnóstico <code>#709</code> con <code>--commit</code>.</p><p>Desde Desarrollo se mergearon y desplegaron al 231 los comandos <code>renombrar_organismos_tdec</code> y <code>ocultar_cuentas_fuera_estructura_tdec</code> (PR <code>#759</code>/<code>#761</code>), el fix de <code>fusionar_organismos</code> (PR <code>#762</code>) y el nuevo <code>fusionar_cuentas_duplicadas</code> (PR <code>#763</code>), con el runbook de aplicación.</p><p>Desde Desarrollo se aplicó en el 231: fusión de 6 organismos duplicados (Jefatura 920, Tribunal 625, Ente Río Colorado 627, Contaduría 630, Tesorería 632, Casa de La Pampa 1284), fusión de las 27 cuentas duplicadas exactas que dejaron esas fusiones y baja de 54 cuentas fuera de estructura.</p><p>Desde Desarrollo se plantearon 5 puntos que frenan el renombrado: cuentas de Sueldos bajo Contaduría General, Subsecretaría de Salud Pública y Ministerio de Salud con el mismo nombre destino, 27 “no encontrado”, las 8 Habilitaciones como “alta manual” y los duplicados de Canal 3, Poder Judicial y Poder Legislativo. Se agregó <code>--debug</code> al renombrado (PR <code>#764</code>) para contrastar contra la data real.</p><p>Se mergearon y desplegaron al 231 los PR de Personal <code>#760</code> (correcciones del re-testing) y <code>#765</code> (badge del cupo del año siguiente).</p></div>
+            </div>
+            <div class="sec sec-pruebas">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+              <div class="sec-cont"><p>Re-verificación de Personal. Confirmado: validaciones al generar la solicitud (saldo Art. 116, topes Art. 148 y Art. 149 Justificada, Art. 133 para agente varón, superposición contra licencia aprobada y contra solicitud pendiente del mismo artículo); saldos de Art. 148 y 149 en “Mi saldo” y en la ficha; botón “Ver” en la bandeja; orden del Tablero y rótulo “Ausentes”; permisos del agente común con aviso claro en lugar del 403; Asistencia mensual con ícono de carga manual.</p><p>Cupo 2027 en 4 legajos (Bide, Benito, Montes y Meluso): el cupo se calcula bien por antigüedad (40, 25, 20 y 25 días) y el descuento sale de la bolsa 2027 sin modificar el Saldo 2026.</p></div>
+            </div>
+            <div class="sec sec-errdet">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+              <div class="sec-cont"><p>Superposición contra solicitud <strong>pendiente de otro artículo</strong>: con un Art. 148 pendiente de 7 días desde el 10/12 (agente MURGIA, id 54), se aceptó un Art. 116 para el 15/12. Debía bloquear.</p><p>“Mis solicitudes” del agente (fbesano, agente 108) no distingue el subtipo del Art. 149: las tres solicitudes figuran como Justificadas. La bandeja del aprobador sí las distingue.</p><p>“Quién autoriza cada área” (<code>/personal/responsables-areas/</code>): las designaciones no se guardan. Además deben eliminarse las áreas División Primera, División Segunda, Asesoría Legal, Control Patrimonial y Tribunal de Cuentas, y filtrar los agentes por área.</p><p>“Editar ficha” permite cambiar el Área sin generar la fila de Trayectoria.</p><p>Legajo digital: el botón “Subir PDF” se muestra al agente común y al usarlo devuelve falta de permiso.</p><p>Marcas del reloj con tipo repetido o sin tipo (Prueba 30): siguen ocurriendo, con menor frecuencia que en septiembre. Cálculo de horas con marcas duplicadas (Prueba 28, ALLEGRI, 28/09): queda “Incompleta” a la espera de la regla de cálculo.</p><p>Cupo 2027: el badge no descuenta lo ya usado en ninguno de los 4 legajos, aunque el detalle de la licencia guarda el remanente correcto. Ninguna ficha muestra el “Saldo Pendiente” posterior al cierre de ejercicio y no es posible verificar qué cifra tomará el pase automático del 1/1.</p><p>Desde Desarrollo detectamos que <code>fusionar_organismos</code> fallaba con <code>ProtectedError</code> por una FK oculta (<code>HistorialAsignacionCuenta</code>). Corregido en el día.</p></div>
+            </div>
+            <div class="sec sec-errrep">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+            </div>
+            <div class="sec sec-resuelto">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+              <div class="sec-cont"><p>Superposición: una solicitud pendiente de varios días sin fecha fin ya bloquea otra que cae dentro de su rango (PR <code>#760</code>).</p><p>“Quién autoriza las salidas” guarda la designación por área (PR <code>#760</code>).</p><p>Área de la ficha de solo lectura al editar; el cambio va por Trayectoria (PR <code>#760</code>).</p><p>“Mis solicitudes” distingue Art. 149 Justificada / Injustificada (PR <code>#760</code>).</p><p>Badge “Cupo año siguiente” muestra el remanente (“Cupo 2027: 20 de 40 días”) en lugar del total. Solo display (PR <code>#765</code>).</p><p><code>fusionar_organismos</code> repunta las FK ocultas PROTECT (PR <code>#762</code>).</p></div>
+            </div>
+            <div class="sec sec-pend">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+              <div class="sec-cont"><p>Retest de <code>#760</code> y <code>#765</code> en los legajos probados.</p><p>Completar las pruebas de licencias ordinarias y de la mochila de minutos.</p><p>Obtener de Infraestructura fechas estimadas para el servidor de producción y responder a Despacho.</p><p>Definiciones de Despacho pendientes: regla de marcas duplicadas, Art. 143 con hijos filiatorios, Legajo digital / edición de Formación, quién aprueba los documentos que sube el agente.</p><p>Lógica del pase del 1/1: debe tomar el remanente real de la bolsa 2027, no el total, y mostrar el “Saldo Pendiente”.</p><p>Responder los 5 puntos de la depuración; correr <code>--debug</code> en el 231; aplicar el renombrado y el diagnóstico <code>#709</code> con <code>--commit</code>.</p><p>Casos manuales: normalizar la cuenta 20.374/04 a 20.374/4 y decidir sobre el registro de Tribunal de Cuentas sin número de cuenta.</p></div>
+            </div>
+            <div class="sec sec-obs">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+              <div class="sec-cont"><p>El informe del 14/10 indicaba unificar 5 organismos duplicados; en el 231 se fusionaron 6 grupos.</p><p>Google Drive (carpeta Gonza-Marie): sin archivos nuevos o modificados en la jornada.</p><p>No figura en Odoo un resumen diario de Análisis Funcional para esta jornada.</p></div>
+            </div>
+          </div>
+        </article>
+        <article class="jornada" id="j-2026-10-15" data-fecha="15/10/2026" data-buscar="organismos cuentas estructura tdec depuracion anexo vii renombrar_organismos_tdec debug requiere fusion aplicar_depuracion_estructura_tdec diagnostico_anexo_vii habilitaciones 20.085/1-20.084/4 centeno ipav casa de la pampa ministerio de desarrollo social relaciones laborales mineria colonia baron 121.966/7 canal 3 poder judicial poder legislativo contaduria general sueldos subsecretaria de salud jefatura de policia unidades regionales logistica d-4 mesa de entradas expediente externo ministerio de seguridad y justicia jessica personal cupo 2027 badge saldo pendiente ciordia licencia ordinaria 3021 3022 766 767 768 769 770 771 mariela gonzalo leandro matias grassi tomas montero">
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+            <span class="j-fecha">15<span class="j-sep">/</span>10<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+            <span class="j-modline">Organismos y Cuentas · Estructura TDEC · Mesa de Entradas · Personal</span>
+            <span class="j-chev" aria-hidden="true">⌄</span>
+          </button>
+          <div class="j-cuerpo">
+            <div class="sec sec-modulos">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+              <div class="sec-cont"><p>Catálogos de Organismos y Cuentas (depuración Estructura TDEC, <code>#3021</code>/<code>#3022</code>, y diagnóstico del Anexo VII), Mesa de Entradas (carga de expediente externo) y Personal (cupo del año siguiente).</p></div>
+            </div>
+            <div class="sec sec-activ">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+              <div class="sec-cont"><p>Desde Desarrollo se mergeó <code>--debug</code> del renombrado (PR <code>#766</code>). Con la salida real se detectó que la mayoría de los “no encontrado” eran nombres oficiales ya cargados como otro organismo vacío, y se agregó la sección “REQUIERE FUSIÓN” más la corrección del testigo combinado de las 8 Habilitaciones (PR <code>#767</code>/<code>#768</code>).</p><p>Desde Desarrollo se desplegó el orquestador <code>aplicar_depuracion_estructura_tdec</code> (PR <code>#769</code>/<code>#770</code>): valida los ids contra la data real, es re-corrible y no incluye las Unidades Regionales de Jefatura. Tras revisar el dry-run, se corrió con <code>--commit</code> en el 231 sin errores.</p><p>Aplicado en el 231: dedup de cuentas (8 Habilitaciones, Centeno 381.301/0 e IPAV); 5 fusiones de organismo (Casa de La Pampa; Min. Desarrollo Social; 4 Delegaciones de Relaciones Laborales → Dir. Gral. de Relaciones Laborales; IPAV 629 → 656; Minería) sin colisiones de ValorativoPartes; renombrado con 31 aplicados, 12 ya correctos, 0 ambiguos; diagnóstico del Anexo VII con Centeno activado y 8 flags apagados.</p><p>Desde Desarrollo se nos elevaron 6 definiciones pendientes: cuentas de Sueldos de Contaduría General, Subsecretaría de Salud Pública vs. Ministerio de Salud, Canal 3 / Poder Judicial / Poder Legislativo, Unidades Regionales de Jefatura, cuenta combinada de las Habilitaciones y cuenta 121.966/7 de Colonia Barón.</p><p>Trasladamos a Desarrollo el reporte de Mesa de Entradas sobre Jefatura de Policía. Desde Desarrollo se indicó que corresponde a la consolidación en curso (<code>#3021</code>/<code>#3022</code>), pendiente de nuestra confirmación.</p><p>Personal: quedamos a la espera de las fechas de Infraestructura para responder a Despacho por la salida a producción. Se mergeó y desplegó al 231 el PR <code>#771</code>.</p></div>
+            </div>
+            <div class="sec sec-pruebas">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+              <div class="sec-cont"><p>Re-verificación del badge del cupo 2027 en Ciordia (legajo 21, ingreso 20/05/2011, cupo 35 días): con una licencia de 17 días contra el cupo 2027, el badge muestra “Cupo 2027: 18 de 35 días”. Correcto.</p></div>
+            </div>
+            <div class="sec sec-errdet">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+              <div class="sec-cont"><p>La licencia cargada contra la bolsa 2027 queda como “Ordinaria” y muestra adosado el “saldo acumulado” del Saldo 2026 (6 días), aunque ese saldo sigue abierto hasta el pase del 1/1.</p></div>
+            </div>
+            <div class="sec sec-errrep">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+              <div class="sec-cont"><p>Mesa de Entradas (Jessica): al cargar un expediente externo en la jurisdicción Ministerio de Seguridad y Justicia aparecen por separado las Unidades Regionales de Jefatura de Policía; debería figurar solo “JEFATURA DE POLICIA”.</p></div>
+            </div>
+            <div class="sec sec-resuelto">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+              <div class="sec-cont"><p>Badge del cupo del año siguiente con remanente (PR <code>#765</code>): verificado en Ciordia.</p><p>Una licencia de la bolsa “cupo año siguiente” ya no adosa el Saldo Pendiente del año en curso, ni en la ficha ni en el PDF de solicitud. Solo display (PR <code>#771</code>).</p><p>Renombrado de organismos: quedan 0 “ambiguo” y 0 “requiere fusión” tras la corrida del orquestador (PR <code>#770</code>).</p></div>
+            </div>
+            <div class="sec sec-pend">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+              <div class="sec-cont"><p>Responder las 6 definiciones de la depuración.</p><p>Consolidar las Unidades Regionales y Logística D-4 de Jefatura (reporte de Mesa de Entradas).</p><p>Definir la cuenta combinada 20.085/1-20.084/4 de las 8 Habilitaciones frente al diagnóstico del Anexo VII (16 “alta manual”).</p><p>Ubicar la cuenta 121.966/7 (Colonia Barón Escuela N° 238).</p><p>Retest de <code>#771</code> en Ciordia.</p><p>Personal: fechas de Infraestructura para producción y envío de las definiciones faltantes.</p></div>
+            </div>
+            <div class="sec sec-obs">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+              <div class="sec-cont"><p>Desde Desarrollo se aclaró que los 7 “no encontrado” restantes del renombrado son cosméticos: corresponden a organismos recién fusionados cuyo nombre anterior ya no existe.</p><p>Google Drive (carpeta Gonza-Marie): sin archivos nuevos o modificados en la jornada.</p><p>No figura en Odoo un resumen diario de Análisis Funcional para esta jornada.</p></div>
+            </div>
+          </div>
+        </article>
+        <article class="jornada" id="j-2026-10-16" data-fecha="16/10/2026" data-buscar="organismos cuentas estructura tdec depuracion normalizacion area organismo cuenta isla diagnostico_estructura_tdec 678 filas separar_contaduria_general_de_sueldos contaduria general habilitacion de sueldos 630 1654 ministerio de la produccion 592 655 subsecretaria de administracion ministerio de salud 713 744 fusionar_cuentas_duplicadas ocultar canal 3 direccion de canal 3 10.267/6 jefatura de policia 920 1386 1387 1388 1389 1390 1779 2253 unidades regionales logistica d-4 poder judicial poder legislativo habilitaciones 20.085/1-20.084/4 colonia baron 121.966/7 mesa de entradas jessica regresion resumen semanal 3021 3022 772 773 774 775 776 777 leandro matias grassi tomas montero">
+          <button class="j-cab" aria-expanded="false" onclick="toggleJornada(this)">
+            <span class="j-fecha">16<span class="j-sep">/</span>10<span class="j-sep">/</span><span class="j-yyyy">2026</span></span>
+            <span class="j-modline">Organismos y Cuentas · Estructura TDEC · Mesa de Entradas</span>
+            <span class="j-chev" aria-hidden="true">⌄</span>
+          </button>
+          <div class="j-cuerpo">
+            <div class="sec sec-modulos">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▣</span><h4>MÓDULOS DE INTEGRA INVOLUCRADOS</h4></div>
+              <div class="sec-cont"><p>Catálogos de Organismos y Cuentas (normalización contra la Estructura TDEC, <code>#3021</code>/<code>#3022</code>) y Mesa de Entradas (selector de organismos en la carga de expedientes externos).</p></div>
+            </div>
+            <div class="sec sec-activ">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">◆</span><h4>ACTIVIDADES REALIZADAS</h4></div>
+              <div class="sec-cont"><p>Enviamos a Desarrollo las definiciones de la depuración. La única referencia es la tabla “Estructura TDEC – Grupos de cuentas” (<code>#3022</code>), no el Anexo VII. El alcance es normalizar todos los organismos y cuentas de Integra (área → organismo → cuenta): un registro por organismo con el nombre exacto de la tabla; cada cuenta por número + descripción (si vienen unificadas, quedan unificadas); en selectores solo lo vigente, y lo dado de baja o fuera de la tabla se oculta sin borrarse; área/isla por organismo + cuenta.</p><p>Definiciones puntuales: <strong>Sueldos</strong> separado en “Contaduría General - Habilitación de Sueldos” (3 cuentas) y “Contaduría General” sin renombrar; <strong>Salud</strong> como un único organismo “Subsecretaría de Administración - Ministerio de Salud” con 22.318/0 y 22.322/7; <strong>Canal 3, Poder Judicial y Poder Legislativo</strong> entran en la depuración con un solo registro visible cada uno (en Poder Legislativo, la 441.968/2 figura dos veces con concepto distinto y quedan las dos); <strong>Jefatura de Policía</strong> con sus 10 cuentas bajo el organismo general y las 5 Unidades Regionales ocultas; <strong>Habilitaciones</strong> con la cuenta combinada, adaptando el diagnóstico; <strong>Colonia Barón</strong> 121.966/7 existe y debe quedar visible en su isla.</p><p>Desde Desarrollo se desplegó <code>diagnostico_estructura_tdec</code>, de solo lectura contra las 678 filas de la tabla (PR <code>#772</code>/<code>#773</code>).</p><p>Desde Desarrollo se desplegó y aplicó <code>separar_contaduria_general_de_sueldos</code> (PR <code>#774</code>/<code>#775</code>): “Contaduría General” (id 1654) con sus 6 cuentas, y el 630 como “Contaduría General Habilitación de Sueldos” con sus 3 cuentas.</p><p>Aplicado en el 231: Ministerio de la Producción unificado (655 → 592); Subsecretaría de Admin. - Min. Salud unificado (744 → 713, 2721 expedientes y 21.356 facturas repunteadas) con dedup de 3 cuentas (18.280/3, 20.085/1-20.084/4 y 22.322/7).</p><p>Desde Desarrollo se agregó <code>--ocultar</code> a <code>fusionar_organismos_duplicados</code>, se corrigió la baja de cuentas con más de una copia vigente (PR <code>#776</code>/<code>#777</code>) y se aplicó: las 2 cuentas 10.267/6 de “Canal 3” ocultas; las Unidades Regionales y Logística D-4 (ids 1386 a 1390) fusionadas ocultando en “JEFATURA DE POLICIA” (id 920), con dedup de 4 cuentas (141.554/6, 163.041/7, 17.551/1 y 18.816/0).</p><p>Desde Desarrollo se publicó el resumen semanal al 16/10.</p></div>
+            </div>
+            <div class="sec sec-pruebas">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✓</span><h4>PRUEBAS FUNCIONALES REALIZADAS</h4></div>
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+            </div>
+            <div class="sec sec-errdet">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▲</span><h4>ERRORES ENCONTRADOS DURANTE LAS PRUEBAS</h4></div>
+              <div class="sec-cont"><p>Desde Desarrollo detectamos una regresión de la corrida del 15/10: <code>aplicar_depuracion_estructura_tdec</code> renombró el organismo 630 completo a “Contaduría General - Habilitación de Sueldos”, arrastrando las 6 cuentas de “Contaduría General”.</p><p>Desde Desarrollo detectamos por qué Canal 3 quedaba trabado desde el 14/10: el organismo tenía dos cuentas vigentes 10.267/6 y la herramienta exigía una sola.</p></div>
+            </div>
+            <div class="sec sec-errrep">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">●</span><h4>ERRORES REPORTADOS POR LOS AGENTES</h4></div>
+              <div class="sec-cont"><p class="vacio">Sin registros.</p></div>
+            </div>
+            <div class="sec sec-resuelto">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">✔</span><h4>ERRORES ANTERIORES VERIFICADOS COMO SOLUCIONADOS</h4></div>
+              <div class="sec-cont"><p>Regresión de Contaduría General corregida: 6 cuentas reasignadas a “Contaduría General” (id 1654) (PR <code>#775</code>).</p><p>Canal 3: <code>ocultar_cuentas_fuera_estructura_tdec</code> oculta todas las copias vigentes de una cuenta (PR <code>#777</code>).</p><p>Reporte de Mesa de Entradas del 15/10: al cargar un expediente externo en Ministerio de Seguridad y Justicia figura solo “JEFATURA DE POLICIA” (PR <code>#777</code> y fusión con <code>--ocultar</code>).</p><p>Cierre de los 2 “organismo ambiguo” (Ministerio de la Producción y Salud) y del “Contaduría no encontrado” del diagnóstico.</p></div>
+            </div>
+            <div class="sec sec-pend">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">→</span><h4>PENDIENTES PARA CONTINUAR</h4></div>
+              <div class="sec-cont"><p>Definir si se aplican los 149 renombrados cosméticos (mayúsculas/tildes) y las 49 descripciones desactualizadas.</p><p>Definir si se ocultan los 454 organismos vigentes que no figuran en la tabla (casi todos sin cuentas).</p><p>Adaptar el diagnóstico para aceptar la cuenta combinada de las 8 Habilitaciones.</p><p>Unificar Poder Judicial y Poder Legislativo según la definición.</p><p>Verificar Colonia Barón 121.966/7 visible en su isla.</p><p>Re-correr <code>diagnostico_estructura_tdec</code> limpio y validar desde Mesa de Entradas.</p><p>Personal: fechas de Infraestructura para producción (noviembre), definiciones de Despacho y lógica del pase del 1/1.</p></div>
+            </div>
+            <div class="sec sec-obs">
+              <div class="sec-cab"><span class="sec-ico" aria-hidden="true">▢</span><h4>OBSERVACIONES</h4></div>
+              <div class="sec-cont"><p>Contradicción de ids en Jefatura de Policía: la definición indicaba conservar el id 1779 y ocultar el 2253; en el 231 el organismo general es el id 920 (fusionado el 14/10), y Desarrollo consolidó sobre ese. Hipótesis: los ids corresponden a otra base (test-integra).</p><p>Diferencia sobre Canal 3: el informe del 14/10 pedía dar de baja en “Canal 3” las cuentas 10.267/6 y 15.226/8; la definición del 16/10 indica pasarlas a “Dirección de Canal 3” sin baja. Lo aplicado ocultó las 2 copias de 10.267/6 y no menciona la 15.226/8: a verificar.</p><p>Google Drive (carpeta Gonza-Marie): sin archivos nuevos o modificados en la jornada.</p><p>No figura en Odoo un resumen diario de Análisis Funcional para esta jornada (ni del lunes 19/10).</p></div>
             </div>
           </div>
         </article>
